@@ -1,38 +1,51 @@
+html, body, #root {
+  background: var(--body-background);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
-
-.App-link {
-  color: #61dafb;
+main {
+  background: var(--main-background);
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px;
+  box-sizing: border-box;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.button {
+  background: var(--button-background);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.reset-button {
+  padding: 10px 16px;
+}
+.button:hover {
+  background: var(--button-hover-background);
+}
+@media (max-width: 700px) {
+  .card-grid {
+    grid-template-columns: 1fr;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 600px) {
+  main {
+    padding: 16px;
   }
 }

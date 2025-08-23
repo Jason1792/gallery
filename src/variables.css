@@ -1,0 +1,157 @@
+/* #region COLOR-VARIABLES */      
+:root,
+:root[data-theme='actual'] {
+  --border: rgba(170, 170, 170,1);
+  --body-background: linear-gradient(rgba(var(--jason-1-alpha),.1),rgba(var(--jason-1-alpha),.1)), rgb(40, 40, 40);
+  --header-footer-background: linear-gradient(rgba(var(--jason-1-alpha),.1),rgba(var(--jason-1-alpha),.1)), rgb(25, 25, 25);
+  --header-footer-inner-background: none;
+  --header-footer-inner-left-background: none;
+  --header-footer-inner-right-background: none;
+  --header-footer-text: white;
+  --main-background: none;
+  --card-background: linear-gradient(rgba(var(--jason-1-alpha),.1),rgba(var(--jason-1-alpha),.1)), rgb(50, 50, 50);
+  --modal-and-card-text: rgb(210, 210, 210);
+  --card-image-background: linear-gradient(90deg,rgba(var(--jason-2-alpha),.9),rgba(var(--jason-2-alpha),.9)), rgb(255, 255, 255);
+  --card-image-img-background: linear-gradient(rgba(var(--jason-2-alpha),0),rgba(var(--jason-2-alpha),0)), rgb(255, 255, 255);
+  --button-background: linear-gradient(rgba(var(--jason-1-alpha),.20),rgba(var(--jason-1-alpha),.20)), rgb(50, 50, 50);
+  --button-hover-background: linear-gradient(90deg,rgba(var(--jason-2-alpha),.15),rgba(var(--jason-2-alpha),.15)), rgb(52, 52, 52);
+  --logo-button-background: none;
+  --logo-button-hover-background: linear-gradient(90deg,rgba(var(--jason-2-alpha),.15),rgba(var(--jason-2-alpha),.15)), rgb(52, 52, 52);
+  --button-text: rgba(255,255,255,.85);
+  --modal-overlay: rgba(255, 255, 255, 0);
+  --modal-content: rgba(25, 25, 25, 0.94);
+  --modal-image-container: rgba(255, 255, 255, 0);
+  --modal-text-and-nav: rgb(44, 44, 44);
+  --modal-nav: rgba(255, 255, 255, 0);
+  --modal-back-and-forward: rgba(255, 255, 255, 0);
+  --modal-close: rgba(255, 255, 255, 0);
+  --modal-text: rgba(255, 255, 255, 0);
+}
+  :root[data-theme='test'] {
+  --border: rgb(255, 0, 0);
+  --body-background: rgb(255, 200, 59);
+  --header-footer-background: rgb(164, 197, 142);
+  --header-footer-inner-background: rgb(96, 186, 48);
+  --header-footer-inner-left-background: rgb(140, 100, 177);
+  --header-footer-inner-right-background: rgb(140, 100, 177);
+  --header-footer-text: white;
+  --main-background: rgb(96, 156, 131);
+  --card-background: rgb(81, 16, 75);
+  --modal-and-card-text: rgb(210, 210, 210);
+  --card-image-background: rgb(147, 180, 186);
+  --card-image-img-background: rgb(200, 92, 9);
+  --button-background: rgb(69, 73, 85);
+  --button-hover-background: rgb(92, 50, 50);
+  --logo-button-background: pink;
+  --logo-button-hover-background: green;
+  --button-text: rgb(236, 85, 85);
+  --modal-overlay: rgb(126, 196, 60);
+  --modal-content: rgb(197, 175, 86);
+  --modal-image-container: rgba(243, 89, 235, 0.8);
+  --modal-text-and-nav: rgb(185, 29, 29);
+  --modal-nav: rgba(54, 167, 148, 0.68);
+  --modal-back-and-forward: rgba(176, 45, 130, 0.695);
+  --modal-close: rgb(223, 170, 106);
+  --modal-text: rgba(22, 81, 109, .5);
+}
+/* #region JASON-COLORS */       
+:root {
+  /* DON'T MESS WITH THESE */
+  --jason-1: rgb(109,99,61);
+  --jason-1-alpha: 109,99,61;
+  --jason-2: rgb(213,81,170);
+  --jason-2-alpha: 213,81,170;
+  --jason-3: rgb(213,189,48);
+  --jason-3-alpha: 213,189,48;
+  --jason-4: rgb(84,151,185);
+  --jason-4-alpha: 84,151,185;
+  --jason-5: rgb(162,201,71);
+  --jason-5-alpha: 162,201,71;
+  }
+  /* #endregion JASON-COLORS */       
+
+/* #endregion COLOR-VARIABLES */       
+
+/* #region FONT_VARIABLES */       
+:root {
+  --font-heading: "Figtree", sans-serif;
+  --font-body: "Figtree", sans-serif;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+}
+/* #endregion FONT_VARS_IN_ROOT */       
+
+/* #region TEXT_STYLES */
+
+/* TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
+   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
+   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
+   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
+   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
+   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT */
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  line-height: 1.6;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+}
+ul {
+  margin-top: .5rem;
+  margin-bottom: 2rem;
+}
+h2 {
+  color: inherit;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semi-bold);
+  font-size: 1.8rem;
+  line-height: 1;
+  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+}
+h3 {
+  color: inherit;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-semi-bold);
+  font-size: 1.8rem;
+  line-height: 1;
+  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+}
+h4 {
+  color: inherit;
+  font-family: var(--font-heading);
+  font-weight: var(--weight-medium);
+  font-size: 1.8rem;
+  line-height: 1;
+  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+}
+.body-small {
+  font-family: var(--font-body);
+  font-weight: var(--weight-regular);
+  font-size: 0.875rem;
+  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+}
+.button-text {
+  color: var(--button-text);
+  font-family: var(--font-body);
+  font-weight: var(--weight-bold);
+  font-size: 0.875rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* #endregion TEXT_VAR_STYLES */       
+
+/* #region MODAL_LAYOUT */
+:root,
+:root[data-theme='text_on_bottom'] {
+--modal-content-flex-direction: column;
+  } 
+:root[data-theme='text_on_right'] {
+--modal-content-flex-direction: row;
+  } 
+/* #endregion MODAL_LAYOUT */

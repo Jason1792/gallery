@@ -1,0 +1,145 @@
+.modal-overlay { 
+  /* modal-overlay is the layer that's between the normal card view and the modal-content that contains larger image. Since in your current plan the modal-content takes up the whole screen, modal-overlay is entirely hidden. Consider removing this when all is settled. */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--modal-overlay);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content { 
+  /* Contains image, text, buttons. With modal-content width & height at 100vh, modal-overlay is completely hidden. */
+  background-color: var(--modal-content);
+  padding: 12px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: var(--modal-content-flex-direction);
+  justify-content: flex-end; /* Keeps text block pinned to bottom */
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  row-gap: 12px;
+}
+.modal-image-container {
+  flex-grow: 1;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.modal-image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.modal-text-and-nav {
+  background-color: var(--modal-text-and-nav);
+  color: var(--modal-and-card-text);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 8px;
+  gap: 8px; 
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.modal-nav {
+  background-color: var(--modal-nav);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 6px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  flex: 1 1 50%;
+}
+.modal-back-and-forward {
+  background-color: var(--modal-back-and-forward);
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  gap: 6px;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+.modal-close {
+  background-color: var(--modal-close);
+  padding: 0;
+  width: 20%;
+  box-sizing: border-box;
+  display: flex;
+  border-radius: 6px;
+  gap: 0;
+}
+.modal-text {
+  background-color: var(--modal-text);
+  display: block;
+  padding: 4px;
+  border-radius: 6px;
+  flex: 1 1 50%;
+}
+.modal-headline {
+  font-size: 1.3rem;
+  margin-top: 0;    
+  margin-bottom: 0;
+  line-height: 1.25rem;    
+}
+.modal-date {
+  font-size: 1rem;
+  margin-top: 10px;    
+  margin-bottom: 0;
+  line-height: 1.25rem;    
+}
+.modal-location {
+  font-size: 1rem;
+  margin-top: 8px;    
+  margin-bottom: 0;
+  line-height: 1.25rem;    
+}
+.modal-description {  
+  font-size: 1rem;
+  margin-top: 8px;    
+  margin-bottom: 0;
+  line-height: 1.25rem;    
+}
+.modal-filename {
+  display: none;
+  font-size: 1rem;
+  margin-top: 0;    
+  margin-bottom: 0;
+  line-height: 1.25rem;    
+}
+.modal-keywords {
+  display: none;
+  font-size: 1.0rem;
+  margin-bottom: 8px;
+  margin-top: 0;    
+}
+.modal-nav-button {
+  padding: 19px 12px;
+  width: 100%;
+  font-weight: bold;
+  background-color: rgb(26,26,26);
+  color: rgb(204,204,204);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-nav-button:hover {
+  background-color: rgb(60,60,60);
+}
