@@ -3,7 +3,6 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Card from "./Card";
 import { useEffect, useState } from "react";
-import Papa from "papaparse";
 import ImageModal from "./ImageModal";
 
 function App() {
