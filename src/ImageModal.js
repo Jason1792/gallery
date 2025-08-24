@@ -9,8 +9,6 @@ useEffect(() => {
       document.body.style.overflow = "";
     };
   }, []);
-
-  
   if (!imageSrc) return null;
 return (
 <div className="modal-overlay">
