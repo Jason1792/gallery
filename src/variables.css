@@ -1,5 +1,3 @@
-
-
 /* #region COLOR-VARIABLES */      
 :root,
 :root[data-theme='actual'] {
@@ -11,6 +9,8 @@
   --header-footer-inner-right-background: none;
   --header-footer-text: white;
   --main-background: none;
+  --no-results-bg: none;
+  --no-results-text: rgb(210, 210, 210);
   --card-background: linear-gradient(rgba(var(--jason-1-alpha),.1),rgba(var(--jason-1-alpha),.1)), rgb(50, 50, 50);
   --modal-and-card-text: rgb(210, 210, 210);
   --card-image-background: linear-gradient(90deg,rgba(var(--jason-2-alpha),.9),rgba(var(--jason-2-alpha),.9)), rgb(255, 255, 255);
@@ -34,11 +34,12 @@
   --body-background: rgb(255, 200, 59);
   --header-footer-background: rgb(164, 197, 142);
   --header-footer-inner-background: rgb(96, 186, 48);
-  --header-footer-inner-left-background: rgb(140, 100, 177);
+  --header-footer-inner-left-background: rgb(139, 38, 233);
   --header-footer-inner-right-background: rgb(140, 100, 177);
   --header-footer-text: white;
   --main-background: rgb(96, 156, 131);
-  --card-background: rgb(81, 16, 75);
+  --no-results-bg: rgb(90, 48, 48);
+  --no-results-text: rgb(210, 210, 210);
   --modal-and-card-text: rgb(210, 210, 210);
   --card-image-background: rgb(147, 180, 186);
   --card-image-img-background: rgb(200, 92, 9);
@@ -56,7 +57,7 @@
   --modal-close: rgb(223, 170, 106);
   --modal-text: rgba(22, 81, 109, .5);
 }
-/* #region JASON-COLORS */       
+/* #region MASTER-COLORS */       
 :root {
   /* DON'T MESS WITH THESE */
   --jason-1: rgb(109,99,61);
@@ -70,7 +71,7 @@
   --jason-5: rgb(162,201,71);
   --jason-5-alpha: 162,201,71;
   }
-  /* #endregion JASON-COLORS */       
+  /* #endregion MASTER-COLORS */       
 
 /* #endregion COLOR-VARIABLES */       
 
@@ -88,13 +89,6 @@
 /* #endregion FONT_VARS_IN_ROOT */       
 
 /* #region TEXT_STYLES */
-
-/* TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
-   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
-   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
-   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
-   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT
-   TEXT   TEXT   TEXT   TEXT   TEXT   TEXT */
 
 body {
   font-family: var(--font-body);
@@ -157,3 +151,29 @@ h4 {
 --modal-content-flex-direction: row;
   } 
 /* #endregion MODAL_LAYOUT */
+
+/* #region TABLET TABLET TABLET TABLET TABLET  */
+
+/* TABLET TABLET TABLET TABLET TABLET
+   TABLET TABLET TABLET TABLET TABLET   
+   TABLET TABLET TABLET TABLET TABLET   
+   TABLET TABLET TABLET TABLET TABLET   
+   TABLET TABLET TABLET TABLET TABLET */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+}
+/* #endregion END TABLET  */
+
+/* #region SMALL SMALL SMALL SMALL SMALL  */       
+
+/* SMALL SMALL SMALL SMALL SMALL
+   SMALL SMALL SMALL SMALL SMALL   
+   SMALL SMALL SMALL SMALL SMALL   
+   SMALL SMALL SMALL SMALL SMALL   
+   SMALL SMALL SMALL SMALL SMALL */  
+
+@media (max-width: 600px) {
+
+}
+/* #endregion END SMALL */       

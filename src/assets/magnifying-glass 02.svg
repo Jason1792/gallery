@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-5ddd3792-d15a-438f-b5e5-3c4f7bba44e9" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="121.25" height="121.25" viewBox="0 0 12.12 12.12">
+  <defs>
+    <style>
+      .uuid-6184c49d-68fb-494c-a69b-feea38817126 {
+        fill: none;
+        stroke: #6e695a;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.4px;
+      }
+
+      .uuid-fe5e820e-a2a1-4f66-b72b-571d1c606b30 {
+        fill: #6e695a;
+      }
+    </style>
+  </defs>
+  <g id="uuid-637d2d47-6169-4e59-a958-3b2e8257dd89" data-name="ABs">
+    <g id="uuid-87e2b901-c9ba-4cb4-9321-d23d2d82ff1b" data-name="AB14 Various">
+      <path class="uuid-fe5e820e-a2a1-4f66-b72b-571d1c606b30" d="M8.12.7c.88,0,1.71.34,2.33.97.62.62.97,1.45.97,2.33s-.34,1.71-.97,2.33c-.62.62-1.45.97-2.33.97s-1.71-.34-2.33-.97c-1.29-1.29-1.29-3.38,0-4.67.62-.62,1.45-.97,2.33-.97M8.12,0c-1.02,0-2.05.39-2.83,1.17-1.56,1.56-1.56,4.09,0,5.66.78.78,1.8,1.17,2.83,1.17s2.05-.39,2.83-1.17c1.56-1.56,1.56-4.09,0-5.66-.78-.78-1.8-1.17-2.83-1.17h0Z"/>
+      <line class="uuid-6184c49d-68fb-494c-a69b-feea38817126" x1=".7" y1="11.42" x2="4.54" y2="7.58"/>
+    </g>
+  </g>
+</svg>

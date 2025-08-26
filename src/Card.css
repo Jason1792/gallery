@@ -77,13 +77,30 @@
   margin-top: 0;    
   margin-bottom: 8px;
 }
-@media (max-width: 800px) {
-  .card {
-    flex-direction: column;
-  }
-  .card-image,
-  .card-text {
-    flex: 1 1 100%;
-  }
-}
 
+/* #region TABLET TABLET TABLET TABLET TABLET  */
+
+/* TABLET TABLET TABLET TABLET TABLET
+   TABLET TABLET TABLET TABLET TABLET   
+   TABLET TABLET TABLET TABLET TABLET   
+   TABLET TABLET TABLET TABLET TABLET   
+   TABLET TABLET TABLET TABLET TABLET */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+}
+/* #endregion END TABLET  */
+
+/* #region SMALL SMALL SMALL SMALL SMALL  */       
+
+/* SMALL SMALL SMALL SMALL SMALL
+   SMALL SMALL SMALL SMALL SMALL   
+   SMALL SMALL SMALL SMALL SMALL   
+   SMALL SMALL SMALL SMALL SMALL   
+   SMALL SMALL SMALL SMALL SMALL */  
+
+@media (max-width: 600px) {
+
+}
+/* #endregion END SMALL */       
+  

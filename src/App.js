@@ -53,9 +53,9 @@ useEffect(() => {
     <div className="App">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         <main>
-        <div className="card-grid">
                 {filteredCardData.length > 0 ? (
-                filteredCardData.map((card, idx) => (
+        <div className="card-grid">
+                {filteredCardData.map((card, idx) => (
         <Card
           key={idx}
           imageSrc={card.imageSrc}
@@ -67,11 +67,13 @@ useEffect(() => {
           keywords={card.keywords}
           onImageClick={() => setSelectedIndex(idx)}   // store index instead of card
       />
-      ))
+      ))}  
+      </div>
     ) : (
-      <p>No results found for your search term.</p>
+        <div className="no-results">
+                <p>No results found for your search term</p>
+        </div>
     )}
-  </div>
 </main>
       <Footer />
        {selectedIndex !== null && (
