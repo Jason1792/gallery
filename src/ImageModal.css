@@ -25,71 +25,96 @@
   overflow: hidden;
   row-gap: 12px;
 }
-.modal-image-container {
-  flex-grow: 1;
-  max-width: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+/*
+@media (min-width: 601px) and (max-width: 1024px) {
+.modal-content { 
+  background-color: grey;
 }
-.modal-image-container img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 6px;
 }
-.modal-text-and-nav {
-  background-color: var(--modal-text-and-nav);
+*/
+.modal-nav-and-text { /* e: div */
+  background-color: var(--modal-nav-and-text);
   color: var(--modal-and-card-text);
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: flex-start;
+  align-items: flex-start;
   padding: 8px;
   gap: 8px; 
   box-sizing: border-box;
   border-radius: 6px;
+  min-height: fit-content;
 }
-.modal-nav {
-  background-color: var(--modal-nav);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  padding: 0;
-  gap: 6px;
-  box-sizing: border-box;
-  border-radius: 6px;
-  flex: 1 1 50%;
+.modal-nav { /* e: div */
+        background-color: var(--modal-nav);
+        height: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 10px;
+        gap:7%;
+        box-sizing: border-box;
+        border-radius: 6px;
+        flex: 1 1 50%;
 }
-.modal-back-and-forward {
-  background-color: var(--modal-back-and-forward);
-  width: 20%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0;
-  gap: 6px;
-  box-sizing: border-box;
-  border-radius: 6px;
+@media (max-width: 600px) {
+.modal-nav { /* e: div */
+        margin-left: 15px;
+        gap:15%;
+        flex: 1 1 15%;
 }
-.modal-close {
-  background-color: var(--modal-close);
-  padding: 0;
-  width: 20%;
-  box-sizing: border-box;
-  display: flex;
-  border-radius: 6px;
-  gap: 0;
 }
-.modal-text {
+.modal-close { /* e: div */
+        background-color: var(--modal-close);
+        height: 100%;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 6px;
+}
+.modal-nav-button { /* e: button */
+        height: 100%;
+        padding: 0;
+        font-weight: bold;
+        background-color: var(--modal-nav-button-bg);
+        color: rgb(204,204,204);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+}
+.modal-close-icon, .modal-back-icon, .modal-forward-icon { /* e: img */
+        opacity: 25%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        transition-duration: .7s;
+}
+.modal-close-icon:hover, .modal-back-icon:hover, .modal-forward-icon:hover { /* e: img */
+        opacity: 65%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        transition-duration: .7s;
+}
+.modal-back-and-forward { /* e: div */
+        background-color: var(--modal-back-and-forward);
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-right: 8px;
+        gap: 2vw;
+        box-sizing: border-box;
+        border-radius: 6px;
+}
+.modal-forward-icon { /* e: img */
+       rotate: 180deg;
+}
+.modal-text { /* e: div */
   background-color: var(--modal-text);
-  display: block;
-  padding: 4px;
+  padding: 4px 0 0 10px;
   border-radius: 6px;
   flex: 1 1 50%;
 }
@@ -130,16 +155,18 @@
   margin-bottom: 8px;
   margin-top: 0;    
 }
-.modal-nav-button {
-  padding: 19px 12px;
+.modal-image-container {
+  flex-grow: 1;
+  max-width: 100%;
   width: 100%;
-  font-weight: bold;
-  background-color: rgb(26,26,26);
-  color: rgb(204,204,204);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
-.modal-nav-button:hover {
-  background-color: rgb(60,60,60);
+.modal-image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
 }

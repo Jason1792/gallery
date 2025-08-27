@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import "./ImageModal.css";
+import close from "./assets/close.svg";
+import backForward from "./assets/back-forward.svg";
 const ImageModal = ({ imageSrc, headline, date, location, description, filename, keywords, onClose, onNext, onPrev }) => {
 useEffect(() => {
     // Disable background scroll
@@ -13,17 +15,14 @@ useEffect(() => {
 return (
 <div className="modal-overlay">
         <div className="modal-content">
-                <div className="modal-image-container">
-                        <img src={imageSrc} alt={headline} />
-                </div>
-                <div className="modal-text-and-nav">
+                <div className="modal-nav-and-text">
                         <div className="modal-nav">
-                                <div className="modal-back-and-forward">
-                                        <button className="modal-nav-button" onClick={onPrev}>Prev</button>
-                                        <button className="modal-nav-button" onClick={onNext}>Next</button>
-                                </div>
                                 <div className="modal-close">
-                                        <button className="modal-nav-button" onClick={onClose}>Close</button>
+                                        <button className="modal-nav-button" onClick={onClose}><img className="modal-close-icon" src={close} alt="Close" /></button>
+                                </div>
+                                <div className="modal-back-and-forward">
+                                        <button className="modal-nav-button" onClick={onPrev}><img className="modal-back-icon" src={backForward} alt="Back" /></button>
+                                        <button className="modal-nav-button" onClick={onNext}><img className="modal-forward-icon" src={backForward} alt="Next" /></button>
                                 </div>
                         </div>
                         <div className="modal-text">
@@ -34,6 +33,9 @@ return (
                                 <p className="modal-filename">{filename}</p>
                                 <p className="modal-keywords">{keywords}</p>
                         </div>
+                </div>
+                <div className="modal-image-container">
+                        <img src={imageSrc} alt={headline} />
                 </div>
         </div>
 </div>

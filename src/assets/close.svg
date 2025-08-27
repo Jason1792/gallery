@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-102b4c73-dee9-45dc-b89e-bb03b2b0790a" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="83.71" height="83.71" viewBox="0 0 8.37 8.37">
+  <defs>
+    <style>
+      .uuid-0eb0863b-2cd1-4e1e-8f98-ac9fcff021d5 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 1.3px;
+      }
+    </style>
+  </defs>
+  <g id="uuid-e3c68ee6-7df3-42cb-a4f8-764eae03ead1" data-name="ABs">
+    <g id="uuid-b24519a9-1c46-4cd0-a08c-33fc768fad84" data-name="AB14 Web Icons">
+      <line class="uuid-0eb0863b-2cd1-4e1e-8f98-ac9fcff021d5" x1="7.72" y1="7.72" x2=".65" y2=".65"/>
+      <line class="uuid-0eb0863b-2cd1-4e1e-8f98-ac9fcff021d5" x1=".65" y1="7.72" x2="7.72" y2=".65"/>
+    </g>
+  </g>
+</svg>

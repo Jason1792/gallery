@@ -23,8 +23,9 @@
   --modal-overlay: rgba(255, 255, 255, 0);
   --modal-content: rgba(25, 25, 25, 0.94);
   --modal-image-container: rgba(255, 255, 255, 0);
-  --modal-text-and-nav: rgb(44, 44, 44);
+  --modal-nav-and-text: rgb(44, 44, 44);
   --modal-nav: rgba(255, 255, 255, 0);
+  --modal-nav-button-bg: none;  
   --modal-back-and-forward: rgba(255, 255, 255, 0);
   --modal-close: rgba(255, 255, 255, 0);
   --modal-text: rgba(255, 255, 255, 0);
@@ -51,11 +52,12 @@
   --modal-overlay: rgb(126, 196, 60);
   --modal-content: rgb(197, 175, 86);
   --modal-image-container: rgba(243, 89, 235, 0.8);
-  --modal-text-and-nav: rgb(185, 29, 29);
-  --modal-nav: rgba(54, 167, 148, 0.68);
-  --modal-back-and-forward: rgba(176, 45, 130, 0.695);
+  --modal-nav-and-text: rgb(185, 29, 29);
+  --modal-nav: rgb(54, 167, 148);
+  --modal-nav-button-bg: black;  
+  --modal-back-and-forward: rgb(193, 104, 162);
   --modal-close: rgb(223, 170, 106);
-  --modal-text: rgba(22, 81, 109, .5);
+  --modal-text: rgba(0, 0, 0, 0.5);
 }
 /* #region MASTER-COLORS */       
 :root {
@@ -151,29 +153,3 @@ h4 {
 --modal-content-flex-direction: row;
   } 
 /* #endregion MODAL_LAYOUT */
-
-/* #region TABLET TABLET TABLET TABLET TABLET  */
-
-/* TABLET TABLET TABLET TABLET TABLET
-   TABLET TABLET TABLET TABLET TABLET   
-   TABLET TABLET TABLET TABLET TABLET   
-   TABLET TABLET TABLET TABLET TABLET   
-   TABLET TABLET TABLET TABLET TABLET */
-
-@media (min-width: 601px) and (max-width: 1024px) {
-
-}
-/* #endregion END TABLET  */
-
-/* #region SMALL SMALL SMALL SMALL SMALL  */       
-
-/* SMALL SMALL SMALL SMALL SMALL
-   SMALL SMALL SMALL SMALL SMALL   
-   SMALL SMALL SMALL SMALL SMALL   
-   SMALL SMALL SMALL SMALL SMALL   
-   SMALL SMALL SMALL SMALL SMALL */  
-
-@media (max-width: 600px) {
-
-}
-/* #endregion END SMALL */       
