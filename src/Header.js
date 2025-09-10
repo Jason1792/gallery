@@ -24,7 +24,7 @@ return (
                                 </div>
                                 <button onClick={() => setSearchTerm('')} className="button reset-button button-text">Reset</button>        
                         </div>
-                        <a className="button button-text email-button" href="mailto:jdullack@gmail.com" target="_blank" rel="noopener noreferrer">email</a>
+                        <a className="button button-text email-button" href="mailto:jdullack@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
                 </div>
         </div>
 </header>
