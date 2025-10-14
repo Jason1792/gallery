@@ -1,172 +1,184 @@
-.modal-overlay { 
-  /* modal-overlay is the layer that's between the normal card view and the modal-content that contains larger image. Since in your current plan the modal-content takes up the whole screen, modal-overlay is entirely hidden. Consider removing this when all is settled. */
-  position: fixed; 
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--modal-overlay);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+.image-modal-overlay { 
+        /* layer between the card grid and image-modal-content that contains larger image. Since image-modal-content takes up whole screen, image-modal-overlay is entirely hidden - consider removing. */
+        position: fixed; 
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--image-modal-overlay-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
 }
-.modal-content { 
-  /* Contains image, text, buttons. With modal-content width & height at 100vh, modal-overlay is completely hidden. */
-  background-color: var(--modal-content);
-  padding: 12px;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: var(--modal-content-flex-direction);
-  justify-content: flex-end; /* Keeps text block pinned to bottom */
-  align-items: center;
-  box-sizing: border-box;
-  overflow: hidden;
-  row-gap: 12px;
+.image-modal-content { 
+        /* Contains image, text, buttons. With image-modal-content width & height at 100vh, image-modal-overlay is completely hidden. */
+        background-color: var(--image-modal-content-bg);
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        box-sizing: border-box;
+        overflow: hidden;
+        row-gap: 12px;
 }
-/*
-@media (min-width: 601px) and (max-width: 1024px) {
-.modal-content { 
-  background-color: grey;
+.image-modal-nav-and-text {
+        background-color: var(--image-modal-nav-and-text-bg);
+        color: var(--image-modal-and-card-text-txt);
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 8px 8px 5px 8px;
+        gap: 8px; 
+        box-sizing: border-box;
+        border-radius: 0;
+        min-height: fit-content;
 }
-}
-*/
-.modal-nav-and-text { /* e: div */
-  background-color: var(--modal-nav-and-text);
-  color: var(--modal-and-card-text);
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 8px;
-  gap: 8px; 
-  box-sizing: border-box;
-  border-radius: 6px;
-  min-height: fit-content;
-}
-.modal-nav { /* e: div */
-        background-color: var(--modal-nav);
-        height: 40px;
+.image-modal-nav { /* e: div */
+        background-color: var(--image-modal-nav-bg);
+        height: auto;
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
         padding: 0;
-        margin-top: 10px;
-        gap:7%;
+        margin: 6px 0 0 0;
+        gap: 2.5vw;
         box-sizing: border-box;
         border-radius: 6px;
         flex: 1 1 50%;
 }
 @media (max-width: 600px) {
-.modal-nav { /* e: div */
+.image-modal-nav { 
         margin-left: 15px;
         gap:15%;
         flex: 1 1 15%;
 }
 }
-.modal-close { /* e: div */
-        background-color: var(--modal-close);
+i {
+        font-size: 2rem;
+}
+.image-modal-close { /* e: div */
+        background-color: var(--image-modal-close-bg);
         height: 100%;
-        padding: 0;
+        padding: 0; /* troubleshooting; reset to 0 */
         box-sizing: border-box;
         border-radius: 6px;
 }
-.modal-nav-button { /* e: button */
+.image-modal-close i { /* e: div */
+        font-size: 2rem;
+}
+.image-modal-nav-button { /* e: button */
         height: 100%;
         padding: 0;
         font-weight: bold;
-        background-color: var(--modal-nav-button-bg);
+        background-color: var(--image-modal-nav-button-bg);
         color: rgb(204,204,204);
         border: none;
         border-radius: 4px;
         cursor: pointer;
 }
-.modal-close-icon, .modal-back-icon, .modal-forward-icon { /* e: img */
-        opacity: 25%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        transition-duration: .7s;
+.image-modal-nav-button:hover { /* e: button */
+        background-color: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
 }
-.modal-close-icon:hover, .modal-back-icon:hover, .modal-forward-icon:hover { /* e: img */
-        opacity: 65%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        transition-duration: .7s;
-}
-.modal-back-and-forward { /* e: div */
-        background-color: var(--modal-back-and-forward);
+.image-modal-back-and-forward { /* e: div */
+        background-color: var(--image-modal-back-and-forward-bg);
         height: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: flex-end;
-        justify-content: flex-start;
-        padding-right: 8px;
-        gap: 2vw;
+        padding: 0px 8px 0px 0px; /* troubleshooting; reset 20s to 0s */
+        gap: .5vw;
         box-sizing: border-box;
         border-radius: 6px;
 }
-.modal-forward-icon { /* e: img */
-       rotate: 180deg;
+.image-modal-text {
+        background-color: var(--image-modal-text);
+        padding: 4px 0 0 10px;
+        border-radius: 6px;
+        flex: 1 1 50%;
 }
-.modal-text { /* e: div */
-  background-color: var(--modal-text);
-  padding: 4px 0 0 10px;
-  border-radius: 6px;
-  flex: 1 1 50%;
+.image-modal-headline {
+        background-color: var(--image-modal-headline-bg);
+        font-size: 1.3rem;
+        margin: 0;
+        padding: 0;
+        line-height: 1.25rem;    
 }
-.modal-headline {
-  font-size: 1.3rem;
-  margin-top: 0;    
-  margin-bottom: 0;
-  line-height: 1.25rem;    
+.image-modal-date {
+        background-color: var(--image-modal-date-bg);
+        font-size: 1rem;
+        margin: 0;
+        padding: 10px 0 0 0;
+        line-height: 1.25rem;    
 }
-.modal-date {
-  font-size: 1rem;
-  margin-top: 10px;    
-  margin-bottom: 0;
-  line-height: 1.25rem;    
+.image-modal-location {
+        background-color: var(--image-modal-location-bg);
+        font-size: 1rem;
+        margin: 0;
+        padding: 8px 0 6px 0;
+        line-height: 1.25rem;    
 }
-.modal-location {
-  font-size: 1rem;
-  margin-top: 8px;    
-  margin-bottom: 0;
-  line-height: 1.25rem;    
+.image-modal-description {  
+        display: none;
+        background-color: var(--image-modal-description-bg);
+        font-size: 1rem;
+        margin: 0;
+        padding: 8px 0 5px 0;
+        line-height: 1.25rem;    
 }
-.modal-description {  
-  font-size: 1rem;
-  margin-top: 8px;    
-  margin-bottom: 0;
-  line-height: 1.25rem;    
+.image-modal-filename {
+        background-color: var(--image-modal-filename-bg);
+        display: none;
 }
-.modal-filename {
-  display: none;
-  font-size: 1rem;
-  margin-top: 0;    
-  margin-bottom: 0;
-  line-height: 1.25rem;    
+.image-modal-keywords {
+        background-color: var(--image-modal-keywords-bg);
+        display: none;
 }
-.modal-keywords {
-  display: none;
-  font-size: 1.0rem;
-  margin-bottom: 8px;
-  margin-top: 0;    
-}
-.modal-image-container {
+.image-modal-image-container {
   flex-grow: 1;
   max-width: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
   overflow: hidden;
+
+  /* Remove padding so the rounded edge is flush.
+     If you want spacing, put it on a wrapper above this element instead. */
+  padding: 0 12px 12px 12px;
+  box-sizing: border-box;
 }
-.modal-image-container img {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  border-radius: 6px;
+
+/* 2) Ensure wrapper fills and inherits radius */
+.image-modal-image-container picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: inherit;   /* keeps all corners aligned */
+}
+
+/* 3) The actual image: fill the box, preserve aspect, inherit radius */
+.image-modal-image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;      /* show entire image */
+  border-radius: inherit;   /* match container corners */
+  border-radius: 8px;
+}
+/* Optional: only if you still see square corners after step 1 */
+.image-modal-image-container picture,
+.image-modal-image-container img {
+  border-radius: inherit !important;
+  border-radius: 8px;
 }

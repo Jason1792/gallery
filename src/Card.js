@@ -1,10 +1,19 @@
 import "./Card.css";
-const Card = ({ imageSrc, headline, date, location, description, filename, keywords, onImageClick }) => {
-
+const Card = ({ 
+  imageSrc,      
+  imageTiny,  
+  headline,
+  date,
+  location,
+  description,
+  filename,
+  keywords,
+  onImageClick }) => {
+const tiny = imageTiny || imageSrc; // fall back if tiny missing
 return (
         <div className="card">
                 <div className="card-image">
-                        <img className="card-image" src={imageSrc} alt={headline} onError={(e) => {
+                        <img className="card-image" src={tiny} alt={headline} onError={(e) => {
                         e.target.onerror = null; // prevent infinite loop
                         e.target.src = "/images/Image Not Available.png";
                         }}

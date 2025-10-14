@@ -55,29 +55,28 @@ main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;
+        padding-bottom: 20px;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .card-grid {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+        grid-template-columns: repeat(2, 1fr);
 }
 }
 @media (max-width: 600px) {
 .card-grid {
-  grid-template-columns: repeat(1, 1fr);
-  gap: 8px;
+        grid-template-columns: repeat(1, 1fr);
 }
 }
 .button {
-  background: var(--button-background);
-  color: var(--button-text);
-  border: none;
-  padding: 8px 16px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+        background: var(--button-text-bg);
+        color: var(--button-text);
+        border: none;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
 }
 .reset-button {
   padding: 11px 16px;
@@ -86,5 +85,5 @@ main {
   padding: 8px 16.75px;
 }
 .button:hover {
-  background: var(--button-hover-background);
+  background: var(--button-text-bg-hover);
 }

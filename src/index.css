@@ -23,3 +23,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* Prevent background scroll when the header menu is open */
+html.menu-open, html.menu-open body {
+  overflow: hidden;
+}

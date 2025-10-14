@@ -2,7 +2,7 @@
   background: var(--card-background);
   display: flex;
   margin-bottom: 0;
-  border: 0px solid var(--border);
+  border: 0px solid red;
   border-radius: 8px;
   overflow: hidden;
   box-sizing: border-box;
@@ -13,7 +13,7 @@
   box-sizing: border-box;
 }
 .card-text {
-  color: var(--modal-and-card-text);
+  color: var(--image-modal-and-card-text-txt);
   flex: 1 1 50%;
   padding: 10px;
   box-sizing: border-box;

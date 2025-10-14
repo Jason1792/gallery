@@ -1,81 +1,158 @@
-/* #region COLOR-VARIABLES */      
-:root,
-:root[data-theme='actual'] {
-  --border: rgba(170, 170, 170,1);
-  --body-background: linear-gradient(rgba(var(--jason-1-alpha),.1),rgba(var(--jason-1-alpha),.1)), rgb(40, 40, 40);
-  --header-footer-background: linear-gradient(rgba(var(--jason-1-alpha),.1),rgba(var(--jason-1-alpha),.1)), rgb(25, 25, 25);
-  --header-footer-inner-background: none;
-  --header-footer-inner-left-background: none;
-  --header-footer-inner-right-background: none;
-  --header-footer-text: white;
-  --main-background: none;
-  --no-results-bg: none;
-  --no-results-text: rgb(210, 210, 210);
-  --card-background: linear-gradient(rgba(var(--jason-1-alpha),.1),rgba(var(--jason-1-alpha),.1)), rgb(50, 50, 50);
-  --modal-and-card-text: rgb(210, 210, 210);
-  --card-image-background: linear-gradient(90deg,rgba(var(--jason-2-alpha),.9),rgba(var(--jason-2-alpha),.9)), rgb(255, 255, 255);
-  --card-image-img-background: linear-gradient(rgba(var(--jason-2-alpha),0),rgba(var(--jason-2-alpha),0)), rgb(255, 255, 255);
-  --button-background: linear-gradient(rgba(var(--jason-1-alpha),.20),rgba(var(--jason-1-alpha),.20)), rgb(50, 50, 50);
-  --button-hover-background: linear-gradient(90deg,rgba(var(--jason-2-alpha),.15),rgba(var(--jason-2-alpha),.15)), rgb(52, 52, 52);
-  --logo-button-background: none;
-  --logo-button-hover-background: linear-gradient(90deg,rgba(var(--jason-2-alpha),.15),rgba(var(--jason-2-alpha),.15)), rgb(52, 52, 52);
-  --button-text: rgba(255,255,255,.85);
-  --modal-overlay: rgba(255, 255, 255, 0);
-  --modal-content: rgba(25, 25, 25, 0.94);
-  --modal-image-container: rgba(255, 255, 255, 0);
-  --modal-nav-and-text: rgb(44, 44, 44);
-  --modal-nav: rgba(255, 255, 255, 0);
-  --modal-nav-button-bg: none;  
-  --modal-back-and-forward: rgba(255, 255, 255, 0);
-  --modal-close: rgba(255, 255, 255, 0);
-  --modal-text: rgba(255, 255, 255, 0);
+/* #region COLORS */      
+:root, :root[data-theme='actual'] {
+        --body-background: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(40, 40, 40);
+        --header-footer-background: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(25, 25, 25);
+        --header-footer-inner-background: none;
+        --header-footer-inner-left-background: none;
+        --header-footer-inner-right-background: none;
+        --header-footer-text: white;
+        --main-background: none;
+        --no-results-bg: none;
+        --no-results-text: rgb(210, 210, 210);
+        --card-background: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(50, 50, 50);
+        --card-image-background: 
+                linear-gradient(90deg,
+                rgba(var(--jason-2-alpha),.9),
+                rgba(var(--jason-2-alpha),.9)), 
+                rgb(255, 255, 255);
+        --card-image-img-background: 
+                linear-gradient(
+                rgba(var(--jason-2-alpha),0),
+                rgba(var(--jason-2-alpha),0)), 
+                rgb(255, 255, 255);
+        --button-text-bg:
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.20),
+                rgba(var(--jason-1-alpha),.20)), 
+                rgb(50, 50, 50);
+        --button-text-bg-hover: 
+                var(--jason-3);
+        --button-icon-bg: rgba(255,255,255,.08);
+        --button-icon-bg-hover: rgba(var(--jason-5-alpha),.25);
+        --button-text: rgba(255,255,255,.85);
+        --button-icon: var(--button-text);
+        --logo-button-bg: none;
+        --logo-button-bg-hover: 
+                linear-gradient(90deg,
+                rgba(var(--jason-2-alpha),.15),
+                rgba(var(--jason-2-alpha),.15)), 
+                rgb(52, 52, 52);
+
+        --menu-modal-overlay-bg: rgba(0,0,0,.5);
+        --menu-modal-header-bg: none;
+        --menu-modal-bg: rgba(0,0,0,.8);
+        --menu-modal-search-wrapper-bg: none;        
+        --menu-modal-input-reset-bg: none;
+        --menu-modal-search-input-bg:
+                linear-gradient(90deg,
+                rgba(var(--jason-1-alpha),.5),
+                rgba(var(--jason-1-alpha),.5)), 
+                rgb(0,0,0);
+        --menu-modal-search-input-text: white;
+
+        --image-modal-overlay-bg: rgba(128,128,128,.5);
+        --image-modal-content-bg: rgba(25, 25, 25, 0.94);
+        --image-modal-nav-and-text-bg: rgb(44, 44, 44);
+        --image-modal-and-card-text-txt: rgb(210, 210, 210);
+        --image-modal-headline-bg: none;
+        --image-modal-date-bg: none;
+        --image-modal-location-bg: none;
+        --image-modal-description-bg: none;
+        --image-modal-filename-bg: none;
+        --image-modal-keywords-bg: none;
+        --image-modal-nav-bg: none;
+        --image-modal-back-and-forward-bg: none;
+        --image-modal-close-bg: none;
+        --image-modal-text: none;
+        --image-modal-image-container: none;
 }
   :root[data-theme='test'] {
-  --border: rgb(255, 0, 0);
-  --body-background: rgb(255, 200, 59);
-  --header-footer-background: rgb(164, 197, 142);
-  --header-footer-inner-background: rgb(96, 186, 48);
-  --header-footer-inner-left-background: rgb(139, 38, 233);
-  --header-footer-inner-right-background: rgb(140, 100, 177);
-  --header-footer-text: white;
-  --main-background: rgb(96, 156, 131);
-  --no-results-bg: rgb(90, 48, 48);
-  --no-results-text: rgb(210, 210, 210);
-  --modal-and-card-text: rgb(210, 210, 210);
-  --card-image-background: rgb(147, 180, 186);
-  --card-image-img-background: rgb(200, 92, 9);
-  --button-background: rgb(69, 73, 85);
-  --button-hover-background: rgb(92, 50, 50);
-  --logo-button-background: pink;
-  --logo-button-hover-background: green;
-  --button-text: rgb(236, 85, 85);
-  --modal-overlay: rgb(126, 196, 60);
-  --modal-content: rgb(197, 175, 86);
-  --modal-image-container: rgba(243, 89, 235, 0.8);
-  --modal-nav-and-text: rgb(185, 29, 29);
-  --modal-nav: rgb(54, 167, 148);
-  --modal-nav-button-bg: black;  
-  --modal-back-and-forward: rgb(193, 104, 162);
-  --modal-close: rgb(223, 170, 106);
-  --modal-text: rgba(0, 0, 0, 0.5);
-}
-/* #region MASTER-COLORS */       
-:root {
-  /* DON'T MESS WITH THESE */
-  --jason-1: rgb(109,99,61);
-  --jason-1-alpha: 109,99,61;
-  --jason-2: rgb(213,81,170);
-  --jason-2-alpha: 213,81,170;
-  --jason-3: rgb(213,189,48);
-  --jason-3-alpha: 213,189,48;
-  --jason-4: rgb(84,151,185);
-  --jason-4-alpha: 84,151,185;
-  --jason-5: rgb(162,201,71);
-  --jason-5-alpha: 162,201,71;
-  }
-  /* #endregion MASTER-COLORS */       
+        --body-background: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(40, 40, 40);
+        --header-footer-background: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(25, 25, 25);
+        --header-footer-inner-background: pink;
+        --header-footer-inner-left-background: green;
+        --header-footer-inner-right-background: green;
+        --header-footer-text: white;
+        --main-background: blue;
+        --no-results-bg: lightblue;
+        --no-results-text: rgb(210, 210, 210);
+        --card-background: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(50, 50, 50);
+        --image-modal-and-card-text: rgb(210, 210, 210);
+        --card-image-background: orange;
+        --card-image-img-background: purple;
+        --button-text-bg: grey;
+        --button-text-bg-hover: hotpink;
+        --button-icon-bg: purple;
+        --button-icon-bg-hover: lightblue;
+        --button-text: rgba(255,255,255,.85);
+        --button-icon: goldenrod;
+        --logo-button-bg: magenta;
+        --logo-button-bg-hover: skyblue;
 
-/* #endregion COLOR-VARIABLES */       
+        --menu-modal-overlay-bg: rgba(255,255,255,.85);
+        --menu-modal-header-bg: pink;
+        --menu-modal-bg: yellow;
+        --menu-modal-search-wrapper-bg: lime;        
+        --menu-modal-input-reset-bg: purple;
+        --menu-modal-search-input-text: white;
+
+        --image-modal-overlay-bg: green;
+        --image-modal-content-bg: pink;
+        --image-modal-nav-and-text-bg: skyblue;
+        --image-modal-and-card-text-txt: lightblue;
+        --image-modal-headline-bg: red;
+        --image-modal-date-bg: lightgreen;
+        --image-modal-location-bg: red;
+        --image-modal-description-bg: lightgreen;
+        --image-modal-filename-bg: red;
+        --image-modal-keywords-bg: lightgreen;
+        --image-modal-nav-bg: blue;
+        --image-modal-nav-button-bg: orange;
+        --image-modal-back-and-forward-bg: lightgreen;
+        --image-modal-close-bg: grey;
+        --image-modal-text: hotpink;
+        --image-modal-image-container: orange;
+}
+/* #region MASTER_COLORS */       
+:root {
+        /* COPY THESE FROM .ASE ONLY */
+        --jason-1: rgb(110,105,90);
+        --jason-1-alpha: 110,105,90;
+        --jason-2: rgb(201,187,80);
+        --jason-2-alpha: 201,187,80;
+        --jason-3: rgb(204,98,38);
+        --jason-3-alpha: 204,98,38;
+        --jason-4: rgb(78,131,169);
+        --jason-4-alpha: 78,131,169;
+        --jason-5: rgb(203,193,174);
+        --jason-5-alpha: 203,193,174;
+}
+  /* #endregion MASTER_COLORS */       
+/* #endregion COLORS */       
 
 /* #region FONT_VARIABLES */       
 :root {
@@ -135,21 +212,37 @@ h4 {
   margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
 }
 .button-text {
-  color: var(--button-text);
-  font-family: var(--font-body);
-  font-weight: var(--weight-bold);
-  font-size: 0.875rem;
-  margin-top: 0;
-  margin-bottom: 0;
+        color: var(--button-text);
+        font-family: var(--font-body);
+        font-weight: var(--weight-bold);
+        font-size: 0.875rem;
+        text-decoration: none;
+        margin-top: 0;
+        margin-bottom: 0;
 }
 /* #endregion TEXT_VAR_STYLES */       
 
-/* #region MODAL_LAYOUT */
-:root,
-:root[data-theme='text_on_bottom'] {
---modal-content-flex-direction: column;
-  } 
-:root[data-theme='text_on_right'] {
---modal-content-flex-direction: row;
-  } 
-/* #endregion MODAL_LAYOUT */
+/* #region BUTTONS */     
+button {
+        background-color: none;
+        background: none;
+        border: none;
+}  
+.button-icon {
+        background: var(--button-icon-bg);
+        color: var(--button-text);
+        border: none;
+        border-radius: 4px;
+        padding: 4px;
+        line-height: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        text-decoration: none;
+}
+.button-icon:hover {
+        background: var(--button-icon-bg-hover);
+}
+
+/* #endregion BUTTONS */       

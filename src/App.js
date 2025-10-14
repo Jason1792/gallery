@@ -59,13 +59,14 @@ useEffect(() => {
         <Card
           key={idx}
           imageSrc={card.imageSrc}
+          imageTiny={card.imageTiny}
           headline={card.headline}
           date={card.date}
           location={card.location}
           description={card.description}
           filename={card.filename}
           keywords={card.keywords}
-          onImageClick={() => setSelectedIndex(idx)}   // store index instead of card
+          onImageClick={() => setSelectedIndex(idx)} // store index instead of card
       />
       ))}  
       </div>
@@ -79,29 +80,15 @@ useEffect(() => {
        {selectedIndex !== null && (
   <ImageModal
     imageSrc={filteredCardData[selectedIndex].imageSrc}
-    headline={filteredCardData[selectedIndex].headline}
+imageSmall={filteredCardData[selectedIndex].imageSmall}
+  imageMedium={filteredCardData[selectedIndex].imageMedium}
+  imageLarge={filteredCardData[selectedIndex].imageLarge} 
+headline={filteredCardData[selectedIndex].headline}
     date={filteredCardData[selectedIndex].date}
     location={filteredCardData[selectedIndex].location}
     description={filteredCardData[selectedIndex].description}
     filename={filteredCardData[selectedIndex].filename}
     keywords={filteredCardData[selectedIndex].keywords}
     onClose={() => setSelectedIndex(null)}
-    onNext={() =>
-      setSelectedIndex((prev) =>
-        (prev + 1) % filteredCardData.length
-      )
-    }
-    onPrev={() =>
-      setSelectedIndex((prev) =>
-        (prev - 1 + filteredCardData.length) % filteredCardData.length
-      )
-    }
-  />
-)}
-    </div>
-   
-
-  );
-}
-
-export default App;
+    onNext={() => setSelectedIndex((prev) => (prev + 1) % filteredCardData.length)}
+    onPrev={() => setSelectedIndex((prev) => (prev - 1 + filteredCardData.length) % filteredCardData.length)}/>)}</div>);}export default App;
