@@ -1,5 +1,5 @@
 .header {
-        background: var(--header-footer-background);
+        background: var(--header-footer-bg);
         color: var(--header-footer-text);
         width: 100%;
         padding: 0;
@@ -8,7 +8,7 @@
         z-index: 1000;
 }
 .header-inner {
-        background: var(--header-footer-inner-background);
+        background: var(--header-footer-inner-bg);
         max-width: 1000px;
         width: 100%;              
         margin: 0 auto;
@@ -21,7 +21,7 @@
 }
 .header-left {
         opacity: 100;
-        background: var(--header-footer-inner-left-background);
+        background: var(--header-left-bg);
         flex: 1 1 100%;
         display: flex;
         justify-content: space-between;
@@ -34,7 +34,7 @@
         padding: 0;
 }
 .logo-button {
-        background: var(--logo-button-background);
+        background: var(--logo-button-bg);
         color: var(--button-text);
         border: none;
         padding: 0;
@@ -58,12 +58,15 @@
 }
 }
 .header-right {
-        background: var(--header-footer-inner-right-background);
+        background: var(--header-right-bg);
+        flex: 1 1 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         box-sizing: border-box;
-        gap: 2.15rem;  
+        padding: 0 0 0 0;
+        gap: 15rem;
+        width: 0px;  
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .header-right {
@@ -79,9 +82,40 @@
 }
 .hamburger-icon {
         font-size: 2rem;
+        margin-right: 0;
+        padding: 4px;
+}
+.menu-modal-overlay {
+        position: fixed;
+        inset: 0;
+        background-color: var(--menu-modal-overlay-bg);
+        z-index: 1000;
+        display: grid;
+        place-items: center;
+}
+.menu-modal {
+        width: min(560px, 92vw);
+        border-radius: 10px;
+        background: var(--menu-modal-bg);
+        color: var(--menu-modal-and-card-text);
+        box-shadow: 0 10px 40px rgba(0,0,0,.45);
+        padding: 8px;
+        box-sizing: border-box;
+}
+.menu-modal-header {
+        background: var(--menu-modal-header-bg);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 12px;
 }
 .close-icon {
         font-size: 2rem;
+}
+.menu-modal-content {
+        display: grid;
+        gap: 12px;
+        width: 100%;
 }
 .menu-modal-search-wrapper {
         background: var(--menu-modal-search-wrapper-bg);
@@ -99,15 +133,17 @@
         background: var(--menu-modal-search-input-bg);
         color: var(--menu-modal-search-input-text);
         border: none;
-        height: 34px;
+        height: 40px;
+        width: 100%;
         vertical-align: middle;
         border-radius: 4px;
-        margin: 0 0 0 40px;
+        margin: 0 0 0 0px;
         padding: 0;
-        text-indent: 10px;
+        text-indent: 45px;
         box-sizing: border-box;
 }
 .search-icon {
+        opacity: .75;
         position: absolute;
         left: 0; /* no effect */
         top: 66%; /* no effect */
@@ -115,40 +151,20 @@
         pointer-events: none; /* so clicks go to input */
         font-size: 1.5rem;
 }
-.email-icon {
-        font-size: 2rem;
+/* remove the old .email-icon rules; replace with: */
+.email-button-wrapper { width: 100%; box-sizing: border-box; padding: 0; margin: 0; } /* already similar */
+.email-button {       /* the anchor behaves like a full-width button */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 0;
+  text-align: center;
 }
-.menu-modal-overlay {
-        position: fixed;
-        inset: 0;
-        background-color: var(--menu-modal-overlay-bg);
-        z-index: 1000;
-        display: grid;
-        place-items: center;
+.email-button .bi {   /* size the glyph only */
+  font-size: 2rem;
+  line-height: 1;
 }
-.menu-modal {
-        width: min(560px, 92vw);
-        border-radius: 10px;
-        background: var(--menu-modal-bg);
-        color: var(--menu-modal-and-card-text);
-        box-shadow: 0 10px 40px rgba(0,0,0,.45);
-        padding: 16px;
-}
-.menu-modal-header {
-        background: var(--menu-modal-header-bg);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 12px;
-}
-.menu-title {
-        margin: 0;
-        font-size: 1.125rem;
-}
-.menu-modal-content {
-        display: grid;
-        gap: 12px;
-}
+
 .menu-modal-content .menu-modal-input-reset {
         display: grid;
         grid-template-columns: 1fr auto;
@@ -165,29 +181,38 @@
         transform: translateY(-50%);
         display: inline-flex;
 }
-.menu-modal-content .search-input {
-        width: 100%;
-        padding: 10px 12px 10px 36px; /* left pad for icon */
+.search-icon {
+        padding: 0; /* left pad for icon */
         border: none;
+        margin: 0 0 0 -4px;
         border-radius: 6px;
-        background: var(--card-background);
-        color: var(--menu-modal-and-card-text);
+        background: none;
+        color: white;
+        opacity: .5;
         outline: none;
 }
-.menu-modal-content .search-input:focus {
-        box-shadow: 0 0 0 2px rgba(255,255,255,.08) inset;
+.menu-modal-search-input:focus {
+        box-shadow: none;
+        border: none;
+        outline: none;
 }
+
 /* Base: define the transition once */
 .reset-button {
         transition: opacity 400ms ease;
+        box-shadow: none;
+        border: none;
+        outline: none;
 }
-
+.menu-modal .reset-button:focus {
+  background: var(--button-text-bg-hover);
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
 /* Hidden state (when input is empty) */
 .reset-button.hidden {
         display: none;
-        /*
-        opacity: 0;
-        */
         pointer-events: none; /* not clickable when hidden */
 }
 
@@ -198,4 +223,8 @@
         opacity: 1;
         */
         pointer-events: auto;
+}
+/* When reset button is hidden, let the input expand full width */
+.menu-modal-input-reset:has(.reset-button.hidden) {
+  grid-template-columns: 1fr;  /* only one column (input) */
 }

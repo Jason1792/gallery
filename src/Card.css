@@ -1,5 +1,5 @@
 .card { 
-  background: var(--card-background);
+  background: var(--card-bg);
   display: flex;
   margin-bottom: 0;
   border: 0px solid red;

@@ -1,37 +1,39 @@
 /* #region COLORS */      
 :root, :root[data-theme='actual'] {
-        --body-background: 
+        --body-bg:
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
-                rgb(40, 40, 40);
-        --header-footer-background: 
+                rgb(35, 35, 35);
+        --header-footer-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(25, 25, 25);
-        --header-footer-inner-background: none;
-        --header-footer-inner-left-background: none;
-        --header-footer-inner-right-background: none;
+        --header-footer-inner-bg: none;
+        --header-footer-inner-left-bg: none;
+        --header-right-bg: none;
         --header-footer-text: white;
-        --main-background: none;
+        --email-button-wrapper-bg: none;
+        --main-bg: none;
         --no-results-bg: none;
         --no-results-text: rgb(210, 210, 210);
-        --card-background: 
+        --card-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(50, 50, 50);
-        --card-image-background: 
+        --card-image-bg: 
                 linear-gradient(90deg,
                 rgba(var(--jason-2-alpha),.9),
                 rgba(var(--jason-2-alpha),.9)), 
                 rgb(255, 255, 255);
-        --card-image-img-background: 
+        --card-image-img-bg: 
                 linear-gradient(
                 rgba(var(--jason-2-alpha),0),
                 rgba(var(--jason-2-alpha),0)), 
                 rgb(255, 255, 255);
+        --button-bg: none;
         --button-text-bg:
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.20),
@@ -62,10 +64,10 @@
                 rgb(0,0,0);
         --menu-modal-search-input-text: white;
 
-        --image-modal-overlay-bg: rgba(128,128,128,.5);
-        --image-modal-content-bg: rgba(25, 25, 25, 0.94);
-        --image-modal-nav-and-text-bg: rgb(44, 44, 44);
+        --image-modal-overlay-bg: rgba(128,128,128,1);
+        --image-modal-content-bg: var(--body-bg);
         --image-modal-and-card-text-txt: rgb(210, 210, 210);
+        --image-modal-nav-and-text-bg: var(--header-footer-bg);
         --image-modal-headline-bg: none;
         --image-modal-date-bg: none;
         --image-modal-location-bg: none;
@@ -79,31 +81,33 @@
         --image-modal-image-container: none;
 }
   :root[data-theme='test'] {
-        --body-background: 
+        --body-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(40, 40, 40);
-        --header-footer-background: 
+        --header-footer-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(25, 25, 25);
-        --header-footer-inner-background: pink;
-        --header-footer-inner-left-background: green;
-        --header-footer-inner-right-background: green;
+        --header-footer-inner-bg: pink;
+        --header-left-bg: black;
+        --header-right-bg: grey;
         --header-footer-text: white;
-        --main-background: blue;
+        --email-button-wrapper-bg: coral;
+        --main-bg: blue;
         --no-results-bg: lightblue;
         --no-results-text: rgb(210, 210, 210);
-        --card-background: 
+        --card-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(50, 50, 50);
         --image-modal-and-card-text: rgb(210, 210, 210);
-        --card-image-background: orange;
-        --card-image-img-background: purple;
+        --card-image-bg: orange;
+        --card-image-img-bg: purple;
+        --button-bg: turquoise;
         --button-text-bg: grey;
         --button-text-bg-hover: hotpink;
         --button-icon-bg: purple;
@@ -224,15 +228,18 @@ h4 {
 
 /* #region BUTTONS */     
 button {
-        background-color: none;
+        background-color: var(--button-bg);
         background: none;
         border: none;
+        margin: 0;
+        padding: 0;
 }  
 .button-icon {
         background: var(--button-icon-bg);
         color: var(--button-text);
         border: none;
         border-radius: 4px;
+        margin: 0;
         padding: 4px;
         line-height: 0;
         display: inline-flex;
@@ -244,5 +251,4 @@ button {
 .button-icon:hover {
         background: var(--button-icon-bg-hover);
 }
-
 /* #endregion BUTTONS */       

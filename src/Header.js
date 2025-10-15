@@ -69,20 +69,25 @@ const Header = ({ searchTerm, setSearchTerm }) => {
               <div className="menu-modal-input-reset"/* SEARCH & RESET */>
                 <div className="menu-modal-search-wrapper"/* SEARCH ICON & INPUT FIELD */>
                   <span>
-                        <i className="button-icon search-icon bi bi-search"></i>
+                        <i className="search-icon bi bi-search"></i>
                   </span>
                   <input className="menu-modal-search-input" 
                     ref={inputRef} type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
                 </div>
                 <button /* RESET */
                         className={`button reset-button button-text ${searchTerm.length > 0 ? "visible" : "hidden"}`} onClick={() => setSearchTerm("")} >
-                        Reset
+                        Clear
                 </button>
-              </div>
-              <a className="button-icon" /* EMAIL */
-              href="mailto:jdullack@gmail.com" target="_blank" rel="noopener noreferrer" >
-                <i class="email-icon button-icon bi bi-envelope"></i>
-              </a>
+                </div>
+                <div className="email-button-wrapper">
+                        <a
+                        className="button-icon email-button"
+                        href="mailto:jdullack@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <i className="bi bi-envelope"></i>      {/* icon only */}
+                        </a>
+                </div>
             </div>
           </div>
         </div>

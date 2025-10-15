@@ -13,7 +13,7 @@
 }
 .image-modal-content { 
         /* Contains image, text, buttons. With image-modal-content width & height at 100vh, image-modal-overlay is completely hidden. */
-        background-color: var(--image-modal-content-bg);
+        background: var(--image-modal-content-bg);
         padding: 0;
         width: 100vw;
         height: 100vh;
@@ -26,7 +26,7 @@
         row-gap: 12px;
 }
 .image-modal-nav-and-text {
-        background-color: var(--image-modal-nav-and-text-bg);
+        background: var(--image-modal-nav-and-text-bg);
         color: var(--image-modal-and-card-text-txt);
         width: 100%;
         height: fit-content;
@@ -34,8 +34,8 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 8px 8px 5px 8px;
-        gap: 8px; 
+        padding: 9px 0 5px 0;
+        gap: 6px; 
         box-sizing: border-box;
         border-radius: 0;
         min-height: fit-content;
@@ -47,8 +47,8 @@
         justify-content: flex-end;
         align-items: flex-start;
         padding: 0;
-        margin: 6px 0 0 0;
-        gap: 2.5vw;
+        margin: 3px 0 0 0;
+        gap: 2vw;
         box-sizing: border-box;
         border-radius: 6px;
         flex: 1 1 50%;
@@ -61,7 +61,7 @@
 }
 }
 i {
-        font-size: 2rem;
+        font-size: 1.5rem;
 }
 .image-modal-close { /* e: div */
         background-color: var(--image-modal-close-bg);
@@ -71,7 +71,7 @@ i {
         border-radius: 6px;
 }
 .image-modal-close i { /* e: div */
-        font-size: 2rem;
+        font-size: 1.5rem;
 }
 .image-modal-nav-button { /* e: button */
         height: 100%;
@@ -95,37 +95,44 @@ i {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
-        padding: 0px 8px 0px 0px; /* troubleshooting; reset 20s to 0s */
+        padding: 0px 8px 0px 0px;
         gap: .5vw;
         box-sizing: border-box;
         border-radius: 6px;
 }
 .image-modal-text {
         background-color: var(--image-modal-text);
-        padding: 4px 0 0 10px;
+        padding: 4px 0 0 4px;
         border-radius: 6px;
         flex: 1 1 50%;
 }
 .image-modal-headline {
         background-color: var(--image-modal-headline-bg);
         font-size: 1.3rem;
+        font-size: 1.2rem;
         margin: 0;
         padding: 0;
         line-height: 1.25rem;    
+        line-height: 1rem;    
 }
 .image-modal-date {
         background-color: var(--image-modal-date-bg);
         font-size: 1rem;
+        font-size: .9rem;
         margin: 0;
-        padding: 10px 0 0 0;
+        padding: 5px 0 1px 0;
         line-height: 1.25rem;    
+        line-height: 1rem;    
 }
 .image-modal-location {
+        display: none;
         background-color: var(--image-modal-location-bg);
         font-size: 1rem;
+        font-size: .8rem;
         margin: 0;
         padding: 8px 0 6px 0;
         line-height: 1.25rem;    
+        line-height: .75rem;    
 }
 .image-modal-description {  
         display: none;

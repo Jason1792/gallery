@@ -1,12 +1,12 @@
 .footer {
         display: none;
-        background: var(--header-footer-background);
+        background: var(--header-footer-bg);
         color: var(--header-footer-text);
         width: 100%;
         padding: 0;
 }
 .footer-inner {
-        background: var(--header-footer-inner-background);
+        background: var(--header-footer-inner-bg);
         max-width: 1000px;
         width: 100%;              
         margin: 0 auto;
@@ -19,9 +19,9 @@
         gap: 3rem;
 }
 .footer-left {
-        background: var(--header-footer-inner-left-background);
+        background: var(--header-footer-inner-left-bg);
         flex: 1 1 100%;
 }
 .footer-right {
-        background: var(--header-footer-inner-right-background);
+        background: var(--header-footer-inner-right-bg);
 }
