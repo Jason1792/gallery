@@ -1,6 +1,5 @@
 import "./App.css";
 import Header from "./Header";
-import Footer from "./Footer";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
@@ -49,6 +48,27 @@ useEffect(() => {
   }
 }, [searchTerm, cardData]);
 
+// Safe text coercion for anything (null, number, object, etc.)
+const asText = (v) => {
+  if (v == null) return "";            // null/undefined
+  if (typeof v === "string") return v.trim();
+  // If it's a Date (unlikely after JSON), format it; else String() then trim
+  if (v instanceof Date) return v.toLocaleDateString();
+  return String(v).trim();
+};
+
+// Combine date + location safely (no dangling separators)
+const formatDateLocation = (date, location) => {
+  const d = asText(date);
+  const l = asText(location);
+  return d && l ? `${d} • ${l}` : d || l;
+};
+cardData.forEach((c, i) => {
+  if (c.date != null && typeof c.date !== "string")
+    console.warn("Non-string date at row", i, c.date);
+  if (c.location != null && typeof c.location !== "string")
+    console.warn("Non-string location at row", i, c.location);
+});
   return (
     <div className="App">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
@@ -61,6 +81,7 @@ useEffect(() => {
           imageSrc={card.imageSrc}
           imageTiny={card.imageTiny}
           headline={card.headline}
+          dateLocation={formatDateLocation(card.date, card.location)}
           date={card.date}
           location={card.location}
           description={card.description}
@@ -76,19 +97,22 @@ useEffect(() => {
         </div>
     )}
 </main>
-      <Footer />
        {selectedIndex !== null && (
-  <ImageModal
-    imageSrc={filteredCardData[selectedIndex].imageSrc}
-imageSmall={filteredCardData[selectedIndex].imageSmall}
-  imageMedium={filteredCardData[selectedIndex].imageMedium}
-  imageLarge={filteredCardData[selectedIndex].imageLarge} 
-headline={filteredCardData[selectedIndex].headline}
-    date={filteredCardData[selectedIndex].date}
-    location={filteredCardData[selectedIndex].location}
-    description={filteredCardData[selectedIndex].description}
-    filename={filteredCardData[selectedIndex].filename}
-    keywords={filteredCardData[selectedIndex].keywords}
-    onClose={() => setSelectedIndex(null)}
-    onNext={() => setSelectedIndex((prev) => (prev + 1) % filteredCardData.length)}
-    onPrev={() => setSelectedIndex((prev) => (prev - 1 + filteredCardData.length) % filteredCardData.length)}/>)}</div>);}export default App;
+        <ImageModal
+        imageSrc={filteredCardData[selectedIndex].imageSrc}
+        imageSmall={filteredCardData[selectedIndex].imageSmall}
+        imageMedium={filteredCardData[selectedIndex].imageMedium}
+        imageLarge={filteredCardData[selectedIndex].imageLarge} 
+        headline={filteredCardData[selectedIndex].headline}
+        dateLocation={formatDateLocation(
+                filteredCardData[selectedIndex].date,
+                filteredCardData[selectedIndex].location)}
+        date={filteredCardData[selectedIndex].date}
+        location={filteredCardData[selectedIndex].location}
+        description={filteredCardData[selectedIndex].description}
+        filename={filteredCardData[selectedIndex].filename}
+        keywords={filteredCardData[selectedIndex].keywords}
+        onClose={() => setSelectedIndex(null)}
+        onNext={() => setSelectedIndex((prev) => (prev + 1) % filteredCardData.length)}
+        onPrev={() => setSelectedIndex((prev) => (prev - 1 + filteredCardData.length) % filteredCardData.length)}/>)}</div>);}
+export default App;

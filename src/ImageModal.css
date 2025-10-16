@@ -34,7 +34,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 9px 0 5px 0;
+        padding: 6px 0;
         gap: 6px; 
         box-sizing: border-box;
         border-radius: 0;
@@ -46,8 +46,8 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
-        padding: 0;
-        margin: 3px 0 0 0;
+        padding: 4px 0 0 0;
+        margin: 0;
         gap: 2vw;
         box-sizing: border-box;
         border-radius: 6px;
@@ -61,7 +61,7 @@
 }
 }
 i {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
 }
 .image-modal-close { /* e: div */
         background-color: var(--image-modal-close-bg);
@@ -71,7 +71,7 @@ i {
         border-radius: 6px;
 }
 .image-modal-close i { /* e: div */
-        font-size: 1.5rem;
+        font-size: 1.8rem;
 }
 .image-modal-nav-button { /* e: button */
         height: 100%;
@@ -108,30 +108,31 @@ i {
 }
 .image-modal-headline {
         background-color: var(--image-modal-headline-bg);
-        font-size: 1.3rem;
         font-size: 1.2rem;
         margin: 0;
         padding: 0;
-        line-height: 1.25rem;    
+        line-height: 1rem;    
+}
+.image-modal-date-location {
+        background-color: var(--image-modal-date-bg);
+        font-size: .9rem;
+        margin: 0;
+        padding: 6px 0 1px 0;
         line-height: 1rem;    
 }
 .image-modal-date {
         background-color: var(--image-modal-date-bg);
-        font-size: 1rem;
         font-size: .9rem;
         margin: 0;
         padding: 5px 0 1px 0;
-        line-height: 1.25rem;    
         line-height: 1rem;    
 }
 .image-modal-location {
         display: none;
         background-color: var(--image-modal-location-bg);
-        font-size: 1rem;
         font-size: .8rem;
         margin: 0;
         padding: 8px 0 6px 0;
-        line-height: 1.25rem;    
         line-height: .75rem;    
 }
 .image-modal-description {  

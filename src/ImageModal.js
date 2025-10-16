@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./ImageModal.css";
 
 const ImageModal = ({
-  imageSrc, imageSmall, imageMedium, imageLarge, headline, date, location, description, filename, keywords, onClose, onNext, onPrev }) => {
+  imageSrc, imageSmall, imageMedium, imageLarge, headline, dateLocation, date, location, description, filename, keywords, onClose, onNext, onPrev }) => {
   // Lock body scroll while modal is open
   useEffect(() => {
     const prev = document.body.style.overflow;
@@ -48,8 +48,14 @@ const large  = imageLarge  ? encodeURI(imageLarge)  : imageSrc;
 
           <div className="image-modal-text">
             <h3 className="image-modal-headline">{headline}</h3>
-            <p className="image-modal-date">{date}</p>
-            <p className="image-modal-location">{location}</p>
+            {dateLocation ? (
+                          <p className="image-modal-date-location">{dateLocation}</p>
+                        ) : (
+                        <>
+                        <p className="image-modal-date">{date || ""}</p>
+                        <p className="image-modal-location">{location || ""}</p>
+                        </>
+                        )}
             <p className="image-modal-description">{description}</p>
             <p className="image-modal-filename">{filename}</p>
             <p className="image-modal-keywords">{keywords}</p>

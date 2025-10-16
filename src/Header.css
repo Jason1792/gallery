@@ -38,7 +38,11 @@
         color: var(--button-text);
         border: none;
         padding: 0;
-        transition: background-color 0.3s ease;
+        filter: saturate(50%);
+        transition: filter 0.4s ease;
+}
+.logo-button:hover {
+        filter: saturate(100%);
 }
 .logo-button img {
         display: block;

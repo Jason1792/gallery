@@ -33,6 +33,7 @@
                 rgba(var(--jason-2-alpha),0),
                 rgba(var(--jason-2-alpha),0)), 
                 rgb(255, 255, 255);
+        --card-text-bg: none;
         --button-bg: none;
         --button-text-bg:
                 linear-gradient(
@@ -107,6 +108,7 @@
         --image-modal-and-card-text: rgb(210, 210, 210);
         --card-image-bg: orange;
         --card-image-img-bg: purple;
+        --card-text-bg: lime;
         --button-bg: turquoise;
         --button-text-bg: grey;
         --button-text-bg-hover: hotpink;

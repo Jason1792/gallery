@@ -1,106 +1,88 @@
 .card { 
-  background: var(--card-bg);
-  display: flex;
-  margin-bottom: 0;
-  border: 0px solid red;
-  border-radius: 8px;
-  overflow: hidden;
-  box-sizing: border-box;
+        background: var(--card-bg);
+        display: flex;
+        margin: 0;
+        border: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-sizing: border-box;
 }
 .card-image {
-  flex: 1 1 50%;
-  padding: 10px;
-  box-sizing: border-box;
+        flex: 1 1 50%;
+        padding: 10px;
+        box-sizing: border-box;
 }
 .card-text {
-  color: var(--image-modal-and-card-text-txt);
-  flex: 1 1 50%;
-  padding: 10px;
-  box-sizing: border-box;
+        background-color: var(--card-text-bg);
+        color: var(--image-modal-and-card-text-txt);
+        flex: 1 1 50%;
+        padding: 10px;
+        box-sizing: border-box;
 }
 .card-image {
-  background: none;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  max-height: 600px;
-  overflow: hidden;
+        background: none;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        max-height: 600px;
+        overflow: hidden;
 }
 .card-image img {
-  background: none;
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  border-radius: 5px;    
-  cursor: pointer;
-  padding: 0;
+        background: none;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;    
+        cursor: pointer;
+        padding: 0;
+        filter: saturate(0%);
+        transition: filter 0.4s ease;
 }
 .card-image img:hover {
-  opacity: 0.5;
-  transition: opacity 0.2s ease;
+        filter: saturate(110%);
 }
 .card-headline {
-  font-size: 1rem;
-  margin-top: 0;    
-  margin-bottom: 0;
-  line-height: 1.25rem;    
+        font-size: 1rem;
+        margin-top: 0;    
+        margin-bottom: 0;
+        line-height: 1.25rem;    
 }
+.card-date-location {
+        display: none;
+        font-size: .8rem;
+        margin-top: 2px;    
+        margin-bottom: 0;
+} 
 .card-date {
-  font-size: .8rem;
-  margin-top: 2px;    
-  margin-bottom: 0;
+        display: none;
+        font-size: .8rem;
+        margin-top: 2px;    
+        margin-bottom: 0;
 } 
 .card-location {
-  display: none;
-  font-size: 1.0rem;
-  margin-top: 0;    
-  margin-bottom: 8px;
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
 }
 .card-description {
-  display: none;
-  font-size: 1.0rem;
-  margin-top: 0;    
-  margin-bottom: 8px;
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
 }
 .card-filename {
-  display: none;
-  font-size: 1.0rem;
-  margin-top: 0;    
-  margin-bottom: 8px;
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
 }
 .card-keywords {
-  display: none;
-  font-size: 1.0rem;
-  margin-top: 0;    
-  margin-bottom: 8px;
+        display: none;
+        font-size: 1.0rem;
+        margin-top: 0;    
+        margin-bottom: 8px;
 }
-
-/* #region TABLET TABLET TABLET TABLET TABLET  */
-
-/* TABLET TABLET TABLET TABLET TABLET
-   TABLET TABLET TABLET TABLET TABLET   
-   TABLET TABLET TABLET TABLET TABLET   
-   TABLET TABLET TABLET TABLET TABLET   
-   TABLET TABLET TABLET TABLET TABLET */
-
-@media (min-width: 601px) and (max-width: 1024px) {
-
-}
-/* #endregion END TABLET  */
-
-/* #region SMALL SMALL SMALL SMALL SMALL  */       
-
-/* SMALL SMALL SMALL SMALL SMALL
-   SMALL SMALL SMALL SMALL SMALL   
-   SMALL SMALL SMALL SMALL SMALL   
-   SMALL SMALL SMALL SMALL SMALL   
-   SMALL SMALL SMALL SMALL SMALL */  
-
-@media (max-width: 600px) {
-
-}
-/* #endregion END SMALL */       
-  
