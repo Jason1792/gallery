@@ -6,17 +6,6 @@ const Header = ({ searchTerm, setSearchTerm }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const inputRef = useRef(null);
 
-  // Lock/unlock page scroll while menu is open
-  useEffect(() => {
-    const root = document.documentElement;
-    if (isMenuOpen) {
-      root.classList.add("menu-open");
-    } else {
-      root.classList.remove("menu-open");
-    }
-    return () => root.classList.remove("menu-open");
-  }, [isMenuOpen]);
-
   // Close on Esc
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -44,55 +33,36 @@ const Header = ({ searchTerm, setSearchTerm }) => {
           </button>
         </div>
         <div className="header-right">
-          <button
-            aria-label="Open menu"
-            aria-haspopup="dialog"
-            aria-expanded={isMenuOpen}
-            onClick={() => setIsMenuOpen(true)}
-            title="Open menu" >
-                <i className="button-icon hamburger-icon bi bi-list"></i>
-          </button>
+          <button className="button menu-toggle-button"
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                aria-haspopup="dialog"
+                aria-expanded={isMenuOpen}
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                title={isMenuOpen ? "Close menu" : "Open menu"}
+                >
+                <i className={`bi ${isMenuOpen ? "bi-x-lg close-icon" : "bi-list hamburger-icon"}`}></i>
+        </button>
         </div>
       </div>
       {isMenuOpen && (
-        <div className="menu-modal-overlay" /* OVERLAY */
-        role="presentation" onClick={() => setIsMenuOpen(false)}>
-          <div className="menu-modal" /* ENTIRE DIALOGUE PANEL */
-          role="dialog" aria-modal="true" aria-label="Search and contact"
-            onClick={(e) => e.stopPropagation()}>
-            <div className="menu-modal-header" /* HEADER (CLOSE BTN) */>
-              <button aria-label="Close menu" onClick={() => setIsMenuOpen(false)} title="Close" >
-                        <i className="button-icon close-icon bi bi-x-lg"></i>
-              </button>
-            </div>
-            <div className="menu-modal-content" /* SEARCH, RESET, EMAIL */>
-              <div className="menu-modal-input-reset"/* SEARCH & RESET */>
-                <div className="menu-modal-search-wrapper"/* SEARCH ICON & INPUT FIELD */>
-                  <span>
-                        <i className="search-icon bi bi-search"></i>
-                  </span>
-                  <input className="menu-modal-search-input" 
-                    ref={inputRef} type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)}/>
-                </div>
-                <button /* RESET */
-                        className={`button reset-button button-text ${searchTerm.length > 0 ? "visible" : "hidden"}`} onClick={() => setSearchTerm("")} >
-                        Clear
-                </button>
-                </div>
-                <div className="email-button-wrapper">
-                        <a
-                        className="button-icon email-button"
-                        href="mailto:jdullack@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <i className="bi bi-envelope"></i>      {/* icon only */}
-                        </a>
-                </div>
-            </div>
+  <div className="menu-outer" /* none | grey */
+  role="region" aria-label="Search and contact">
+    <div className="menu-inner" /* none | yella */>        <div className="menu-modal-input-reset">
+          <div className="menu-modal-search-wrapper">
+            <span>
+              <i className="search-icon bi bi-search"></i>
+            </span>
+            <input className="menu-modal-search-input"
+              ref={inputRef} type="text" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
           </div>
+          <button className={`button reset-button ${searchTerm.length > 0 ? "visible" : "hidden"}`}
+            onClick={() => setSearchTerm("")}>
+            Clear
+          </button>
         </div>
-      )}
-    </header>
-  );
-};
+        <div className="email-button-wrapper">
+          <a className="button email-button"
+            href="mailto:jdullack@gmail.com" target="_blank" rel="noopener noreferrer">
+            <i className="bi bi-envelope"></i>
+          </a></div></div></div>)}</header>);};
 export default Header;

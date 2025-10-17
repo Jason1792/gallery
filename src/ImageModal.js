@@ -25,21 +25,19 @@ const large  = imageLarge  ? encodeURI(imageLarge)  : imageSrc;
         <div className="image-modal-nav-and-text">
           <div className="image-modal-nav">
             <div className="image-modal-close">
-              <button className="image-modal-nav-button" onClick={onClose}>
-
-                <i className="button-icon close-icon bi bi-x-lg"></i>
+              <button className="button image-modal-nav-button" onClick={onClose}>
+                <i className="close-icon bi bi-x-lg"></i>
               </button>
             </div>
             <div className="image-modal-back-and-forward">
-              <button className="image-modal-nav-button" onClick={onPrev}>
-                <i
-                  className="button-icon left-icon bi bi-chevron-left accordion-button-icon"
+              <button className="button image-modal-nav-button" onClick={onPrev}>
+                <i className="left-icon bi bi-chevron-left"
                   aria-hidden="true"
                 />
               </button>
-              <button className="image-modal-nav-button" onClick={onNext}>
+              <button className="button image-modal-nav-button" onClick={onNext}>
                 <i
-                  className="button-icon right-icon bi bi-chevron-right accordion-button-icon"
+                  className="right-icon bi bi-chevron-right"
                   aria-hidden="true"
                 />
               </button>

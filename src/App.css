@@ -68,7 +68,7 @@ main {
 }
 }
 .button {
-        background: var(--button-text-bg);
+        background: var(--button-bg);
         color: var(--button-text);
         border: none;
         padding: 8px 16px;
@@ -85,5 +85,5 @@ main {
   padding: 8px 16.75px;
 }
 .button:hover {
-  background: var(--button-text-bg-hover);
+  background: var(--button-bg-hover);
 }

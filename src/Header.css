@@ -12,7 +12,7 @@
         max-width: 1000px;
         width: 100%;              
         margin: 0 auto;
-        padding: 8px;        
+        padding: 0;        
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -31,13 +31,13 @@
         gap: 3rem;
         margin: 0;
         vertical-align: middle;
-        padding: 0;
+        padding: 8px;
 }
 .logo-button {
         background: var(--logo-button-bg);
-        color: var(--button-text);
         border: none;
         padding: 0;
+        margin: 0;
         filter: saturate(50%);
         transition: filter 0.4s ease;
 }
@@ -85,41 +85,46 @@
 }
 }
 .hamburger-icon {
-        font-size: 2rem;
-        margin-right: 0;
-        padding: 4px;
-}
-.menu-modal-overlay {
-        position: fixed;
-        inset: 0;
-        background-color: var(--menu-modal-overlay-bg);
-        z-index: 1000;
-        display: grid;
-        place-items: center;
-}
-.menu-modal {
-        width: min(560px, 92vw);
-        border-radius: 10px;
-        background: var(--menu-modal-bg);
-        color: var(--menu-modal-and-card-text);
-        box-shadow: 0 10px 40px rgba(0,0,0,.45);
-        padding: 8px;
-        box-sizing: border-box;
-}
-.menu-modal-header {
-        background: var(--menu-modal-header-bg);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 12px;
+        opacity: 1;
 }
 .close-icon {
-        font-size: 2rem;
+        opacity: 1;
 }
-.menu-modal-content {
-        display: grid;
-        gap: 12px;
+.menu-toggle-button {
+  border: none;
+  padding: 0;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu-toggle-button .bi {
+  font-size: 2rem;
+  padding: 4px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.menu-outer { /* none | grey */
+  width: 100%;
+  background: var(--menu-outer-bg);
+  overflow: hidden;
+}
+.menu-inner { /* none | yella */
+        max-width: 1000px;       
         width: 100%;
+        display: grid;
+        gap: 8px;
+        margin: 0 auto;         
+        border-radius: 0;
+        background: var(--menu-inner-bg);
+        color: var(--menu-modal-and-card-text);
+        padding: 8px 8px 0 8px ;
+        box-sizing: border-box;
+        animation: menuSlide 180ms ease-out;
+}
+@keyframes menuSlide {
+  from { transform: translateY(-8px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
 }
 .menu-modal-search-wrapper {
         background: var(--menu-modal-search-wrapper-bg);
@@ -146,39 +151,34 @@
         text-indent: 45px;
         box-sizing: border-box;
 }
-.search-icon {
-        opacity: .75;
-        position: absolute;
-        left: 0; /* no effect */
-        top: 66%; /* no effect */
-        transform: translateY(-50%);
-        pointer-events: none; /* so clicks go to input */
-        font-size: 1.5rem;
+.email-button-wrapper { 
+        width: 100%; 
+        box-sizing: border-box; 
+        padding: 0; 
+        margin: 0; 
 }
-/* remove the old .email-icon rules; replace with: */
-.email-button-wrapper { width: 100%; box-sizing: border-box; padding: 0; margin: 0; } /* already similar */
-.email-button {       /* the anchor behaves like a full-width button */
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 6px 0;
-  text-align: center;
+.email-button {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 0 4px 0;
+        text-align: center;
 }
-.email-button .bi {   /* size the glyph only */
-  font-size: 2rem;
-  line-height: 1;
+.bi-envelope {
+        font-size: 2rem;
+        line-height: 1;
 }
 
-.menu-modal-content .menu-modal-input-reset {
+.menu-inner .menu-modal-input-reset {
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 8px;
         align-items: center;
 }
-.menu-modal-content .menu-modal-search-wrapper {
+.menu-inner .menu-modal-search-wrapper {
         position: relative;
 }
-.menu-modal-content .search-icon {
+.menu-inner .search-icon {
         position: absolute;
         left: 10px;
         top: 50%;
@@ -194,41 +194,34 @@
         color: white;
         opacity: .5;
         outline: none;
+        font-size: 1.5rem;
 }
 .menu-modal-search-input:focus {
         box-shadow: none;
         border: none;
         outline: none;
 }
-
-/* Base: define the transition once */
 .reset-button {
         transition: opacity 400ms ease;
+        padding: 19px 12px 20px 12px;
         box-shadow: none;
         border: none;
         outline: none;
 }
-.menu-modal .reset-button:focus {
-  background: var(--button-text-bg-hover);
-  box-shadow: none;
-  border: none;
-  outline: none;
+.reset-button:focus {
+        background: var(--button-bg-hover);
+        box-shadow: none;
+        border: none;
+        outline: none;
 }
-/* Hidden state (when input is empty) */
 .reset-button.hidden {
         display: none;
-        pointer-events: none; /* not clickable when hidden */
+        pointer-events: none;
 }
-
-/* Visible state (when input has text) */
 .reset-button.visible {
         display: inline-block;
-        /*
-        opacity: 1;
-        */
         pointer-events: auto;
 }
-/* When reset button is hidden, let the input expand full width */
 .menu-modal-input-reset:has(.reset-button.hidden) {
-  grid-template-columns: 1fr;  /* only one column (input) */
+  grid-template-columns: 1fr; 
 }

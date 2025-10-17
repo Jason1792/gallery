@@ -5,6 +5,10 @@
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(35, 35, 35);
+        --button-bg: rgba(var(--jason-5-alpha),.25);
+        --button-bg-hover: rgba(var(--jason-3-alpha),.6);
+        --button-text: rgba(255,255,255,.7);        
+        --button-text-hover: rgba(255,255,255,1);        
         --header-footer-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
@@ -34,18 +38,6 @@
                 rgba(var(--jason-2-alpha),0)), 
                 rgb(255, 255, 255);
         --card-text-bg: none;
-        --button-bg: none;
-        --button-text-bg:
-                linear-gradient(
-                rgba(var(--jason-1-alpha),.20),
-                rgba(var(--jason-1-alpha),.20)), 
-                rgb(50, 50, 50);
-        --button-text-bg-hover: 
-                var(--jason-3);
-        --button-icon-bg: rgba(255,255,255,.08);
-        --button-icon-bg-hover: rgba(var(--jason-5-alpha),.25);
-        --button-text: rgba(255,255,255,.85);
-        --button-icon: var(--button-text);
         --logo-button-bg: none;
         --logo-button-bg-hover: 
                 linear-gradient(90deg,
@@ -53,16 +45,11 @@
                 rgba(var(--jason-2-alpha),.15)), 
                 rgb(52, 52, 52);
 
-        --menu-modal-overlay-bg: rgba(0,0,0,.5);
-        --menu-modal-header-bg: none;
-        --menu-modal-bg: rgba(0,0,0,.8);
+        --menu-outer-bg: var(--body-bg);
+        --menu-inner-bg: none;
         --menu-modal-search-wrapper-bg: none;        
         --menu-modal-input-reset-bg: none;
-        --menu-modal-search-input-bg:
-                linear-gradient(90deg,
-                rgba(var(--jason-1-alpha),.5),
-                rgba(var(--jason-1-alpha),.5)), 
-                rgb(0,0,0);
+        --menu-modal-search-input-bg: rgba(255,255,255,.08);
         --menu-modal-search-input-text: white;
 
         --image-modal-overlay-bg: rgba(128,128,128,1);
@@ -108,20 +95,15 @@
         --image-modal-and-card-text: rgb(210, 210, 210);
         --card-image-bg: orange;
         --card-image-img-bg: purple;
-        --card-text-bg: lime;
+        --card-text-bg: rgb(55, 168, 55);
         --button-bg: turquoise;
-        --button-text-bg: grey;
-        --button-text-bg-hover: hotpink;
-        --button-icon-bg: purple;
-        --button-icon-bg-hover: lightblue;
+        --button-bg-hover: hotpink;
         --button-text: rgba(255,255,255,.85);
-        --button-icon: goldenrod;
         --logo-button-bg: magenta;
         --logo-button-bg-hover: skyblue;
 
-        --menu-modal-overlay-bg: rgba(255,255,255,.85);
-        --menu-modal-header-bg: pink;
-        --menu-modal-bg: yellow;
+        --menu-outer-bg: grey;
+        --menu-inner-bg: yellow;
         --menu-modal-search-wrapper-bg: lime;        
         --menu-modal-input-reset-bg: purple;
         --menu-modal-search-input-text: white;
@@ -137,7 +119,6 @@
         --image-modal-filename-bg: red;
         --image-modal-keywords-bg: lightgreen;
         --image-modal-nav-bg: blue;
-        --image-modal-nav-button-bg: orange;
         --image-modal-back-and-forward-bg: lightgreen;
         --image-modal-close-bg: grey;
         --image-modal-text: hotpink;
@@ -176,48 +157,49 @@
 /* #region TEXT_STYLES */
 
 body {
-  font-family: var(--font-body);
-  font-weight: var(--weight-regular);
-  line-height: 1.6;
-  font-size: 1rem;
-  color: white;
-  margin: 0;
+        font-family: var(--font-body);
+        font-weight: var(--weight-regular);
+        line-height: 1.6;
+        font-size: 1rem;
+        color: white;
+        margin: 0;
 }
 ul {
-  margin-top: .5rem;
-  margin-bottom: 2rem;
+        margin-top: .5rem;
+        margin-bottom: 2rem;
 }
 h2 {
-  color: inherit;
-  font-family: var(--font-heading);
-  font-weight: var(--weight-semi-bold);
-  font-size: 1.8rem;
-  line-height: 1;
-  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+        color: inherit;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.8rem;
+        line-height: 1;
+        margin: 0;
 }
 h3 {
-  color: inherit;
-  font-family: var(--font-heading);
-  font-weight: var(--weight-semi-bold);
-  font-size: 1.8rem;
-  line-height: 1;
-  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+        color: inherit;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.8rem;
+        line-height: 1;
+        margin: 0;
 }
 h4 {
-  color: inherit;
-  font-family: var(--font-heading);
-  font-weight: var(--weight-medium);
-  font-size: 1.8rem;
-  line-height: 1;
-  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+        color: inherit;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.8rem;
+        line-height: 1;
+        margin: 0;
 }
 .body-small {
-  font-family: var(--font-body);
-  font-weight: var(--weight-regular);
-  font-size: 0.875rem;
-  margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+        font-family: var(--font-body);
+        font-weight: var(--weight-regular);
+        font-size: 0.875rem;
+        margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
 }
 .button-text {
+        background: var(--button-bg);
         color: var(--button-text);
         font-family: var(--font-body);
         font-weight: var(--weight-bold);
@@ -231,26 +213,18 @@ h4 {
 /* #region BUTTONS */     
 button {
         background-color: var(--button-bg);
+        color: var(--button-text);
         background: none;
         border: none;
         margin: 0;
         padding: 0;
-}  
-.button-icon {
-        background: var(--button-icon-bg);
-        color: var(--button-text);
-        border: none;
         border-radius: 4px;
-        margin: 0;
-        padding: 4px;
-        line-height: 0;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
         text-decoration: none;
-}
-.button-icon:hover {
-        background: var(--button-icon-bg-hover);
+        cursor: pointer;
+        line-height: 0;
+}  
+.button:hover {
+        background: var(--button-bg-hover);
+        color: var(--button-text-hover);
 }
 /* #endregion BUTTONS */       

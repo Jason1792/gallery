@@ -34,7 +34,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 6px 0;
+        padding: 5.5px 0 3.5px 0;
         gap: 6px; 
         box-sizing: border-box;
         border-radius: 0;
@@ -46,7 +46,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-start;
-        padding: 4px 0 0 0;
+        padding: 0;
         margin: 0;
         gap: 2vw;
         box-sizing: border-box;
@@ -63,31 +63,27 @@
 i {
         font-size: 1.8rem;
 }
-.image-modal-close { /* e: div */
+.image-modal-nav-button {
+  border: none;
+  padding: 0;
+  margin: 0 8px 0 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-modal-nav-button .bi {
+  font-size: 2rem;
+  padding: 4px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}.image-modal-close { /* e: div */
         background-color: var(--image-modal-close-bg);
         height: 100%;
-        padding: 0; /* troubleshooting; reset to 0 */
         box-sizing: border-box;
         border-radius: 6px;
 }
 .image-modal-close i { /* e: div */
         font-size: 1.8rem;
-}
-.image-modal-nav-button { /* e: button */
-        height: 100%;
-        padding: 0;
-        font-weight: bold;
-        background-color: var(--image-modal-nav-button-bg);
-        color: rgb(204,204,204);
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-}
-.image-modal-nav-button:hover { /* e: button */
-        background-color: none;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
 }
 .image-modal-back-and-forward { /* e: div */
         background-color: var(--image-modal-back-and-forward-bg);
