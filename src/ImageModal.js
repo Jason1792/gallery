@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./ImageModal.css";
 
 const ImageModal = ({
@@ -12,12 +12,69 @@ const ImageModal = ({
     };
   }, []);
 
+const lastXRef = useRef(null);
+
+const [startX, setStartX] = useState(null);
+const [startY, setStartY] = useState(null);
+const [isSwiping, setIsSwiping] = useState(false);
+
   if (!imageSrc && !imageLarge && !imageMedium && !imageSmall) return null;
 
-  // Fallbacks in case one of the sizes isn't provided. Also solves spaces-in-filename issue
+
+const isTouchBreakpoint = typeof window !== "undefined" ? window.innerWidth <= 1024 : true;
+const SWIPE_THRESHOLD = 50; // px required to trigger
+const MAX_VERTICAL_DRIFT = 30; // ignore if vertical motion is large
+
 const small  = imageSmall  ? encodeURI(imageSmall)  : imageSrc;
 const medium = imageMedium ? encodeURI(imageMedium) : imageSrc;
 const large  = imageLarge  ? encodeURI(imageLarge)  : imageSrc;
+
+const onTouchStart = (e) => {
+  if (!isTouchBreakpoint) return;
+  const t = e.touches[0];
+  setStartX(t.clientX);
+  setStartY(t.clientY);
+  lastXRef.current = t.clientX;
+  setIsSwiping(false);
+};
+
+const onTouchMove = (e) => {
+  if (!isTouchBreakpoint || startX === null || startY === null) return;
+  const t = e.touches[0];
+  const dx = t.clientX - startX;
+  const dy = t.clientY - startY;
+  lastXRef.current = t.clientX;
+
+  if (Math.abs(dx) > Math.abs(dy) && Math.abs(dy) < MAX_VERTICAL_DRIFT) {
+    setIsSwiping(true);
+    e.preventDefault();
+  }
+};
+
+
+const onTouchEnd = () => {
+  if (!isTouchBreakpoint || startX === null || lastXRef.current === null) {
+    setStartX(null); setStartY(null); setIsSwiping(false);
+    return;
+  }
+  const dx = lastXRef.current - startX;
+
+  if (isSwiping && Math.abs(dx) >= SWIPE_THRESHOLD) {
+    if (dx < 0) {
+      // swipe left → NEXT
+      onNext?.();
+    } else {
+      // swipe right → PREV
+      onPrev?.();
+    }
+  }
+
+  setStartX(null);
+  setStartY(null);
+  setIsSwiping(false);
+  lastXRef.current = null;
+};
+
 
   return (
     <div className="image-modal-overlay">
@@ -43,7 +100,6 @@ const large  = imageLarge  ? encodeURI(imageLarge)  : imageSrc;
               </button>
             </div>
           </div>
-
           <div className="image-modal-text">
             <h3 className="image-modal-headline">{headline}</h3>
             {dateLocation ? (
@@ -60,7 +116,10 @@ const large  = imageLarge  ? encodeURI(imageLarge)  : imageSrc;
           </div>
         </div>
 
-        <div className="image-modal-image-container">
+        <div className="image-modal-image-container"
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}>
           <picture>
             {/* Mobile */}
             <source media="(max-width: 600px)" srcSet={small} />
