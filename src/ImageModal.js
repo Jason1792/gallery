@@ -115,7 +115,6 @@ const onTouchEnd = () => {
             <p className="image-modal-keywords">{keywords}</p>
           </div>
         </div>
-
         <div className="image-modal-image-container"
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}

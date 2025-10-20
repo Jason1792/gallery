@@ -6,7 +6,8 @@
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(35, 35, 35);
         --button-bg: rgba(var(--jason-5-alpha),.25);
-        --button-bg-hover: rgba(var(--jason-3-alpha),.6);
+        --button-bg-hover: rgba(var(--jason-3-alpha),.4);
+        --button-bg-active: rgba(var(--jason-3-alpha),.8);
         --button-text: rgba(255,255,255,.7);        
         --button-text-hover: rgba(255,255,255,1);        
         --header-footer-bg: 
@@ -225,6 +226,10 @@ button {
 }  
 .button:hover {
         background: var(--button-bg-hover);
+        color: var(--button-text-hover);
+}
+.button:active {
+        background: var(--button-bg-active);
         color: var(--button-text-hover);
 }
 /* #endregion BUTTONS */       
