@@ -1,5 +1,5 @@
 .image-modal-overlay { 
-        /* layer between the card grid and image-modal-content that contains larger image. Since image-modal-content takes up whole screen, image-modal-overlay is entirely hidden - consider removing. */
+        /* layer bw card grid & image-modal-content that contains modal image. Since image-modal-content takes up whole screen, image-modal-overlay is entirely hidden - consider removing. */
         position: fixed; 
         top: 0;
         left: 0;
@@ -11,8 +11,7 @@
         align-items: center;
         z-index: 1000;
 }
-.image-modal-content { 
-        /* Contains image, text, buttons. With image-modal-content width & height at 100vh, image-modal-overlay is completely hidden. */
+.image-modal-content { /* Contains image, text, buttons. */
         background: var(--image-modal-content-bg);
         padding: 0;
         width: 100vw;
@@ -25,7 +24,7 @@
         overflow: hidden;
         row-gap: 12px;
 }
-.image-modal-nav-and-text {
+.image-modal-nav-and-text { /* Contains text, buttons. */
         background: var(--image-modal-nav-and-text-bg);
         color: var(--image-modal-and-card-text-txt);
         width: 100%;
@@ -40,7 +39,7 @@
         border-radius: 0;
         min-height: fit-content;
 }
-.image-modal-nav { /* e: div */
+.image-modal-nav { /* Contains buttons. */
         background-color: var(--image-modal-nav-bg);
         height: auto;
         display: flex;
@@ -63,8 +62,11 @@
 @media (max-width: 600px) {
 .image-modal-nav { /* e: div */
         opacity: 1;
+        order: 2;
+        padding: 0 6px 0 0;
 }
-}i {
+}
+i {
         font-size: 1.8rem;
 }
 .image-modal-close { /* e: div */
@@ -74,21 +76,21 @@
         border-radius: 6px;
 }
 .image-modal-nav-button {
-  border: none;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
 }
 .image-modal-close i { /* e: div */
         font-size: 1.8rem;
 }
 .image-modal-nav-button .bi {
-  font-size: 2rem;
-  padding: 4px;
-  transition: transform 0.25s ease, opacity 0.25s ease;
+        font-size: 2rem;
+        padding: 4px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
 }
 .image-modal-back-and-forward { /* e: div */
         background-color: var(--image-modal-back-and-forward-bg);
@@ -163,100 +165,84 @@
         display: none;
 }
 .image-modal-image-container {
-  flex-grow: 1;
-  max-width: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 8px;
-  overflow: hidden;
-
-  /* Remove padding so the rounded edge is flush.
-     If you want spacing, put it on a wrapper above this element instead. */
-  padding: 0 12px 12px 12px;
-  box-sizing: border-box;
+        flex-grow: 1;
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px;
+        overflow: hidden;
+        /* Remove padding so the rounded edge is flush.
+        If you want spacing, put it on a wrapper above this element instead. */
+        padding: 0 12px 12px 12px;
+        box-sizing: border-box;
 }
-
 /* 2) Ensure wrapper fills and inherits radius */
 .image-modal-image-container picture {
-  width: 100%;
-  height: 100%;
-  display: block;
-  border-radius: inherit;   /* keeps all corners aligned */
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: inherit;   /* keeps all corners aligned */
 }
-
 /* 3) The actual image: fill the box, preserve aspect, inherit radius */
 .image-modal-image-container img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;      /* show entire image */
-  border-radius: inherit;   /* match container corners */
-  border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;      /* show entire image */
+        border-radius: inherit;   /* match container corners */
+        border-radius: 8px;
 }
 /* Optional: only if you still see square corners after step 1 */
 .image-modal-image-container picture,
 .image-modal-image-container img {
-  border-radius: inherit !important;
-  border-radius: 8px;
+        border-radius: inherit !important;
+        border-radius: 8px;
 }
-/* ===== Phone + Tablet overlay controls ===== */
 @media (max-width: 1024px) {
-  /* Make sure the overall modal is a positioned container if you
-     later want to anchor to it; not strictly required for fixed. */
-  .image-modal-content {
-    position: relative;
-  }
-  /* Take the existing back/forward group out of the header flow
-     and pin it centered over the image area */
-  .image-modal-back-and-forward {
-    position: fixed;           /* sits above the image regardless of scroll */
-    top: 50vh;                 /* roughly the vertical center of the viewport */
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px; /* gutter from edges */
-    z-index: 1001; /* above image; below any global overlays */
-    background: transparent; /* no background strip */
-    pointer-events: none; /* let only the buttons be clickable */
-  }
-  /* Make the actual buttons clickable and styled as on-image pills */
-  .image-modal-back-and-forward .image-modal-nav-button {
-    pointer-events: auto; /* re-enable pointer for the buttons */
-    background: var(--button-icon-bg);
-    border-radius: 6px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.35);
-  }
-  .image-modal-back-and-forward .bi {
-    font-size: 2rem;
-    padding: 8px;              /* larger hit area on touch */
-    line-height: 1;
-  }
-
-  /* Optional: hide any residual height that the group might claim in header */
-  .image-modal-nav {
-    align-items: center;
-  }
+/* Make sure the overall modal is a positioned container if you later want to anchor to it; not strictly required for fixed. */
+.image-modal-content {
+        position: relative;
 }
-
-
-/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
-
-
-
-/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
-
-
+/* Take the existing back/forward group out of the header flow and pin it centered over the image area */
+.image-modal-back-and-forward {
+        position: fixed; /* sits above the image regardless of scroll */
+        top: 50vh; /* roughly the vertical center of the viewport */
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px; /* gutter from edges */
+        z-index: 1001; /* above image; below any global overlays */
+        background: transparent; /* no background strip */
+        pointer-events: none; /* let only the buttons be clickable */
+}
+/* Make the actual buttons clickable and styled as on-image pills */
+.image-modal-back-and-forward .image-modal-nav-button {
+        pointer-events: auto; /* re-enable pointer for the buttons */
+        background: var(--button-icon-bg);
+        border-radius: 6px;
+        box-shadow: 0 2px 10px rgba(0,0,0,.35);
+}
+.image-modal-back-and-forward .bi {
+        font-size: 2rem;
+        padding: 8px;              /* larger hit area on touch */
+        line-height: 1;
+}
+/* Optional: hide any residual height that the group might claim in header */
+.image-modal-nav {
+        align-items: center;
+}
+}
 @media (max-width: 1024px) {
-  .image-modal-back-and-forward .image-modal-nav-button {
-    opacity: 0.9;
-    transition: opacity 150ms ease, transform 150ms ease;
-  }
-  .image-modal-back-and-forward .image-modal-nav-button:active {
-    transform: scale(0.96);
-  }
+.image-modal-back-and-forward .image-modal-nav-button {
+        opacity: 0.9;
+        transition: opacity 150ms ease, transform 150ms ease;
+}
+.image-modal-back-and-forward .image-modal-nav-button:active {
+        transform: scale(0.96);
+}
 }
