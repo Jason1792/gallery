@@ -70,6 +70,9 @@ const ImageModal = ({
     didSwipeRef.current = false;
   };
 
+
+
+
   const onTouchMove = (e) => {
     if (!isTouchBreakpoint) return;
     const sx = startXRef.current;
@@ -122,6 +125,7 @@ const ImageModal = ({
   const onImageClick = () => {
   if (didSwipeRef.current) { didSwipeRef.current = false; return; }
   setIsImmersive(v => !v);
+  console.log("Toggled immersive:", !isImmersive);
 };
 
   // After hooks: it’s now safe to early-return if no source

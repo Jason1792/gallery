@@ -279,11 +279,11 @@ i {
   }
 }
 /* Smooth background + chrome fade when toggling immersive */
-.image-modal-content {
-  transition: background-color 200ms ease;
+.image-modal-content { 
+  transition: background 200ms ease, background-color 200ms ease; /* cover both props */
 }
 
-/* Chrome (text + header controls) default: visible */
+/* Default chrome state */
 .image-modal-nav-and-text,
 .image-modal-back-and-forward {
   opacity: 1;
@@ -291,13 +291,15 @@ i {
   transition: opacity 200ms ease;
 }
 
-/* Immersive: fade chrome out and make it non-interactive. 
-   (JS already sets aria-hidden on the strip; this just animates) */
+/* Immersive: fully fade and disable interaction */
 .image-modal-content.immersive .image-modal-nav-and-text,
-.image-modal-content.immersive .image-modal-back-and-forward {
-  opacity: 0;
-  pointer-events: none;
+.image-modal-content.immersive .image-modal-nav-and-text *,
+.image-modal-content.immersive .image-modal-back-and-forward,
+.image-modal-content.immersive .image-modal-back-and-forward * {
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
+
 
 /* Optional: nudge image a hair for a "focused" feel */
 .image-modal-image-container picture,
@@ -323,4 +325,9 @@ i {
   .image-modal-image-container img {
     transition: none !important;
   }
+}
+/* Ensure the header bar sits above the fixed on-image controls */
+.image-modal-nav-and-text {
+  position: relative;
+  z-index: 1002; /* higher than .image-modal-back-and-forward (1001) */
 }
