@@ -102,6 +102,10 @@ i {
         box-sizing: border-box;
         border-radius: 6px;
 }
+@media (max-width: 1024px) {
+  .image-modal-back-and-forward { pointer-events: none; }
+  .image-modal-back-and-forward .image-modal-nav-button { pointer-events: auto; }
+}
 .image-modal-text {
         background-color: var(--image-modal-text);
         padding: 2px 0 2px 4px;
@@ -247,10 +251,6 @@ i {
 /* Base: your existing layout stays the same */
 
 /* Immersive mode: no text/buttons, edge-to-edge image */
-.image-modal-content.immersive .image-modal-nav-and-text {
-  display: none !important;
-}
-
 .image-modal-content.immersive {
   padding: 0;              /* if you added inner padding anywhere */
   background: black;       /* optional: cinematic look */

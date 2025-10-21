@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./Header.css";
-import logo from "./assets/logo-jasons-gallery.svg";
+import logo from "./assets/logo.svg";
 
 const Header = ({ searchTerm, setSearchTerm }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

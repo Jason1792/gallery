@@ -120,14 +120,9 @@ const ImageModal = ({
   };
 
   const onImageClick = () => {
-    // Toggle immersive on tap for touch breakpoints; ignore clicks after swipes
-    if (!isTouchBreakpoint) return;
-    if ( didSwipeRef.current ) {
-      didSwipeRef.current = false;
-      return;
-    }
-    setIsImmersive((v) => !v);
-  };
+  if (didSwipeRef.current) { didSwipeRef.current = false; return; }
+  setIsImmersive(v => !v);
+};
 
   // After hooks: it’s now safe to early-return if no source
   if (!imageSrc && !imageLarge && !imageMedium && !imageSmall) return null;
@@ -184,6 +179,7 @@ const ImageModal = ({
             <img
               src={large}
               alt={headline}
+              onClick={onImageClick}
               onError={(e) => {
                 e.currentTarget.onerror = null;
                 e.currentTarget.src = "/images/Image Not Available.png";
