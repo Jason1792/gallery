@@ -1,15 +1,14 @@
 .image-modal-overlay { 
-        /* layer bw card grid & image-modal-content that contains modal image. Since image-modal-content takes up whole screen, image-modal-overlay is entirely hidden - consider removing. */
         position: fixed; 
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: var(--image-modal-overlay-bg);
+        background-color: red;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1000;
+        z-index: 2147483647; /* Ensure the overlay wins the stacking war everywhere */
 }
 .image-modal-content { /* Contains image, text, buttons. */
         background: var(--image-modal-content-bg);
@@ -23,6 +22,8 @@
         box-sizing: border-box;
         overflow: hidden;
         row-gap: 12px;
+        height: 100dvh; /* added: handles mobile browser chrome || Make the modal content truly full screen on mobile Safari too */
+        position: relative; /* creates stacking context for children */
 }
 .image-modal-nav-and-text { /* Contains text, buttons. */
         background: var(--image-modal-nav-and-text-bg);
@@ -73,6 +74,8 @@ i {
         height: 100%;
         box-sizing: border-box;
         border-radius: 6px;
+        position: relative; /* z-index only works on positioned elements */
+        z-index: 10000;
 }
 .image-modal-nav-button {
         border: none;
@@ -101,10 +104,23 @@ i {
         gap: .4vw;
         box-sizing: border-box;
         border-radius: 6px;
+        pointer-events: none;
+        position: fixed;
+        left: 0;
+        right: 0;
 }
 @media (max-width: 1024px) {
-  .image-modal-back-and-forward { pointer-events: none; }
-  .image-modal-back-and-forward .image-modal-nav-button { pointer-events: auto; }
+.image-modal-back-and-forward { 
+        pointer-events: none; 
+}
+.image-modal-back-and-forward .image-modal-nav-button { 
+        pointer-events: auto; 
+}
+}
+.image-modal-back-and-forward button,
+.image-modal-back-and-forward [role="button"],
+.image-modal-back-and-forward a {
+        pointer-events: auto;
 }
 .image-modal-text {
         background-color: var(--image-modal-text);
@@ -208,7 +224,6 @@ i {
 .image-modal-content {
         position: relative;
 }
-/* Take the existing back/forward group out of the header flow and pin it centered over the image area */
 .image-modal-back-and-forward {
         position: fixed; /* sits above the image regardless of scroll */
         top: 50vh; /* roughly the vertical center of the viewport */
@@ -219,7 +234,6 @@ i {
         justify-content: space-between;
         align-items: center;
         padding: 0 20px; /* gutter from edges */
-        z-index: 1001; /* above image; below any global overlays */
         background: transparent; /* no background strip */
         pointer-events: none; /* let only the buttons be clickable */
 }
@@ -234,7 +248,6 @@ i {
         padding: 8px;              /* larger hit area on touch */
         line-height: 1;
 }
-/* Optional: hide any residual height that the group might claim in header */
 .image-modal-nav {
         align-items: center;
 }
@@ -248,20 +261,16 @@ i {
         transform: scale(0.96);
 }
 }
-/* Base: your existing layout stays the same */
-
-/* Immersive mode: no text/buttons, edge-to-edge image */
 .image-modal-content.immersive {
-  padding: 0;              /* if you added inner padding anywhere */
-  background: black;       /* optional: cinematic look */
+  padding: 0; 
+  background: red;
 }
-
 .image-modal-content.immersive .image-modal-image-container {
-  /* already flex:1 in your setup; ensure it fills fully */
-  width: 100%;
-  height: 100%;
+        width: 100%;
+        height: 100%;
+        padding: 0 !important;
+        border-radius: 0;
 }
-
 /* Make sure the picture/img fill the container */
 .image-modal-content.immersive .image-modal-image-container picture,
 .image-modal-content.immersive .image-modal-image-container img {
@@ -270,6 +279,16 @@ i {
   display: block;
   object-fit: contain;     /* keep full image visible */
   border-radius: 0;        /* or inherit if you prefer rounded; remove overflow if so */
+}
+@media (max-width: 1024px) {
+  .image-modal-back-and-forward {
+    position: fixed;
+    top: 50dvh; /* was 50vh; d**vh handles mobile chrome */
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10001; /* above picture (which you set at 9998) */
+  }
 }
 
 /* Optional: show a helpful cursor on desktop; touch devices ignore it */
@@ -329,5 +348,22 @@ i {
 /* Ensure the header bar sits above the fixed on-image controls */
 .image-modal-nav-and-text {
   position: relative;
-  z-index: 1002; /* higher than .image-modal-back-and-forward (1001) */
+}
+/* 8) Optional: give the image container a stacking baseline */
+.image-modal-image-container picture {
+  position: relative;  /* NEW */
+  z-index: 1;          /* picture sits under controls */
+}
+.image-modal-nav-and-text { pointer-events: none; }
+.image-modal-nav-and-text button,
+.image-modal-nav-and-text [role="button"],
+.image-modal-nav-and-text a,
+.image-modal-nav-and-text input,
+.image-modal-nav-and-text select,
+.image-modal-nav-and-text textarea {
+  pointer-events: auto;
+}
+.image-modal-image-container {
+  position: relative;
+  z-index: 2;   /* above background layers */
 }

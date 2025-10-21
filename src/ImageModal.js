@@ -122,18 +122,23 @@ const ImageModal = ({
     setIsSwiping(false);
   };
 
-  const onImageClick = () => {
-  if (didSwipeRef.current) { didSwipeRef.current = false; return; }
-  setIsImmersive(v => !v);
-  console.log("Toggled immersive:", !isImmersive);
+        const onImageClick = () => {
+        if (didSwipeRef.current) { didSwipeRef.current = false; return; }
+        setIsImmersive(v => {
+        const next = !v;
+        console.log("[ImageModal] immersive ->", next); // TEMP
+        return next;
+        });
 };
 
   // After hooks: it’s now safe to early-return if no source
   if (!imageSrc && !imageLarge && !imageMedium && !imageSmall) return null;
 
   return (
-    <div className="image-modal-overlay">
-      <div className={`image-modal-content ${isImmersive ? "immersive" : ""}`}>
+        <div className={`image-modal-overlay 
+        ${isImmersive ? "immersive" : ""}`} data-immersive={isImmersive}>
+      <div className={`image-modal-content 
+      ${isImmersive ? "immersive" : ""}`} data-immersive={isImmersive}>
         {/* Top bar (fades out via CSS when immersive) */}
         <div className="image-modal-nav-and-text" aria-hidden={isImmersive}>
           <div className="image-modal-nav">
@@ -151,7 +156,6 @@ const ImageModal = ({
               </button>
             </div>
           </div>
-
           <div className="image-modal-text">
             <h3 className="image-modal-headline">{headline}</h3>
             {/* Use either the combined meta or separate lines */}
@@ -170,20 +174,17 @@ const ImageModal = ({
         </div>
 
         {/* Image area (tap toggles immersive; swipes navigate) */}
-        <div
-          className="image-modal-image-container"
+        <div className="image-modal-image-container"
           onClick={onImageClick}
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
-        >
+          onTouchEnd={onTouchEnd}>
           <picture key={bp}>
             <source media="(max-width: 600px)" srcSet={small} />
             <source media="(max-width: 1024px)" srcSet={medium} />
             <img
               src={large}
               alt={headline}
-              onClick={onImageClick}
               onError={(e) => {
                 e.currentTarget.onerror = null;
                 e.currentTarget.src = "/images/Image Not Available.png";
