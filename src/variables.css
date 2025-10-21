@@ -1,3 +1,27 @@
+/* #region BUTTONS */     
+button, .button {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        border: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 0;
+        transition: background-color .4s ease;
+        font-weight: bold;
+}  
+button:hover, .button:hover {
+        background: var(--button-bg-hover);
+        color: var(--button-text-hover);
+}
+button:active, .button:active {
+        background: var(--button-bg-active);
+        color: var(--button-text-active);
+}
+/* #endregion BUTTONS */       
+
 /* #region COLORS */      
 :root, :root[data-theme='actual'] {
         --body-bg:
@@ -5,11 +29,12 @@
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(35, 35, 35);
-        --button-bg: rgba(var(--jason-5-alpha),.25);
+        --button-bg: rgba(var(--jason-5-alpha),.15);
         --button-bg-hover: rgba(var(--jason-3-alpha),.4);
         --button-bg-active: rgba(var(--jason-3-alpha),.8);
-        --button-text: rgba(255,255,255,.7);        
-        --button-text-hover: rgba(255,255,255,1);        
+        --button-text: rgba(255,255,255,.5);        
+        --button-text-hover: rgba(255,255,255,.75);        
+        --button-text-active: rgba(255,255,255,1);        
         --header-footer-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
@@ -210,26 +235,3 @@ h4 {
         margin-bottom: 0;
 }
 /* #endregion TEXT_VAR_STYLES */       
-
-/* #region BUTTONS */     
-button {
-        background-color: var(--button-bg);
-        color: var(--button-text);
-        background: none;
-        border: none;
-        margin: 0;
-        padding: 0;
-        border-radius: 4px;
-        text-decoration: none;
-        cursor: pointer;
-        line-height: 0;
-}  
-.button:hover {
-        background: var(--button-bg-hover);
-        color: var(--button-text-hover);
-}
-.button:active {
-        background: var(--button-bg-active);
-        color: var(--button-text-hover);
-}
-/* #endregion BUTTONS */       

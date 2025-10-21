@@ -9,15 +9,20 @@ function App() {
   const [filteredCardData, setFilteredCardData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');  
   const [selectedIndex, setSelectedIndex] = useState(null);
+  const [loading, setLoading] = useState(true);   // 👈 NEW
 
-useEffect(() => {
-  fetch("https://script.google.com/macros/s/AKfycbz7AC7ptwQ91zSTO9xYisad8JmB5YmtB3jDq_ZZatYxZHtbuJPlvlswu-JUXcJgKiBJ1g/exec")
-    .then(res => res.json())
+  useEffect(() => {
+    setLoading(true);
+    fetch("https://script.google.com/macros/s/AKfycbz7AC7ptwQ91zSTO9xYisad8JmB5YmtB3jDq_ZZatYxZHtbuJPlvlswu-JUXcJgKiBJ1g/exec")
+      .then(res => res.json())
       .then(data => {
         setCardData(data);
-        setFilteredCardData(data); // Initialize filtered data with all cards
-      });
+        setFilteredCardData(data);
+      })
+      .catch(err => console.error("Error loading data:", err))
+      .finally(() => setLoading(false));           // 👈 clear loading
   }, []);
+
 
 useEffect(() => {
   const toText = (v, fieldName, card) => {
@@ -72,10 +77,14 @@ cardData.forEach((c, i) => {
   return (
     <div className="App">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-        <main>
-                {filteredCardData.length > 0 ? (
-        <div className="card-grid">
-                {filteredCardData.map((card, idx) => (
+<main>
+  {loading ? (
+    <div className="no-results">
+      <p>Loading images</p>
+    </div>
+  ) : filteredCardData.length > 0 ? (
+    <div className="card-grid">
+      {filteredCardData.map((card, idx) => (
         <Card
           key={idx}
           imageSrc={card.imageSrc}
@@ -87,15 +96,15 @@ cardData.forEach((c, i) => {
           description={card.description}
           filename={card.filename}
           keywords={card.keywords}
-          onImageClick={() => setSelectedIndex(idx)} // store index instead of card
-      />
-      ))}  
-      </div>
-    ) : (
-        <div className="no-results">
-                <p>No results found for your search term</p>
-        </div>
-    )}
+          onImageClick={() => setSelectedIndex(idx)}
+        />
+      ))}
+    </div>
+  ) : (
+    <div className="no-results">
+      <p>No results found for your search term</p>
+    </div>
+  )}
 </main>
        {selectedIndex !== null && (
         <ImageModal

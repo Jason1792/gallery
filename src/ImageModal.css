@@ -33,7 +33,7 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 5.5px 0 3.5px 0;
+        padding: 6px 0;
         gap: 6px; 
         box-sizing: border-box;
         border-radius: 0;
@@ -70,7 +70,6 @@ i {
         font-size: 1.8rem;
 }
 .image-modal-close { /* e: div */
-        background-color: var(--image-modal-close-bg);
         height: 100%;
         box-sizing: border-box;
         border-radius: 6px;
@@ -105,7 +104,7 @@ i {
 }
 .image-modal-text {
         background-color: var(--image-modal-text);
-        padding: 4px 0 0 4px;
+        padding: 2px 0 2px 4px;
         border-radius: 6px;
         flex: 1 1 50%;
 }
@@ -128,16 +127,16 @@ i {
 }
 .image-modal-date-location {
         background-color: var(--image-modal-date-bg);
-        font-size: .9rem;
+        font-size: 1rem;
         margin: 0;
-        padding: 6px 0 1px 0;
+        padding: 0;
         line-height: 1rem;    
 }
 .image-modal-date {
         background-color: var(--image-modal-date-bg);
         font-size: .9rem;
         margin: 0;
-        padding: 5px 0 1px 0;
+        padding: 0px 0 1px 0;
         line-height: 1rem;    
 }
 .image-modal-location {
@@ -223,7 +222,6 @@ i {
 /* Make the actual buttons clickable and styled as on-image pills */
 .image-modal-back-and-forward .image-modal-nav-button {
         pointer-events: auto; /* re-enable pointer for the buttons */
-        background: var(--button-icon-bg);
         border-radius: 6px;
         box-shadow: 0 2px 10px rgba(0,0,0,.35);
 }
@@ -245,4 +243,84 @@ i {
 .image-modal-back-and-forward .image-modal-nav-button:active {
         transform: scale(0.96);
 }
+}
+/* Base: your existing layout stays the same */
+
+/* Immersive mode: no text/buttons, edge-to-edge image */
+.image-modal-content.immersive .image-modal-nav-and-text {
+  display: none !important;
+}
+
+.image-modal-content.immersive {
+  padding: 0;              /* if you added inner padding anywhere */
+  background: black;       /* optional: cinematic look */
+}
+
+.image-modal-content.immersive .image-modal-image-container {
+  /* already flex:1 in your setup; ensure it fills fully */
+  width: 100%;
+  height: 100%;
+}
+
+/* Make sure the picture/img fill the container */
+.image-modal-content.immersive .image-modal-image-container picture,
+.image-modal-content.immersive .image-modal-image-container img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;     /* keep full image visible */
+  border-radius: 0;        /* or inherit if you prefer rounded; remove overflow if so */
+}
+
+/* Optional: show a helpful cursor on desktop; touch devices ignore it */
+@media (hover: hover) and (pointer: fine) {
+  .image-modal-content.immersive .image-modal-image-container {
+    cursor: zoom-out;
+  }
+}
+/* Smooth background + chrome fade when toggling immersive */
+.image-modal-content {
+  transition: background-color 200ms ease;
+}
+
+/* Chrome (text + header controls) default: visible */
+.image-modal-nav-and-text,
+.image-modal-back-and-forward {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 200ms ease;
+}
+
+/* Immersive: fade chrome out and make it non-interactive. 
+   (JS already sets aria-hidden on the strip; this just animates) */
+.image-modal-content.immersive .image-modal-nav-and-text,
+.image-modal-content.immersive .image-modal-back-and-forward {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Optional: nudge image a hair for a "focused" feel */
+.image-modal-image-container picture,
+.image-modal-image-container img {
+  transition: transform 250ms ease, opacity 200ms ease;
+  will-change: transform, opacity;
+}
+
+.image-modal-content.immersive .image-modal-image-container img {
+  transform: scale(1.02); /* subtle; remove if you prefer zero movement */
+}
+
+/* If you want the immersive background to get slightly darker */
+.image-modal-content.immersive {
+  background-color: #000; /* or keep your var(...) if you have one */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image-modal-content,
+  .image-modal-nav-and-text,
+  .image-modal-back-and-forward,
+  .image-modal-image-container picture,
+  .image-modal-image-container img {
+    transition: none !important;
+  }
 }

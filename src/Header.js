@@ -40,7 +40,7 @@ const Header = ({ searchTerm, setSearchTerm }) => {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 title={isMenuOpen ? "Close menu" : "Open menu"}
                 >
-                <i className={`bi ${isMenuOpen ? "bi-x-lg close-icon" : "bi-list hamburger-icon"}`}></i>
+                <i className={`bi ${isMenuOpen ? "bi-x-lg" : "bi-list"}`}></i>
         </button>
         </div>
       </div>
@@ -57,7 +57,7 @@ const Header = ({ searchTerm, setSearchTerm }) => {
           </div>
           <button className={`button reset-button ${searchTerm.length > 0 ? "visible" : "hidden"}`}
             onClick={() => setSearchTerm("")}>
-            Clear
+            <p>Clear</p>
           </button>
         </div>
         <div className="email-button-wrapper">
