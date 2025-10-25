@@ -24,17 +24,18 @@ button:active, .button:active {
 
 /* #region COLORS */      
 :root, :root[data-theme='actual'] {
-        --body-bg:
-                linear-gradient(
-                rgba(var(--jason-1-alpha),.1),
-                rgba(var(--jason-1-alpha),.1)), 
-                rgb(35, 35, 35);
         --button-bg: rgba(var(--jason-5-alpha),.15);
         --button-bg-hover: rgba(var(--jason-3-alpha),.4);
         --button-bg-active: rgba(var(--jason-3-alpha),.8);
         --button-text: rgba(255,255,255,.5);        
         --button-text-hover: rgba(255,255,255,.75);        
         --button-text-active: rgba(255,255,255,1);        
+        --text-color: white;
+        --body-bg:
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(35, 35, 35);
         --header-footer-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
@@ -78,23 +79,47 @@ button:active, .button:active {
         --menu-modal-search-input-bg: rgba(255,255,255,.08);
         --menu-modal-search-input-text: white;
 
-        --image-modal-overlay-bg: rgba(128,128,128,1);
-        --image-modal-content-bg: var(--body-bg);
+
+
+
+        /* ACTUAL */
+        --image-modal-overlay-div-bg: rgba(128,128,128,1);
+        --image-modal-content-div-bg: var(--body-bg);
+        --image-modal-content-div-tablet-bg: var(--body-bg);
+        --image-modal-content-div-cell-bg: var(--body-bg);
         --image-modal-and-card-text-txt: rgb(210, 210, 210);
-        --image-modal-nav-and-text-bg: var(--header-footer-bg);
+        --image-modal-nav-and-text-div-bg: var(--header-footer-bg);
+        --image-modal-nav-div-bg: none;
+        --image-modal-close-div-bg: none;
+        --image-modal-back-and-forward-div-bg: none;
+        --image-modal-text-div-bg: none;
+        --image-modal-image-container-div-bg: none;
+
         --image-modal-headline-bg: none;
         --image-modal-date-bg: none;
         --image-modal-location-bg: none;
         --image-modal-description-bg: none;
         --image-modal-filename-bg: none;
         --image-modal-keywords-bg: none;
-        --image-modal-nav-bg: none;
-        --image-modal-back-and-forward-bg: none;
-        --image-modal-close-bg: none;
-        --image-modal-text: none;
-        --image-modal-image-container: none;
 }
+
+
+
+
+
+
+
+
+
+
   :root[data-theme='test'] {
+        --button-bg: rgba(255,200,9,1);
+        --button-bg-hover: rgba(111,255,99,1);
+        --button-bg-active: rgba(0,255,255,1);
+        --button-text: rgba(255,0,111,1);
+        --button-text-hover: rgba(44,188,88,1);
+        --button-text-active: rgba(255,255,255,1);        
+        --text-color: hotpink;
         --body-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
@@ -122,9 +147,7 @@ button:active, .button:active {
         --card-image-bg: orange;
         --card-image-img-bg: purple;
         --card-text-bg: rgb(55, 168, 55);
-        --button-bg: turquoise;
-        --button-bg-hover: hotpink;
-        --button-text: rgba(255,255,255,.85);
+
         --logo-button-bg: magenta;
         --logo-button-bg-hover: skyblue;
 
@@ -134,9 +157,23 @@ button:active, .button:active {
         --menu-modal-input-reset-bg: purple;
         --menu-modal-search-input-text: white;
 
-        --image-modal-overlay-bg: green;
-        --image-modal-content-bg: pink;
-        --image-modal-nav-and-text-bg: skyblue;
+
+
+
+
+        /* TEST */
+        --image-modal-overlay-div-bg: green;
+        --image-modal-content-div-bg: pink;
+        --image-modal-content-div-tablet-bg: rgb(180, 116, 187);
+        --image-modal-content-div-cell-bg: rgb(190, 78, 108);
+        --image-modal-nav-and-text-div-bg: skyblue;
+        --image-modal-nav-div-bg: goldenrod;
+        --image-modal-close-div-bg: lime;
+        --image-modal-nav-button-bg:  rgb(193, 131, 185);
+        --image-modal-back-and-forward-div-bg: rgba(0,0,0,.25);
+        --image-modal-text-div-bg: hotpink;
+        --image-modal-image-container-div-bg: orange;
+        
         --image-modal-and-card-text-txt: lightblue;
         --image-modal-headline-bg: red;
         --image-modal-date-bg: lightgreen;
@@ -144,12 +181,19 @@ button:active, .button:active {
         --image-modal-description-bg: lightgreen;
         --image-modal-filename-bg: red;
         --image-modal-keywords-bg: lightgreen;
-        --image-modal-nav-bg: blue;
-        --image-modal-back-and-forward-bg: lightgreen;
-        --image-modal-close-bg: grey;
-        --image-modal-text: hotpink;
-        --image-modal-image-container: orange;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 /* #region MASTER_COLORS */       
 :root {
         /* COPY THESE FROM .ASE ONLY */
@@ -187,7 +231,7 @@ body {
         font-weight: var(--weight-regular);
         line-height: 1.6;
         font-size: 1rem;
-        color: white;
+        color: var(--text-color);
         margin: 0;
 }
 ul {

@@ -1,11 +1,11 @@
-.header {
+/* z-index */ .header { 
         background: var(--header-footer-bg);
         color: var(--header-footer-text);
         width: 100%;
         padding: 0;
         position: sticky;
         top: 0;
-        z-index: 300;
+        z-index: 1;
 }
 .header-inner {
         background: var(--header-footer-inner-bg);

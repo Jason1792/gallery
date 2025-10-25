@@ -70,9 +70,6 @@ const ImageModal = ({
     didSwipeRef.current = false;
   };
 
-
-
-
   const onTouchMove = (e) => {
     if (!isTouchBreakpoint) return;
     const sx = startXRef.current;
@@ -108,93 +105,100 @@ const ImageModal = ({
       setIsSwiping(false);
       return;
     }
-
     const dx = lx - sx;
     if (isSwiping && Math.abs(dx) >= SWIPE_THRESHOLD) {
       didSwipeRef.current = true;
       if (dx < 0) onNext?.();
       else onPrev?.();
     }
-
     startXRef.current = null;
     startYRef.current = null;
     lastXRef.current = null;
     setIsSwiping(false);
   };
-
         const onImageClick = () => {
         if (didSwipeRef.current) { didSwipeRef.current = false; return; }
         setIsImmersive(v => {
         const next = !v;
-        console.log("[ImageModal] immersive ->", next); // TEMP
         return next;
         });
 };
-
   // After hooks: it’s now safe to early-return if no source
   if (!imageSrc && !imageLarge && !imageMedium && !imageSmall) return null;
-
   return (
-        <div className={`image-modal-overlay 
-        ${isImmersive ? "immersive" : ""}`} data-immersive={isImmersive}>
-      <div className={`image-modal-content 
-      ${isImmersive ? "immersive" : ""}`} data-immersive={isImmersive}>
-        {/* Top bar (fades out via CSS when immersive) */}
-        <div className="image-modal-nav-and-text" aria-hidden={isImmersive}>
-          <div className="image-modal-nav">
-            <div className="image-modal-close">
-              <button className="image-modal-nav-button" onClick={onClose} aria-label="Close">
-                <i className="button-icon bi bi-x-lg"></i>
-              </button>
-            </div>
-            <div className="image-modal-back-and-forward">
-              <button className="image-modal-nav-button" onClick={onPrev} aria-label="Previous">
-                <i className="button-icon left-icon bi bi-chevron-left accordion-button-icon" aria-hidden="true" />
-              </button>
-              <button className="image-modal-nav-button" onClick={onNext} aria-label="Next">
-                <i className="button-icon right-icon bi bi-chevron-right accordion-button-icon" aria-hidden="true" />
-              </button>
-            </div>
-          </div>
-          <div className="image-modal-text">
-            <h3 className="image-modal-headline">{headline}</h3>
-            {/* Use either the combined meta or separate lines */}
-            {dateLocation ? (
-              <p className="image-modal-date-location">{dateLocation}</p>
-            ) : (
-              <>
-                <p className="image-modal-date">{date}</p>
-                <p className="image-modal-location">{location}</p>
-              </>
-            )}
-            <p className="image-modal-description">{description}</p>
-            <p className="image-modal-filename">{filename}</p>
-            <p className="image-modal-keywords">{keywords}</p>
-          </div>
-        </div>
 
-        {/* Image area (tap toggles immersive; swipes navigate) */}
-        <div className="image-modal-image-container"
-          onClick={onImageClick}
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}>
-          <picture key={bp}>
-            <source media="(max-width: 600px)" srcSet={small} />
-            <source media="(max-width: 1024px)" srcSet={medium} />
-            <img
-              src={large}
-              alt={headline}
-              onError={(e) => {
-                e.currentTarget.onerror = null;
-                e.currentTarget.src = "/images/Image Not Available.png";
-              }}
-            />
-          </picture>
+
+
+
+
+
+
+
+
+
+<div className="image-modal-overlay-div" /* CV */ > 
+        <div className={`image-modal-content-div 
+        ${isImmersive ? "immersive" : ""}`} data-immersive={isImmersive} /* CV */ >
+                {/* Top bar (fades out via CSS when immersive) */}
+                <div className="image-modal-nav-and-text-div" aria-hidden={isImmersive} /* CV */ >
+                        <div className="image-modal-nav-div" /* CV */ >
+                                <div className="image-modal-close-div" /* CV */ >
+                                        <button className="image-modal-nav-button" /* CV */
+                                        onClick={onClose} aria-label="Close">
+                                                <i className="button-icon bi bi-x-lg"></i>
+                                        </button>
+                                </div>
+                                <div className="image-modal-back-and-forward-div" /* CV */ >
+                                        <button className="image-modal-nav-button" /* CV */  
+                                        onClick={onPrev} aria-label="Previous">
+                                                <i className="button-icon left-icon bi bi-chevron-left accordion-button-icon" aria-hidden="true" />
+                                        </button>
+                                        <button className="image-modal-nav-button" /* CV */ 
+                                        onClick={onNext} aria-label="Next">
+                                                <i className="button-icon right-icon bi bi-chevron-right accordion-button-icon" aria-hidden="true" />
+                                        </button>
+                                </div>
+                        </div>
+                        <div className="image-modal-text-div" /* CV (skip indiv texts) */ >
+                                <h3 className="image-modal-headline">{headline}</h3>
+                                {dateLocation ? (
+                                <p className="image-modal-date-location">{dateLocation}</p>
+                                ) : (
+                                <>
+                                <p className="image-modal-date">{date}</p>
+                                <p className="image-modal-location">{location}</p>
+                                </>
+                                )}
+                                <p className="image-modal-description">{description}</p>
+                                <p className="image-modal-filename">{filename}</p>
+                                <p className="image-modal-keywords">{keywords}</p>
+                        </div>
+                </div>
+                <div className="image-modal-image-container-div" /* CV */ 
+                onClick={onImageClick} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
+                        <picture key={bp}>
+                                <source media="(max-width: 600px)" srcSet={small} />
+                                <source media="(max-width: 1024px)" srcSet={medium} />
+                                <img
+                                src={large}
+                                alt={headline}
+                                onError={(e) => {
+                                e.currentTarget.onerror = null;
+                                e.currentTarget.src = "/images/Image Not Available.png";
+                                }} />
+                        </picture>
+                </div>
         </div>
-      </div>
-    </div>
-  );
+</div>
+
+
+
+
+
+
+
+
+
+);
 };
-
 export default ImageModal;

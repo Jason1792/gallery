@@ -1,17 +1,30 @@
-.image-modal-overlay { 
+/* z-index */ .image-modal-overlay-div { 
+        background: var(--image-modal-overlay-div-bg);
         position: fixed; 
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: red;
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 2147483647; /* Ensure the overlay wins the stacking war everywhere */
+        z-index: 2;
 }
-.image-modal-content { /* Contains image, text, buttons. */
-        background: var(--image-modal-content-bg);
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-overlay-div { 
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-overlay-div { 
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-content-div { 
+        background: var(--image-modal-content-div-bg);
         padding: 0;
         width: 100vw;
         height: 100vh;
@@ -22,12 +35,48 @@
         box-sizing: border-box;
         overflow: hidden;
         row-gap: 12px;
-        height: 100dvh; /* added: handles mobile browser chrome || Make the modal content truly full screen on mobile Safari too */
+        height: 100dvh; /* handles mobile browser chrome || Make the modal content truly full screen on mobile Safari too */
         position: relative; /* creates stacking context for children */
+        transition: background 200ms ease, background-color 200ms ease; /* cover both props */
 }
-.image-modal-nav-and-text { /* Contains text, buttons. */
-        background: var(--image-modal-nav-and-text-bg);
-        color: var(--image-modal-and-card-text-txt);
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-content-div { 
+        opacity: 1;
+        background: var(--image-modal-content-div-tablet-bg);
+        position: relative;
+}
+}
+@media (max-width: 600px) {
+.image-modal-content-div { 
+        opacity: 1;
+        background: var(--image-modal-content-div-cell-bg);
+        position: relative;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-content-div.immersive {
+        opacity: 1;
+        padding: 0; 
+        background-color: black;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-content-div.immersive {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-content-div.immersive {
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+/* z-index */ .image-modal-nav-and-text-div { 
+        background: var(--image-modal-nav-and-text-div-bg);
+        color: var(--text-color);
         width: 100%;
         height: fit-content;
         display: flex;
@@ -39,9 +88,60 @@
         box-sizing: border-box;
         border-radius: 0;
         min-height: fit-content;
+        opacity: 1;
+        transition: opacity 200ms ease;
+        position: relative; /* Ensure header bar sits above fixed on-image controls */
+        z-index: 10;
 }
-.image-modal-nav { /* Contains buttons. */
-        background-color: var(--image-modal-nav-bg);
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-nav-and-text-div { 
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-nav-and-text-div { 
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-nav-and-text-div { pointer-events: none; }
+.image-modal-nav-and-text-div button,
+.image-modal-nav-and-text-div [role="button"],
+.image-modal-nav-and-text-div a,
+.image-modal-nav-and-text-div input,
+.image-modal-nav-and-text-div select,
+.image-modal-nav-and-text-div textarea { 
+        pointer-events: auto;
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-content-div.immersive .image-modal-nav-and-text-div,
+.image-modal-content-div.immersive .image-modal-nav-and-text-div * {
+        opacity: 0 !important;
+        pointer-events: none !important;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-content-div.immersive .image-modal-nav-and-text-div,
+.image-modal-content-div.immersive .image-modal-nav-and-text-div * {
+        opacity: 0 !important;
+        pointer-events: none !important;
+}
+}
+@media (max-width: 600px) {
+.image-modal-content-div.immersive .image-modal-nav-and-text-div,
+.image-modal-content-div.immersive .image-modal-nav-and-text-div * {
+        opacity: 0 !important;
+        pointer-events: none !important;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-nav-div { 
+        background-color: var(--image-modal-nav-div-bg);
         height: auto;
         display: flex;
         justify-content: flex-end;
@@ -50,34 +150,52 @@
         margin: 0;
         gap: .45vw;
         box-sizing: border-box;
-        border-radius: 6px;
+        border-radius: none;
         flex: 1 1 50%;
+        pointer-events: none !important;
+
 }
 @media (min-width: 601px) and (max-width: 1024px) {
-.image-modal-nav { /* e: div */
+.image-modal-nav-div { 
         opacity: 1;
         order: 2;
         padding: 0 6px 0 0;
 }
 }
 @media (max-width: 600px) {
-.image-modal-nav { /* e: div */
+.image-modal-nav-div { 
         opacity: 1;
         order: 2;
         padding: 0 6px 0 0;
 }
 }
-i {
-        font-size: 1.8rem;
-}
-.image-modal-close { /* e: div */
+/**/
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+/* z-index */ .image-modal-close-div { 
+        background-color: var(--image-modal-close-div-bg);
         height: 100%;
         box-sizing: border-box;
         border-radius: 6px;
-        position: relative; /* z-index only works on positioned elements */
-        z-index: 10000;
+        position: relative; /* ZI only works on positioned elements */
+        z-index: 1;
 }
-.image-modal-nav-button {
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-close-div { 
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-close-div { 
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-nav-button { 
+        /* don't add bg color here; button element already has it. */
         border: none;
         padding: 0;
         margin: 0;
@@ -86,16 +204,71 @@ i {
         align-items: center;
         justify-content: center;
 }
-.image-modal-close i { /* e: div */
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-nav-button { 
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-nav-button { 
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-close-div i { 
         font-size: 1.8rem;
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-close-div i { 
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-close-div i { 
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
 .image-modal-nav-button .bi {
         font-size: 2rem;
         padding: 4px;
         transition: transform 0.25s ease, opacity 0.25s ease;
 }
-.image-modal-back-and-forward { /* e: div */
-        background-color: var(--image-modal-back-and-forward-bg);
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-nav-button .bi {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-nav-button .bi {
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-back-and-forward-div { 
+        opacity: 1;
+        background-color: var(--image-modal-back-and-forward-div-bg);
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0;
+        gap: .4vw;
+        box-sizing: border-box;
+        border-radius: 6px;
+        pointer-events: none;
+        transition: opacity 200ms ease;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-back-and-forward-div { 
+        opacity: 1;
+        background-color: var(--image-modal-back-and-forward-div-bg);
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -108,37 +281,138 @@ i {
         position: fixed;
         left: 0;
         right: 0;
+        transition: opacity 200ms ease;
+        transform: translateY(-50%);
 }
-@media (max-width: 1024px) {
-.image-modal-back-and-forward { 
-        pointer-events: none; 
 }
-.image-modal-back-and-forward .image-modal-nav-button { 
+@media (max-width: 600px) {
+.image-modal-back-and-forward-div { 
+        opacity: 1;
+        background-color: var(--image-modal-back-and-forward-div-bg);
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0;
+        gap: .4vw;
+        box-sizing: border-box;
+        border-radius: 6px;
+        pointer-events: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        transition: opacity 200ms ease;
+        transform: translateY(-50%);
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-content-div.immersive .image-modal-back-and-forward-div,
+.image-modal-content-div.immersive .image-modal-back-and-forward-div * {
+        opacity: 0 !important;
+        pointer-events: none !important;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-content-div.immersive .image-modal-back-and-forward-div,
+.image-modal-content-div.immersive .image-modal-back-and-forward-div * {
+        opacity: 0 !important;
+        pointer-events: none !important;
+}
+}
+@media (max-width: 600px) {
+.image-modal-content-div.immersive .image-modal-back-and-forward-div,
+.image-modal-content-div.immersive .image-modal-back-and-forward-div * {
+        opacity: 0 !important;
+        pointer-events: none !important;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-back-and-forward-div .image-modal-nav-button { 
+        opacity: 0.9;
+        transition: opacity 150ms ease, transform 150ms ease;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-back-and-forward-div .image-modal-nav-button { 
+        opacity: 0.9;
+        transition: opacity 150ms ease, transform 150ms ease;
         pointer-events: auto; 
 }
 }
-.image-modal-back-and-forward button,
-.image-modal-back-and-forward [role="button"],
-.image-modal-back-and-forward a {
+@media (max-width: 600px) {
+.image-modal-back-and-forward-div .image-modal-nav-button { 
+        opacity: 0.9;
+        transition: opacity 150ms ease, transform 150ms ease;
+        pointer-events: auto; 
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-back-and-forward-div .image-modal-nav-button:active {
+        opacity: 1;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-back-and-forward-div .image-modal-nav-button:active {
+        opacity: 1;
+        transform: scale(0.96);
+}
+}
+@media (max-width: 600px) {
+.image-modal-back-and-forward-div .image-modal-nav-button:active {
+        opacity: 1;
+        transform: scale(0.96);
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-back-and-forward-div button,
+.image-modal-back-and-forward-div [role="button"],
+.image-modal-back-and-forward-div a {
         pointer-events: auto;
 }
-.image-modal-text {
-        background-color: var(--image-modal-text);
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-back-and-forward-div button,
+.image-modal-back-and-forward-div [role="button"],
+.image-modal-back-and-forward-div a {        
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-back-and-forward-div button,
+.image-modal-back-and-forward-div [role="button"],
+.image-modal-back-and-forward-div a {        
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-text-div {
+        background-color: var(--image-modal-text-div-bg);
         padding: 2px 0 2px 4px;
         border-radius: 6px;
         flex: 1 1 50%;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
-.image-modal-text {
+.image-modal-text-div {
         opacity: 1;
         padding: 4px 0 0 10px;
 }
 }
 @media (max-width: 600px) {
-.image-modal-text {
+.image-modal-text-div {
         opacity: 1;
 }
-}.image-modal-headline {
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-headline {
+        color: var(--text-color);
         background-color: var(--image-modal-headline-bg);
         font-size: 1.2rem;
         margin: 0;
@@ -148,31 +422,31 @@ i {
 .image-modal-date-location {
         background-color: var(--image-modal-date-bg);
         font-size: 1rem;
-        margin: 0;
-        padding: 0;
+        margin: 0 0 0 0;
+        padding: 4px 0 0 0;
         line-height: 1rem;    
 }
 .image-modal-date {
         background-color: var(--image-modal-date-bg);
         font-size: .9rem;
-        margin: 0;
-        padding: 0px 0 1px 0;
+        margin: 0 0 0 0;
+        padding: 4px 0 0 0;
         line-height: 1rem;    
 }
 .image-modal-location {
         display: none;
         background-color: var(--image-modal-location-bg);
         font-size: .8rem;
-        margin: 0;
-        padding: 8px 0 6px 0;
+        margin: 0 0 0 0;
+        padding: 4px 0 0 0;
         line-height: .75rem;    
 }
 .image-modal-description {  
         display: none;
         background-color: var(--image-modal-description-bg);
         font-size: 1rem;
-        margin: 0;
-        padding: 8px 0 5px 0;
+        margin: 0 0 0 0;
+        padding: 4px 0 0 0;
         line-height: 1.25rem;    
 }
 .image-modal-filename {
@@ -183,7 +457,11 @@ i {
         background-color: var(--image-modal-keywords-bg);
         display: none;
 }
-.image-modal-image-container {
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-image-container-div {
+        background-color: var(--image-modal-image-container-div-bg);
         flex-grow: 1;
         max-width: 100%;
         width: 100%;
@@ -192,178 +470,178 @@ i {
         align-items: center;
         border-radius: 8px;
         overflow: hidden;
-        /* Remove padding so the rounded edge is flush.
-        If you want spacing, put it on a wrapper above this element instead. */
         padding: 0 12px 12px 12px;
         box-sizing: border-box;
 }
-/* 2) Ensure wrapper fills and inherits radius */
-.image-modal-image-container picture {
-        width: 100%;
-        height: 100%;
-        display: block;
-        border-radius: inherit;   /* keeps all corners aligned */
-}
-/* 3) The actual image: fill the box, preserve aspect, inherit radius */
-.image-modal-image-container img {
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: contain;      /* show entire image */
-        border-radius: inherit;   /* match container corners */
-        border-radius: 8px;
-}
-/* Optional: only if you still see square corners after step 1 */
-.image-modal-image-container picture,
-.image-modal-image-container img {
-        border-radius: inherit !important;
-        border-radius: 8px;
-}
-@media (max-width: 1024px) {
-/* Make sure the overall modal is a positioned container if you later want to anchor to it; not strictly required for fixed. */
-.image-modal-content {
-        position: relative;
-}
-.image-modal-back-and-forward {
-        position: fixed; /* sits above the image regardless of scroll */
-        top: 50vh; /* roughly the vertical center of the viewport */
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 20px; /* gutter from edges */
-        background: transparent; /* no background strip */
-        pointer-events: none; /* let only the buttons be clickable */
-}
-/* Make the actual buttons clickable and styled as on-image pills */
-.image-modal-back-and-forward .image-modal-nav-button {
-        pointer-events: auto; /* re-enable pointer for the buttons */
-        border-radius: 6px;
-        box-shadow: 0 2px 10px rgba(0,0,0,.35);
-}
-.image-modal-back-and-forward .bi {
-        font-size: 2rem;
-        padding: 8px;              /* larger hit area on touch */
-        line-height: 1;
-}
-.image-modal-nav {
-        align-items: center;
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-image-container-div {
+        opacity: 1;
 }
 }
-@media (max-width: 1024px) {
-.image-modal-back-and-forward .image-modal-nav-button {
-        opacity: 0.9;
-        transition: opacity 150ms ease, transform 150ms ease;
-}
-.image-modal-back-and-forward .image-modal-nav-button:active {
-        transform: scale(0.96);
+@media (max-width: 600px) {
+.image-modal-image-container-div {
+        opacity: 1;
 }
 }
-.image-modal-content.immersive {
-  padding: 0; 
-  background: red;
+
+/* Optional: show a helpful cursor on desktop; touch devices ignore it */
+@media (hover: hover) and (pointer: fine) {
+.image-modal-content-div.immersive .image-modal-image-container-div {
+        cursor: zoom-out;
+  }
 }
-.image-modal-content.immersive .image-modal-image-container {
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-content-div.immersive .image-modal-image-container-div {
         width: 100%;
         height: 100%;
         padding: 0 !important;
         border-radius: 0;
 }
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-content-div.immersive .image-modal-image-container-div {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-content-div.immersive .image-modal-image-container-div {
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+/* z-index */ .image-modal-image-container-div {
+  position: relative;
+  z-index: 3;   /* above background layers */
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-image-container-div {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-image-container-div {
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+/* z-index */ .image-modal-image-container-div picture {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: inherit; /* keeps all corners aligned */
+        /* Optional: give image container a stacking baseline */  
+        position: relative;
+        z-index: 9; /* picture sits under controls */
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-image-container-div picture {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-image-container-div picture {
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-image-container-div img { /* fill box, preserve aspect, inherit radius */
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain; /* show entire image */
+        border-radius: inherit; 
+        border-radius: 8px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-image-container-div img {        
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.image-modal-image-container-div img {
+        opacity: 1;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
 /* Make sure the picture/img fill the container */
-.image-modal-content.immersive .image-modal-image-container picture,
-.image-modal-content.immersive .image-modal-image-container img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain;     /* keep full image visible */
-  border-radius: 0;        /* or inherit if you prefer rounded; remove overflow if so */
+.image-modal-content-div.immersive .image-modal-image-container-div picture,
+.image-modal-content-div.immersive .image-modal-image-container-div img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;     /* keep full image visible */
+        border-radius: 0;    
+        transform: scale(1.02); /* subtle; remove if you prefer zero movement */
 }
-@media (max-width: 1024px) {
-  .image-modal-back-and-forward {
-    position: fixed;
-    top: 50dvh; /* was 50vh; d**vh handles mobile chrome */
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 10001; /* above picture (which you set at 9998) */
-  }
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-content-div.immersive .image-modal-image-container-div picture,
+.image-modal-content-div.immersive .image-modal-image-container-div img {
+        opacity: 1;
 }
-
-/* Optional: show a helpful cursor on desktop; touch devices ignore it */
-@media (hover: hover) and (pointer: fine) {
-  .image-modal-content.immersive .image-modal-image-container {
-    cursor: zoom-out;
-  }
 }
-/* Smooth background + chrome fade when toggling immersive */
-.image-modal-content { 
-  transition: background 200ms ease, background-color 200ms ease; /* cover both props */
+@media (max-width: 600px) {
+.image-modal-content-div.immersive .image-modal-image-container-div picture,
+.image-modal-content-div.immersive .image-modal-image-container-div img {
+        opacity: 1;
+}
 }
 
-/* Default chrome state */
-.image-modal-nav-and-text,
-.image-modal-back-and-forward {
-  opacity: 1;
-  pointer-events: auto;
-  transition: opacity 200ms ease;
-}
-
-/* Immersive: fully fade and disable interaction */
-.image-modal-content.immersive .image-modal-nav-and-text,
-.image-modal-content.immersive .image-modal-nav-and-text *,
-.image-modal-content.immersive .image-modal-back-and-forward,
-.image-modal-content.immersive .image-modal-back-and-forward * {
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
-
-
-/* Optional: nudge image a hair for a "focused" feel */
-.image-modal-image-container picture,
-.image-modal-image-container img {
-  transition: transform 250ms ease, opacity 200ms ease;
-  will-change: transform, opacity;
-}
-
-.image-modal-content.immersive .image-modal-image-container img {
-  transform: scale(1.02); /* subtle; remove if you prefer zero movement */
-}
-
-/* If you want the immersive background to get slightly darker */
-.image-modal-content.immersive {
-  background-color: #000; /* or keep your var(...) if you have one */
-}
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
 @media (prefers-reduced-motion: reduce) {
-  .image-modal-content,
-  .image-modal-nav-and-text,
-  .image-modal-back-and-forward,
-  .image-modal-image-container picture,
-  .image-modal-image-container img {
-    transition: none !important;
-  }
+.image-modal-content-div,
+.image-modal-nav-and-text-div,
+.image-modal-back-and-forward-div,
+.image-modal-image-container-div picture,
+.image-modal-image-container-div img {
+        transition: none !important;
 }
-/* Ensure the header bar sits above the fixed on-image controls */
-.image-modal-nav-and-text {
-  position: relative;
 }
-/* 8) Optional: give the image container a stacking baseline */
-.image-modal-image-container picture {
-  position: relative;  /* NEW */
-  z-index: 1;          /* picture sits under controls */
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+/* Optional: nudge image a hair for a "focused" feel */
+.image-modal-image-container-div img {
+        transition: transform 250ms ease, opacity 200ms ease;
+        will-change: transform, opacity;
 }
-.image-modal-nav-and-text { pointer-events: none; }
-.image-modal-nav-and-text button,
-.image-modal-nav-and-text [role="button"],
-.image-modal-nav-and-text a,
-.image-modal-nav-and-text input,
-.image-modal-nav-and-text select,
-.image-modal-nav-and-text textarea {
-  pointer-events: auto;
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-image-container-div img {
+        transition: transform 250ms ease, opacity 200ms ease;
+        will-change: transform, opacity;
 }
-.image-modal-image-container {
-  position: relative;
-  z-index: 2;   /* above background layers */
+}
+@media (max-width: 600px) {
+.image-modal-image-container-div img {
+        transition: transform 250ms ease, opacity 200ms ease;
+        will-change: transform, opacity;
+}
+}
+
+/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
+
+.image-modal-image-container-div picture {
+        transition: transform 250ms ease, opacity 200ms ease;
+        will-change: transform, opacity;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.image-modal-image-container-div picture {
+        transition: transform 250ms ease, opacity 200ms ease;
+        will-change: transform, opacity;
+}
+}
+@media (max-width: 600px) {
+.image-modal-image-container-div picture {
+        transition: transform 250ms ease, opacity 200ms ease;
+        will-change: transform, opacity;
+}
 }
