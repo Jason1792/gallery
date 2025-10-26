@@ -26,7 +26,7 @@ button:active, .button:active {
 :root, :root[data-theme='actual'] {
         --button-bg: rgba(var(--jason-5-alpha),.15);
         --button-bg-hover: rgba(var(--jason-3-alpha),.4);
-        --button-bg-active: rgba(var(--jason-3-alpha),.8);
+        --button-bg-active: rgba(var(--jason-3-alpha),.6);
         --button-text: rgba(255,255,255,.5);        
         --button-text-hover: rgba(255,255,255,.75);        
         --button-text-active: rgba(255,255,255,1);        
@@ -163,16 +163,16 @@ button:active, .button:active {
 
         /* TEST */
         --image-modal-overlay-div-bg: green;
-        --image-modal-content-div-bg: pink;
+        --image-modal-content-div-bg: rgb(64, 52, 125);
         --image-modal-content-div-tablet-bg: rgb(180, 116, 187);
         --image-modal-content-div-cell-bg: rgb(190, 78, 108);
         --image-modal-nav-and-text-div-bg: skyblue;
         --image-modal-nav-div-bg: goldenrod;
         --image-modal-close-div-bg: lime;
         --image-modal-nav-button-bg:  rgb(193, 131, 185);
-        --image-modal-back-and-forward-div-bg: rgba(0,0,0,.25);
+        --image-modal-back-and-forward-div-bg: rgba(0, 162, 255, 0.25);
         --image-modal-text-div-bg: hotpink;
-        --image-modal-image-container-div-bg: orange;
+        --image-modal-image-container-div-bg: rgb(150, 58, 12);
         
         --image-modal-and-card-text-txt: lightblue;
         --image-modal-headline-bg: red;

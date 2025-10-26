@@ -34,7 +34,7 @@
         align-items: center;
         box-sizing: border-box;
         overflow: hidden;
-        row-gap: 12px;
+        row-gap: 0;
         height: 100dvh; /* handles mobile browser chrome || Make the modal content truly full screen on mobile Safari too */
         position: relative; /* creates stacking context for children */
         transition: background 200ms ease, background-color 200ms ease; /* cover both props */
@@ -74,7 +74,7 @@
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
-/* z-index */ .image-modal-nav-and-text-div { 
+/* yyy xxx */ .image-modal-nav-and-text-div { 
         background: var(--image-modal-nav-and-text-div-bg);
         color: var(--text-color);
         width: 100%;
@@ -83,8 +83,8 @@
         flex-direction: row;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 6px 0;
-        gap: 6px; 
+        padding: 6px 6.5px;
+        gap: 10px; 
         box-sizing: border-box;
         border-radius: 0;
         min-height: fit-content;
@@ -122,6 +122,7 @@
 .image-modal-content-div.immersive .image-modal-nav-and-text-div * {
         opacity: 0 !important;
         pointer-events: none !important;
+        display: none;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-content-div.immersive .image-modal-nav-and-text-div,
@@ -140,33 +141,34 @@
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
-.image-modal-nav-div { 
+/* yyy xxx */ .image-modal-nav-div { 
         background-color: var(--image-modal-nav-div-bg);
         height: auto;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: flex-start;
         padding: 0;
         margin: 0;
-        gap: .45vw;
+        gap: 6px;
         box-sizing: border-box;
         border-radius: none;
-        flex: 1 1 50%;
+        flex: 0 0 auto;
         pointer-events: none !important;
 
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-nav-div { 
         opacity: 1;
+        justify-content: flex-end;
         order: 2;
-        padding: 0 6px 0 0;
+        padding: 0;
 }
 }
 @media (max-width: 600px) {
 .image-modal-nav-div { 
         opacity: 1;
         order: 2;
-        padding: 0 6px 0 0;
+        padding: 0;
 }
 }
 /**/
@@ -251,7 +253,7 @@
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
-.image-modal-back-and-forward-div { 
+/* yyy */ .image-modal-back-and-forward-div { 
         opacity: 1;
         background-color: var(--image-modal-back-and-forward-div-bg);
         height: 100%;
@@ -259,7 +261,7 @@
         justify-content: space-between;
         align-items: flex-end;
         padding: 0;
-        gap: .4vw;
+        gap: 6px;
         box-sizing: border-box;
         border-radius: 6px;
         pointer-events: none;
@@ -282,7 +284,7 @@
         left: 0;
         right: 0;
         transition: opacity 200ms ease;
-        transform: translateY(-50%);
+        transform: translateY(-45.75%);
 }
 }
 @media (max-width: 600px) {
@@ -302,7 +304,7 @@
         left: 0;
         right: 0;
         transition: opacity 200ms ease;
-        transform: translateY(-50%);
+        transform: translateY(-45.75%);
 }
 }
 
@@ -391,16 +393,16 @@
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
-.image-modal-text-div {
+/* yyy xxx */ .image-modal-text-div {
         background-color: var(--image-modal-text-div-bg);
-        padding: 2px 0 2px 4px;
-        border-radius: 6px;
-        flex: 1 1 50%;
+        padding: 2px 0 0 0;
+        border-radius: none;
+        flex: 1 1 auto;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-text-div {
         opacity: 1;
-        padding: 4px 0 0 10px;
+        padding: 4px 0 0 6px;
 }
 }
 @media (max-width: 600px) {
@@ -468,9 +470,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 8px;
+        border-radius: none;
         overflow: hidden;
-        padding: 0 12px 12px 12px;
+        padding: 12px;
         box-sizing: border-box;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -578,9 +580,10 @@
         width: 100%;
         height: 100%;
         display: block;
-        object-fit: contain;     /* keep full image visible */
+        object-fit: contain; /* keep full image visible */
         border-radius: 0;    
-        transform: scale(1.02); /* subtle; remove if you prefer zero movement */
+        /*
+        transform: scale(1.02);  subtle; remove if you prefer zero movement */
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-content-div.immersive .image-modal-image-container-div picture,
