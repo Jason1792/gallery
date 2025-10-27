@@ -1,10 +1,13 @@
 /* z-index */ .image-modal-overlay-div { 
         background: var(--image-modal-overlay-div-bg);
         position: fixed; 
+        /* I20251027A Commented out:
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
+        */
+        inset: 0; /* I20251027A Added: */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -27,7 +30,12 @@
         background: var(--image-modal-content-div-bg);
         padding: 0;
         width: 100vw;
+        /* I20251027A Commented out:
         height: 100vh;
+        height: 100dvh;
+        */
+        height: 100svh; /* I20251027A Added */
+        min-height: 100svh; /* I20251027A Added */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -35,7 +43,6 @@
         box-sizing: border-box;
         overflow: hidden;
         row-gap: 0;
-        height: 100dvh; /* handles mobile browser chrome || Make the modal content truly full screen on mobile Safari too */
         position: relative; /* creates stacking context for children */
         transition: background 200ms ease, background-color 200ms ease; /* cover both props */
 }
@@ -60,6 +67,8 @@
         opacity: 1;
         padding: 0; 
         background-color: black;
+        height: 100svh; /* I20251027A Added. When the smoke clears, try deleting these, since it's already stated in non-immers version */
+        min-height: 100svh; /* I20251027A Added. When the smoke clears, try deleting these, since it's already stated in non-immers version */
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-content-div.immersive {
@@ -84,6 +93,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding: 6px 6.5px;
+        padding-top: calc(6px + env(safe-area-inset-top, 0)); /* I20251027A Add safe-area padding for notches/URL bar overlap (nice-to-have). Prevents top bar from ever tucking under the iOS chrome on devices with a notch. */
         gap: 10px; 
         box-sizing: border-box;
         border-radius: 0;
