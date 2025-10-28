@@ -34,6 +34,8 @@
         height: 100vh;
         height: 100dvh;
         */
+        top: 0; /* I20251027A Added per me */
+        left: 0; /* I20251027A Added per me */
         height: 100svh; /* I20251027A Added */
         min-height: 100svh; /* I20251027A Added */
         display: flex;
