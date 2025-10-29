@@ -90,7 +90,7 @@
 
 /* yyy xxx */ .image-modal-nav-and-text-div { 
         background: var(--image-modal-nav-and-text-div-bg);
-        color: var(--text-color);
+        color: var(--image-modal-and-card-text-txt);
         width: 100%;
         height: fit-content;
         display: flex;
@@ -429,7 +429,6 @@
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
 .image-modal-headline {
-        color: var(--text-color);
         background-color: var(--image-modal-headline-bg);
         font-size: 1.2rem;
         margin: 0;

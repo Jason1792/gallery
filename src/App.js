@@ -80,7 +80,7 @@ cardData.forEach((c, i) => {
 <main>
   {loading ? (
     <div className="no-results">
-      <p>Loading images</p>
+      <p>Loading...</p>
     </div>
   ) : filteredCardData.length > 0 ? (
     <div className="card-grid">
