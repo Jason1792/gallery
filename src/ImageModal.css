@@ -73,6 +73,7 @@
         background-color: black;
         height: 100svh; /* I20251027A Added. When the smoke clears, try deleting these, since it's already stated in non-immers version */
         min-height: 100svh; /* I20251027A Added. When the smoke clears, try deleting these, since it's already stated in non-immers version */
+        min-height: 100%;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-content-div.immersive {
