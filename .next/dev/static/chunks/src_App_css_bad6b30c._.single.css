@@ -1,0 +1,69 @@
+/* [project]/src/App.css [app-client] (css) */
+html, body, #root {
+  background: var(--body-bg);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
+}
+
+main {
+  background: var(--main-bg);
+  box-sizing: border-box;
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px;
+}
+
+@media (max-width: 600px) {
+  main {
+    display: block;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  main {
+    display: block;
+  }
+}
+
+.no-results {
+  background-color: var(--no-results-bg);
+  text-align: center;
+  opacity: .85;
+  place-items: center;
+  min-height: 40vh;
+  display: grid;
+}
+
+.no-results p {
+  color: var(--no-results-text);
+  font-weight: var(--weight-semi-bold);
+}
+
+.card-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding-bottom: 20px;
+  display: grid;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*# sourceMappingURL=src_App_css_bad6b30c._.single.css.map*/

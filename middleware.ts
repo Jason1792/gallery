@@ -4,13 +4,26 @@ export const config = {
   matcher: ["/((?!_next/|favicon.ico|robots.txt|sitemap.xml).*)"],
 };
 
-export function middleware(req: Request) {
-  const auth = req.headers.get("authorization") || "";
-  const u = process.env.BASIC_AUTH_USER || "";
-  const p = process.env.BASIC_AUTH_PASS || "";
-  const expected = "Basic " + Buffer.from(`${u}:${p}`).toString("base64");
+function parsePairs(env: string | undefined) {
+  return (env || "")
+    .split(",")
+    .map(s => s.trim())
+    .filter(Boolean); // ["me:myPass","visitor:theirPass"]
+}
 
-  if (auth === expected) return NextResponse.next();
+export function middleware(req: Request) {
+  // New: multiple acceptable pairs via BASIC_AUTH_PAIRS, fallback to single user/pass
+  const pairs = parsePairs(process.env.BASIC_AUTH_PAIRS).length
+    ? parsePairs(process.env.BASIC_AUTH_PAIRS)
+    : [`${process.env.BASIC_AUTH_USER || ""}:${process.env.BASIC_AUTH_PASS || ""}`];
+
+  const auth = req.headers.get("authorization") || "";
+  if (auth.startsWith("Basic ")) {
+    const decoded = Buffer.from(auth.slice(6), "base64").toString("utf8"); // "user:pass"
+    if (pairs.includes(decoded)) {
+      return NextResponse.next();
+    }
+  }
 
   return new NextResponse("Auth required", {
     status: 401,
