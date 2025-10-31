@@ -1,29 +1,1165 @@
-[00:00:09.781] Server  WARN     ⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
-[00:00:11.625] Server  LOG      ✓ Ready in 8.7s
-[00:01:24.357] Server  LOG      ○ Compiling / ...
-[00:01:28.573] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:56.319] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:07.738] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:43.577] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:10:51.170] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:11:19.545] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:16:00.432] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:17:33.305] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:31:12.992] Server  LOG      ✓ Compiled in 819.6s
-[00:31:31.317] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:37:00.121] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:29:59.560] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:30:22.409] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[01:32:32.221] Server  LOG      ✓ Compiled in 129.7s
-[01:32:32.730] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:15:39.837] Server  LOG      ✓ Compiled in 2587s
-[02:15:41.207] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:21:38.902] Server  LOG      ✓ Compiled in 6.3s
-[02:21:39.414] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:29:25.520] Server  LOG      ✓ Compiled in 466s
-[02:29:26.153] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[02:36:08.738] Server  LOG      ✓ Compiled in 402.4s
-[02:36:09.893] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:52:05.082] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:53:43.718] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[04:54:23.978] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:12.751] Server  LOG      ✓ Ready in 8.6s
+[00:00:16.245] Server  LOG      ○ Compiling / ...
+[00:00:18.370] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:09.610] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:39.251] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:09.443] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:09.496] Server  LOG      ✓ Compiled in 88ms
+[01:27:09.499] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:10.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:10.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:12.481] Server  LOG      ○ Compiling /_error ...
+[01:27:13.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:14.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:17.573] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:17.708] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:17.930] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:18.026] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:18.190] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:18.813] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:18.974] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:19.098] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:19.274] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:19.322] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:19.462] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:19.522] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:20.328] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:20.633] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:20.637] Server  LOG      ○ Compiling /_not-found/page ...
+[01:27:20.824] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:20.967] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.083] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.129] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.221] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.298] Browser ERROR   uncaughtError: Error: ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+
+
+[01:27:21.478] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.514] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.591] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.626] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.732] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.775] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.827] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:21.899] Server  ERROR    ⨯ Error: Could not parse module '[project]/proxy.ts'
+
+Expected ';', '}' or <eof>
+[01:27:22.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:22.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:22.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:22.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:22.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:22.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:27:22.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:50:19.414] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:50:53.381] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:51:18.050] Server  LOG      ✓ Compiled in 425ms
+[01:51:18.381] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:52:29.456] Server  LOG      ✓ Compiled in 490ms
+[01:52:30.380] Browser ERROR   ./proxy.ts:42:15
+Parsing ecmascript source code failed
+  40 |
+  41 |
+> 42 | Melissa.Bernal@umusic.com
+     |               ^
+
+Expected ';', '}' or <eof>
+[01:52:50.416] Server  LOG      ✓ Compiled in 313ms
+[01:52:52.017] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:04:15.041] Server  LOG      ✓ Compiled in 0ms
+[02:05:35.089] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:27:42.428] Server  LOG      ✓ Compiled in 115ms
+[02:27:44.405] Server  LOG      ✓ Compiled in 389ms
+[02:28:27.082] Server  LOG      ✓ Compiled in 96ms
+[02:29:31.063] Server  LOG      ✓ Compiled in 78ms
+[02:29:36.937] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:36:57.416] Server  LOG      ✓ Compiled in 203ms
+[02:44:49.614] Server  LOG      ✓ Compiled in 207ms
+[02:44:57.036] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:45:57.047] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:51:38.545] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:38.555] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.318] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.323] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.801] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.803] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.804] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.804] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.807] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.807] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.814] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.822] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.832] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.837] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:39.840] Server  LOG      ✓ Compiled in 2.2s
+[02:51:39.968] Browser ERROR   ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+https://nextjs.org/docs/messages/module-not-found
+[02:51:43.829] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.830] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.830] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.844] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.892] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.892] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.893] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.893] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.945] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.946] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.946] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.947] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.960] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.961] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.961] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.961] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.972] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.972] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.973] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.973] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.975] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.976] Server  ERROR    ⨯ ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.978] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:43.979] Server  ERROR    ⨯ ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[02:51:44.085] Browser ERROR   ./app/layout.tsx:2:1
+Module not found: Can't resolve './scrollbar-consistency'
+  1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+> 2 | import ScrollbarConsistency from "./scrollbar-consistency";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+  5 | import "../src/Header.css";
+
+https://nextjs.org/docs/messages/module-not-found
+[02:51:44.085] Browser ERROR   ./app/layout.tsx:1:1
+Module not found: Can't resolve './scrollbar-shift-fix'
+> 1 | import ScrollbarShiftFix from "./scrollbar-shift-fix";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  2 | import ScrollbarConsistency from "./scrollbar-consistency";
+  3 | import "../src/index.css";
+  4 | import "../src/App.css";
+
+https://nextjs.org/docs/messages/module-not-found
+[02:51:53.423] Server  LOG      ✓ Compiled in 84ms
+[02:52:55.383] Server  LOG      ✓ Compiled in 118ms
+[03:25:44.036] Server  LOG      ✓ Compiled in 194ms
+[03:25:51.708] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:30:25.411] Server  LOG      ✓ Compiled in 233ms
+[03:30:31.149] Server  LOG      ✓ Compiled in 36ms
+[03:45:17.008] Browser ERROR   ./app/layout.tsx:10:38
+Parsing ecmascript source code failed
+   8 | export default function RootLayout({ children }: { children: React.ReactNode }) {
+   9 |   return (
+> 10 | <html lang="en" data-theme="test" > {<!-- actual test -->}
+     |                                      ^^^^^^^^^^^^^^^^^^^^^
+> 11 |       <head>
+     | ^^^^^^^
+  12 |         <title>Portfolio</title>
+  13 |         <link rel="icon" href="/favicon.png" />
+  14 |         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+Legacy comments cannot be used in module code
+[03:45:17.021] Browser ERROR   ./app/layout.tsx:18:2
+Parsing ecmascript source code failed
+  16 | <body>
+  17 |     {children}
+> 18 | </body>
+     |  ^^^^^^
+  19 |
+  20 |     </html>
+  21 |   );
+
+Unterminated regexp literal
+[03:45:34.736] Browser ERROR   ./app/layout.tsx:10:38
+Parsing ecmascript source code failed
+   8 | export default function RootLayout({ children }: { children: React.ReactNode }) {
+   9 |   return (
+> 10 | <html lang="en" data-theme="test" > <!-- actual test -->
+     |                                      ^
+  11 |       <head>
+  12 |         <title>Portfolio</title>
+  13 |         <link rel="icon" href="/favicon.png" />
+
+Expected '</', got '!'
+[03:49:41.761] Server  LOG      ✓ Compiled in 295ms
+[03:51:24.218] Server  LOG      ✓ Compiled in 145ms
+[03:51:47.965] Server  LOG      ✓ Compiled in 561ms
+[03:52:04.229] Server  LOG      ✓ Compiled in 43ms
+[03:53:16.968] Server  LOG      ✓ Compiled in 629ms
+[04:03:28.897] Server  LOG      ✓ Compiled in 143ms
+[04:03:56.693] Server  LOG      ✓ Compiled in 749ms
+[04:05:13.246] Server  LOG      ✓ Compiled in 141ms
+[04:05:44.955] Server  LOG      ✓ Compiled in 646ms
+[04:05:57.126] Server  LOG      ✓ Compiled in 202ms
+[04:08:34.145] Server  LOG      ✓ Compiled in 116ms
+[04:08:39.701] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:09:42.972] Server  LOG      ✓ Compiled in 683ms
+[04:10:06.071] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:16:35.825] Server  LOG      ✓ Compiled in 63ms
+[04:17:45.860] Server  LOG      ✓ Compiled in 815ms
+[04:21:14.282] Server  LOG      ✓ Compiled in 155ms
+[04:21:47.743] Server  LOG      ✓ Compiled in 683ms
+[04:22:22.228] Server  LOG      ✓ Compiled in 836ms
+[04:22:42.231] Server  LOG      ✓ Compiled in 610ms
+[04:24:26.662] Server  LOG      ✓ Compiled in 643ms
+[04:24:46.987] Server  LOG      ✓ Compiled in 630ms
+[04:25:22.008] Server  LOG      ✓ Compiled in 138ms
+[04:25:50.150] Server  LOG      ✓ Compiled in 666ms
+[04:26:07.623] Server  LOG      ✓ Compiled in 91ms
+[04:27:28.622] Server  LOG      ✓ Compiled in 243ms
+[04:28:13.096] Server  LOG      ✓ Compiled in 638ms
+[04:28:25.303] Server  LOG      ✓ Compiled in 583ms
+[04:28:32.426] Server  LOG      ✓ Compiled in 21ms
+[04:28:48.830] Server  LOG      ✓ Compiled in 623ms
+[04:30:48.177] Server  LOG      ✓ Compiled in 52ms
+[04:37:28.309] Server  LOG      ✓ Compiled in 346ms
+[04:39:20.584] Server  LOG      ✓ Compiled in 774ms
+[04:39:34.547] Server  LOG      ✓ Compiled in 63ms
+[04:41:28.992] Server  LOG      ✓ Compiled in 719ms
+[04:42:13.104] Server  LOG      ✓ Compiled in 721ms
+[04:46:51.183] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[04:47:05.039] Server  LOG      ✓ Compiled in 85ms
+[04:54:26.735] Server  LOG      ✓ Compiled in 131ms
+[04:56:11.535] Server  LOG      ✓ Compiled in 769ms
+[04:56:54.879] Server  LOG      ✓ Compiled in 629ms
+[04:57:33.729] Server  LOG      ✓ Compiled in 26ms
+[04:59:13.414] Server  LOG      ✓ Compiled in 612ms
+[04:59:19.453] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:06:03.085] Server  LOG      ✓ Compiled in 3.5s
+[05:06:10.462] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:06:35.423] Server  LOG      ✓ Compiled in 148ms
+[05:08:06.695] Server  LOG      ✓ Compiled in 438ms
+[05:11:00.977] Server  LOG      ✓ Compiled in 735ms
+[05:18:36.118] Server  LOG      ✓ Compiled in 255ms
+[05:18:46.931] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:19:29.108] Server  LOG      ✓ Compiled in 120ms
+[05:20:41.959] Server  LOG      ✓ Compiled in 744ms
+[05:20:49.480] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:30:35.845] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:39:41.561] Server  LOG      ✓ Compiled in 132ms
+[05:40:11.139] Server  LOG      ✓ Compiled in 711ms
+[05:56:39.843] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[05:56:40.125] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+                          data-theme="test"
+-                         style={{--sbw:"0px"}}
+                        >
+                          <head>
+                          <body
+-                           className="no-scroll"
+                          >
+                  ...
+
+[06:02:19.175] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:02:19.463] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+                          data-theme="test"
+-                         style={{--sbw:"0px"}}
+                        >
+                          <head>
+                          <body
+-                           className="no-scroll"
+                          >
+                  ...
+
+[06:04:24.539] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:04:24.660] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+                          data-theme="test"
+-                         style={{--sbw:"0px"}}
+                        >
+                          <head>
+                          <body
+-                           className="no-scroll"
+                          >
+                  ...
+
+[06:05:25.691] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:05:25.691] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+                          data-theme="test"
+-                         style={{--sbw:"0px"}}
+                        >
+                          <head>
+                          <body
+-                           className="no-scroll"
+                          >
+                  ...
+
+[06:12:31.391] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:12:31.529] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+                          data-theme="test"
+-                         style={{--sbw:"0px"}}
+                        >
+                          <head>
+                          <body
+-                           className="no-scroll"
+                          >
+                  ...
+
+[07:35:47.166] Server  LOG      ✓ Compiled in 938ms
+[07:39:04.621] Server  LOG      ✓ Compiled in 343ms
+[07:39:40.767] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:39:40.944] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html
+                          lang="en"
+                          data-theme="test"
+-                         style={{--sbw:"0px"}}
+                        >
+                          <head>
+                          <body
+-                           className="no-scroll"
+                          >
+                  ...
+
+[07:51:11.660] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[07:51:26.867] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:04:27.875] Server  LOG      ✓ Compiled in 694ms
+[08:04:29.088] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:06:52.142] Server  LOG      ✓ Compiled in 1099ms
+[08:07:12.048] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:11:19.931] Server  LOG      ✓ Compiled in 620ms
+[08:12:47.191] Server  LOG      ✓ Compiled in 183ms
+[08:13:27.415] Server  LOG      ✓ Compiled in 656ms
+[08:13:41.684] Server  LOG      ✓ Compiled in 555ms
+[08:14:01.132] Server  LOG      ✓ Compiled in 19ms
+[08:14:12.730] Server  LOG      ✓ Compiled in 613ms
+[08:14:34.012] Server  LOG      ✓ Compiled in 35ms
+[08:14:58.268] Server  LOG      ✓ Compiled in 53ms
+[08:22:16.105] Server  LOG      ✓ Compiled in 167ms
+[08:23:21.451] Server  LOG      ✓ Compiled in 708ms
+[08:31:11.010] Server  LOG      ✓ Compiled in 164ms
+[08:32:20.297] Server  LOG      ✓ Compiled in 108ms
+[08:36:37.431] Server  LOG      ✓ Compiled in 127ms
+[08:36:42.975] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[08:43:36.029] Server  LOG      ✓ Compiled in 89ms
+[08:43:58.077] Server  LOG      ✓ Compiled in 106ms
+[08:44:20.205] Server  LOG      ✓ Compiled in 781ms
+[08:44:27.002] Server  LOG      ✓ Compiled in 87ms
+[08:44:32.135] Server  LOG      ✓ Compiled in 22ms

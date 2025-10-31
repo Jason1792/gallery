@@ -31,6 +31,7 @@ button:active, .button:active {
   --button-text-hover: #ffffffbf;
   --button-text-active: #fff;
   --text-color: white;
+  --html-bg: none;
   --body-bg: linear-gradient(rgba(var(--jason-1-alpha), .1), rgba(var(--jason-1-alpha), .1)), #232323;
   --header-footer-bg: linear-gradient(rgba(var(--jason-1-alpha), .1), rgba(var(--jason-1-alpha), .1)), #191919;
   --header-footer-inner-bg: none;
@@ -80,11 +81,12 @@ button:active, .button:active {
   --button-text-hover: #2cbc58;
   --button-text-active: #fff;
   --text-color: hotpink;
-  --body-bg: linear-gradient(rgba(var(--jason-1-alpha), .1), rgba(var(--jason-1-alpha), .1)), #282828;
-  --header-footer-bg: linear-gradient(rgba(var(--jason-1-alpha), .1), rgba(var(--jason-1-alpha), .1)), #191919;
+  --html-bg: lightblue;
+  --body-bg: hotpink;
+  --header-footer-bg: chartreuse;
   --header-footer-inner-bg: pink;
   --header-left-bg: black;
-  --header-right-bg: grey;
+  --header-right-bg: yellow;
   --header-footer-text: white;
   --email-button-wrapper-bg: coral;
   --main-bg: blue;
@@ -97,7 +99,7 @@ button:active, .button:active {
   --card-text-bg: #37a837;
   --logo-button-bg: magenta;
   --logo-button-bg-hover: skyblue;
-  --menu-outer-bg: grey;
+  --menu-outer-bg: black;
   --menu-inner-bg: yellow;
   --menu-modal-search-wrapper-bg: lime;
   --menu-modal-input-reset-bg: purple;

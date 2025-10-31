@@ -4,6 +4,7 @@
   color: var(--header-footer-text);
   z-index: 1;
   width: 100%;
+  min-width: 100%;
   padding: 0;
   position: sticky;
   top: 0;

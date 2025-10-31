@@ -1,11 +1,4 @@
 /* [project]/src/App.css [app-client] (css) */
-html, body, #root {
-  background: var(--body-bg);
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
 .App {
   flex-direction: column;
   min-height: 100vh;
