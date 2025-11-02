@@ -1,0 +1,281 @@
+/* #region BUTTONS */     
+button, .button {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        border: none;
+        margin: 0;
+        padding: 0;
+        border-radius: 4px;
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 0;
+        transition: background-color .4s ease;
+        font-weight: bold;
+}  
+button:hover, .button:hover {
+        background: var(--button-bg-hover);
+        color: var(--button-text-hover);
+}
+button:active, .button:active {
+        background: var(--button-bg-active);
+        color: var(--button-text-active);
+}
+/* #endregion BUTTONS */       
+
+/* #region COLORS */      
+:root, :root[data-theme='actual'] {
+        --button-bg: rgba(var(--jason-5-alpha),.15);
+        --button-bg-hover: rgba(var(--jason-3-alpha),.4);
+        --button-bg-active: rgba(var(--jason-3-alpha),.6);
+        --button-text: rgba(255,255,255,.5);        
+        --button-text-hover: rgba(255,255,255,.75);        
+        --button-text-active: rgba(255,255,255,1);        
+        --text-color: white;
+        --body-bg:
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(35, 35, 35);
+        --header-footer-bg: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(25, 25, 25);
+        --header-footer-inner-bg: none;
+        --header-footer-inner-left-bg: none;
+        --header-right-bg: none;
+        --header-footer-text: white;
+        --email-button-wrapper-bg: none;
+        --main-bg: none;
+        --no-results-bg: none;
+        --no-results-text: rgb(210, 210, 210);
+        --card-bg: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(50, 50, 50);
+        --card-image-bg: 
+                linear-gradient(90deg,
+                rgba(var(--jason-2-alpha),.9),
+                rgba(var(--jason-2-alpha),.9)), 
+                rgb(255, 255, 255);
+        --card-image-img-bg: 
+                linear-gradient(
+                rgba(var(--jason-2-alpha),0),
+                rgba(var(--jason-2-alpha),0)), 
+                rgb(255, 255, 255);
+        --card-text-bg: none;
+        --logo-button-bg: none;
+        --logo-button-bg-hover: 
+                linear-gradient(90deg,
+                rgba(var(--jason-2-alpha),.15),
+                rgba(var(--jason-2-alpha),.15)), 
+                rgb(52, 52, 52);
+
+        --menu-outer-bg: var(--body-bg);
+        --menu-inner-bg: none;
+        --menu-modal-search-wrapper-bg: none;        
+        --menu-modal-input-reset-bg: none;
+        --menu-modal-search-input-bg: rgba(255,255,255,.08);
+        --menu-modal-search-input-text: white;
+
+
+
+
+        /* ACTUAL */
+        --image-modal-overlay-div-bg: rgba(128,128,128,1);
+        --image-modal-content-div-bg: var(--body-bg);
+        --image-modal-content-div-tablet-bg: var(--body-bg);
+        --image-modal-content-div-cell-bg: var(--body-bg);
+        --image-modal-and-card-text-txt: rgb(210, 210, 210);
+        --image-modal-nav-and-text-div-bg: var(--header-footer-bg);
+        --image-modal-nav-div-bg: none;
+        --image-modal-close-div-bg: none;
+        --image-modal-back-and-forward-div-bg: none;
+        --image-modal-text-div-bg: none;
+        --image-modal-image-container-div-bg: none;
+
+        --image-modal-headline-bg: none;
+        --image-modal-date-bg: none;
+        --image-modal-location-bg: none;
+        --image-modal-description-bg: none;
+        --image-modal-filename-bg: none;
+        --image-modal-keywords-bg: none;
+}
+
+
+
+
+
+
+
+
+
+
+  :root[data-theme='test'] {
+        --button-bg: rgba(255,200,9,1);
+        --button-bg-hover: rgba(111,255,99,1);
+        --button-bg-active: rgba(0,255,255,1);
+        --button-text: rgba(255,0,111,1);
+        --button-text-hover: rgba(44,188,88,1);
+        --button-text-active: rgba(255,255,255,1);        
+        --text-color: hotpink;
+        --body-bg: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(40, 40, 40);
+        --header-footer-bg: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(25, 25, 25);
+        --header-footer-inner-bg: pink;
+        --header-left-bg: black;
+        --header-right-bg: grey;
+        --header-footer-text: white;
+        --email-button-wrapper-bg: coral;
+        --main-bg: blue;
+        --no-results-bg: lightblue;
+        --no-results-text: rgb(210, 210, 210);
+        --card-bg: 
+                linear-gradient(
+                rgba(var(--jason-1-alpha),.1),
+                rgba(var(--jason-1-alpha),.1)), 
+                rgb(50, 50, 50);
+        --image-modal-and-card-text: rgb(210, 210, 210);
+        --card-image-bg: orange;
+        --card-image-img-bg: purple;
+        --card-text-bg: rgb(55, 168, 55);
+
+        --logo-button-bg: magenta;
+        --logo-button-bg-hover: skyblue;
+
+        --menu-outer-bg: grey;
+        --menu-inner-bg: yellow;
+        --menu-modal-search-wrapper-bg: lime;        
+        --menu-modal-input-reset-bg: purple;
+        --menu-modal-search-input-text: white;
+
+
+
+
+
+        /* TEST */
+        --image-modal-overlay-div-bg: green;
+        --image-modal-content-div-bg: rgb(64, 52, 125);
+        --image-modal-content-div-tablet-bg: rgb(180, 116, 187);
+        --image-modal-content-div-cell-bg: rgb(190, 78, 108);
+        --image-modal-nav-and-text-div-bg: skyblue;
+        --image-modal-nav-div-bg: goldenrod;
+        --image-modal-close-div-bg: lime;
+        --image-modal-nav-button-bg:  rgb(193, 131, 185);
+        --image-modal-back-and-forward-div-bg: rgba(0, 162, 255, 0.25);
+        --image-modal-text-div-bg: hotpink;
+        --image-modal-image-container-div-bg: rgb(150, 58, 12);
+        
+        --image-modal-and-card-text-txt: lightblue;
+        --image-modal-headline-bg: red;
+        --image-modal-date-bg: lightgreen;
+        --image-modal-location-bg: red;
+        --image-modal-description-bg: lightgreen;
+        --image-modal-filename-bg: red;
+        --image-modal-keywords-bg: lightgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* #region MASTER_COLORS */       
+:root {
+        /* COPY THESE FROM .ASE ONLY */
+        --jason-1: rgb(110,105,90);
+        --jason-1-alpha: 110,105,90;
+        --jason-2: rgb(201,187,80);
+        --jason-2-alpha: 201,187,80;
+        --jason-3: rgb(204,98,38);
+        --jason-3-alpha: 204,98,38;
+        --jason-4: rgb(78,131,169);
+        --jason-4-alpha: 78,131,169;
+        --jason-5: rgb(203,193,174);
+        --jason-5-alpha: 203,193,174;
+}
+  /* #endregion MASTER_COLORS */       
+/* #endregion COLORS */       
+
+/* #region FONT_VARIABLES */       
+:root {
+  --font-heading: "Figtree", sans-serif;
+  --font-body: "Figtree", sans-serif;
+
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+}
+/* #endregion FONT_VARS_IN_ROOT */       
+
+/* #region TEXT_STYLES */
+
+body {
+        font-family: var(--font-body);
+        font-weight: var(--weight-regular);
+        line-height: 1.6;
+        font-size: 1rem;
+        color: var(--text-color);
+        margin: 0;
+}
+ul {
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+}
+h2 {
+        color: inherit;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.8rem;
+        line-height: 1;
+        margin: 0;
+}
+h3 {
+        color: inherit;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.8rem;
+        line-height: 1;
+        margin: 0;
+}
+h4 {
+        color: inherit;
+        font-family: var(--font-heading);
+        font-weight: var(--weight-semi-bold);
+        font-size: 1.8rem;
+        line-height: 1;
+        margin: 0;
+}
+.body-small {
+        font-family: var(--font-body);
+        font-weight: var(--weight-regular);
+        font-size: 0.875rem;
+        margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
+}
+.button-text {
+        background: var(--button-bg);
+        color: var(--button-text);
+        font-family: var(--font-body);
+        font-weight: var(--weight-bold);
+        font-size: 0.875rem;
+        text-decoration: none;
+        margin-top: 0;
+        margin-bottom: 0;
+}
+/* #endregion TEXT_VAR_STYLES */       

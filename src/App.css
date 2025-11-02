@@ -1,0 +1,69 @@
+html, body, #root {
+  background: var(--body-bg);
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  background: var(--main-bg);
+  flex: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+main {
+        display: block;
+
+        /*
+        copy this out of comments for media break visual; delete before deploy.
+        Keep 'display: block' there to stave off warning msg.
+        background: goldenrod; 
+        */
+}
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+main {
+        display: block;
+
+        /*
+        copy this out of comments for media break visual; delete before deploy
+        Keep 'display: block' there so no warning msg.  
+        background: slateblue; 
+        */
+}
+}
+.no-results {
+        background-color: var(--no-results-bg);
+        min-height: 40vh;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        opacity: .85;
+}
+.no-results p {
+        color: var(--no-results-text);
+        font-weight: var(--weight-semi-bold);
+}
+.card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding-bottom: 20px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.card-grid {
+        grid-template-columns: repeat(2, 1fr);
+}
+}
+@media (max-width: 600px) {
+.card-grid {
+        grid-template-columns: repeat(1, 1fr);
+}
+}
