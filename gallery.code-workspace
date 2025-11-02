@@ -1,11 +1,8 @@
 {
 	"folders": [
-                {
-                        "path": "."
-                },
-                {
-                        "path": "../../shared_web"
-                }
+		{
+			"path": "."
+		}
         ],
         "settings": {}
 }

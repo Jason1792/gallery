@@ -16,13 +16,33 @@ function App() {
     fetch("https://script.google.com/macros/s/AKfycbz7AC7ptwQ91zSTO9xYisad8JmB5YmtB3jDq_ZZatYxZHtbuJPlvlswu-JUXcJgKiBJ1g/exec")
       .then(res => res.json())
       .then(data => {
-        setCardData(data);
-        setFilteredCardData(data);
-      })
-      .catch(err => console.error("Error loading data:", err))
-      .finally(() => setLoading(false));           // 👈 clear loading
-  }, []);
+// Detect base (your dev server is mounted at /gallery)
+        const BASE = window.location.pathname.startsWith("/gallery") ? "/gallery" : "";
 
+        const fix = (v) => {
+          if (!v) return v;
+          // already absolute with /gallery → leave it
+          if (typeof v === "string" && v.startsWith(`${BASE}/`)) return v;
+          // absolute but missing /gallery → prefix it
+          if (typeof v === "string" && v.startsWith("/")) return `${BASE}${v}`;
+          // relative like "images/tiny/file.jpg" → make it "/gallery/images/…"
+          return `${BASE}/${v.replace(/^\.?\/*/, "")}`;
+        };
+
+        const patched = data.map((card) => ({
+          ...card,
+          imageSrc:    fix(card.imageSrc),
+          imageTiny:   fix(card.imageTiny),
+          imageSmall:  fix(card.imageSmall),
+          imageMedium: fix(card.imageMedium),
+          imageLarge:  fix(card.imageLarge),
+        }));
+
+        setCardData(patched);
+        setFilteredCardData(patched);      })
+      .catch(err => console.error("Error loading data:", err))
+      .finally(() => setLoading(false)); // 👈 clear loading
+  }, []);
 
 useEffect(() => {
   const toText = (v, fieldName, card) => {

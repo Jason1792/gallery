@@ -5,9 +5,6 @@ import App from './App';
 import './variables.css';
 import reportWebVitals from './reportWebVitals';
 
-// --- Scrollbar shift prevention: measure & compensate when needed ---
-// Measure the *system* scrollbar width by using a temporary scroller.
-// This works even when the main page has no scrollbar yet.
 function measureScrollbarWidth() {
   const probe = document.createElement('div');
   probe.style.position = 'absolute';
