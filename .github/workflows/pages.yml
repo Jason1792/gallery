@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -30,14 +30,17 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build
+      - name: Build (CRA)
         run: npm run build
 
-      # Upload the build/ directory as the Pages artifact
+      - name: SPA 404 fallback
+        run: cp build/index.html build/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./build
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
