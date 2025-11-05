@@ -130,7 +130,7 @@ function App() {
         <div className="logo-wrapper">
                 <img src={logo} alt="Logo" />
         </div>
-        <h3>Password</h3>
+        <h3>Password: Ok</h3>
         <form onSubmit={handleSubmit}>
           <input className="runtime_render-input"
             value={input}
