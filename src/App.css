@@ -49,11 +49,13 @@ html, body, #root {
 @media (min-width: 601px) and (max-width: 1024px) {
 .runtime_render {
         opacity: 1;
+        max-width: 80vw;
 }
 }
 @media (max-width: 600px) {
 .runtime_render {
         opacity: 1;
+        max-width: 80vw;
 }
 }
 .runtime_render h3 {
