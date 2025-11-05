@@ -220,7 +220,7 @@ body {
         font-family: var(--font-body);
         font-weight: var(--weight-regular);
         line-height: 1.6;
-        font-size: 1rem;
+        font-size: 16px;
         color: var(--text-color);
         margin: 0;
 }

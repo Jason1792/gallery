@@ -1,12 +1,10 @@
 /* Runtime-controlled scrollbar compensation
    (JS sets --sbw and toggles .has-scroll on <html>) */
 :root {
-  --sbw: 0px; /* scrollbar width (computed at runtime) */
+        --sbw: 0px;
 }
 html.no-scroll body {
-  /* When overflow occurs, add padding equal to the scrollbar width
-     so the content area width stays constant and doesn't “jump”. */
-  padding-right: var(--sbw);
+        padding-right: var(--sbw);
 }
 html.no-scroll .header,
 html.no-scroll .menu-outer { padding-right: var(--sbw); 
