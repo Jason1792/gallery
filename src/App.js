@@ -5,12 +5,21 @@ import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
 import logo from "./assets/logo.svg";
 
-const runtime_render = "OK";
+const runtime_render = "Ok";
+const AUTH_KEY = "gallery-authed"; // name in localStorage
 
 function App() {
   // 1. auth hooks
   const [authed, setAuthed] = useState(false);
   const [input, setInput] = useState("");
+
+  // 👇 check localStorage once, when the app mounts
+  useEffect(() => {
+    const saved = localStorage.getItem(AUTH_KEY);
+    if (saved === "true") {
+      setAuthed(true);
+    }
+  }, []);
 
   // 2. app hooks
   const [cardData, setCardData] = useState([]);
@@ -108,6 +117,7 @@ function App() {
     e.preventDefault();
     if (input === runtime_render) {
       setAuthed(true);
+      localStorage.setItem(AUTH_KEY, "true");
     } else {
       alert("No");
     }
@@ -130,8 +140,7 @@ function App() {
           {input.length > 0 && (
           <button className="button runtime_render-button" type="submit">
                 <span>Enter</span>
-                </button>           )}
-
+                </button> )}
         </form>
       </div>
     );
