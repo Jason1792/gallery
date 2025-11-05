@@ -5,7 +5,7 @@ const tiny = imageTiny || imageSrc; // fall back if tiny missing
 return (
         <div className="card">
                 <div className="card-image-container">
-                        <img src={tiny} alt={headline} onError={(e) => {
+                        <img  loading="lazy" src={tiny} alt={headline} onError={(e) => {
                         e.target.onerror = null; // prevent infinite loop
                         e.target.src = "/images/Image Not Available.png";
                         }}

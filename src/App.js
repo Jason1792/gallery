@@ -3,145 +3,204 @@ import Header from "./Header";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
+import logo from "./assets/logo.svg";
+
+const runtime_render = "OK";
 
 function App() {
+  // 1. auth hooks
+  const [authed, setAuthed] = useState(false);
+  const [input, setInput] = useState("");
+
+  // 2. app hooks
   const [cardData, setCardData] = useState([]);
   const [filteredCardData, setFilteredCardData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');  
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const [loading, setLoading] = useState(true);   // 👈 NEW
+  const [loading, setLoading] = useState(true);
 
+  // fetch data
   useEffect(() => {
     setLoading(true);
-    fetch("https://script.google.com/macros/s/AKfycbz7AC7ptwQ91zSTO9xYisad8JmB5YmtB3jDq_ZZatYxZHtbuJPlvlswu-JUXcJgKiBJ1g/exec")
-      .then(res => res.json())
-      .then(data => {
-// Detect base (your dev server is mounted at /gallery)
-        const BASE = window.location.pathname.startsWith("/gallery") ? "/gallery" : "";
+    fetch(
+      "https://script.google.com/macros/s/AKfycbz7AC7ptwQ91zSTO9xYisad8JmB5YmtB3jDq_ZZatYxZHtbuJPlvlswu-JUXcJgKiBJ1g/exec"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        const BASE = window.location.pathname.startsWith("/gallery")
+          ? "/gallery"
+          : "";
 
         const fix = (v) => {
           if (!v) return v;
-          // already absolute with /gallery → leave it
           if (typeof v === "string" && v.startsWith(`${BASE}/`)) return v;
-          // absolute but missing /gallery → prefix it
           if (typeof v === "string" && v.startsWith("/")) return `${BASE}${v}`;
-          // relative like "images/tiny/file.jpg" → make it "/gallery/images/…"
           return `${BASE}/${v.replace(/^\.?\/*/, "")}`;
         };
 
         const patched = data.map((card) => ({
           ...card,
-          imageSrc:    fix(card.imageSrc),
-          imageTiny:   fix(card.imageTiny),
-          imageSmall:  fix(card.imageSmall),
+          imageSrc: fix(card.imageSrc),
+          imageTiny: fix(card.imageTiny),
+          imageSmall: fix(card.imageSmall),
           imageMedium: fix(card.imageMedium),
-          imageLarge:  fix(card.imageLarge),
+          imageLarge: fix(card.imageLarge),
         }));
 
         setCardData(patched);
-        setFilteredCardData(patched);      })
-      .catch(err => console.error("Error loading data:", err))
-      .finally(() => setLoading(false)); // 👈 clear loading
+        setFilteredCardData(patched);
+      })
+      .catch((err) => console.error("Error loading data:", err))
+      .finally(() => setLoading(false));
   }, []);
 
-useEffect(() => {
-  const toText = (v, fieldName, card) => {
-    if (v == null) return ""; // null/undefined → safe empty string
-    if (typeof v !== "string") {
-      console.warn(
-        `Non-string value in field "${fieldName}" for card:`,
-        card,
-        "Value:",
-        v
+  // search filter
+  useEffect(() => {
+    const toText = (v, fieldName, card) => {
+      if (v == null) return "";
+      if (typeof v !== "string") {
+        console.warn(
+          `Non-string value in field "${fieldName}" for card:`,
+          card,
+          "Value:",
+          v
+        );
+        return String(v);
+      }
+      return v.toLowerCase();
+    };
+
+    const term = searchTerm.toLowerCase();
+
+    if (searchTerm === "") {
+      setFilteredCardData(cardData);
+    } else {
+      const results = cardData.filter((card) =>
+        ["headline", "filename", "description", "keywords"].some((field) =>
+          toText(card[field], field, card).includes(term)
+        )
       );
-      return String(v); // still coerce to string so search works
+      setFilteredCardData(results);
     }
-    return v.toLowerCase();
+  }, [searchTerm, cardData]);
+
+  const asText = (v) => {
+    if (v == null) return "";
+    if (typeof v === "string") return v.trim();
+    if (v instanceof Date) return v.toLocaleDateString();
+    return String(v).trim();
   };
 
-  const term = searchTerm.toLowerCase();
+  const formatDateLocation = (date, location) => {
+    const d = asText(date);
+    const l = asText(location);
+    return d && l ? `${d} • ${l}` : d || l;
+  };
 
-  if (searchTerm === "") {
-    setFilteredCardData(cardData);
-  } else {
-    const results = cardData.filter((card) =>
-      [ "headline", "filename", "description", "keywords" ].some((field) =>
-        toText(card[field], field, card).includes(term)
-      )
+  cardData.forEach((c, i) => {
+    if (c.date != null && typeof c.date !== "string")
+      console.warn("Non-string date at row", i, c.date);
+    if (c.location != null && typeof c.location !== "string")
+      console.warn("Non-string location at row", i, c.location);
+  });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (input === runtime_render) {
+      setAuthed(true);
+    } else {
+      alert("No");
+    }
+  };
+
+  // 3. now that all hooks are declared, you can branch in the render
+  if (!authed) {
+    return (
+      <div className="runtime_render">
+        <div className="logo-wrapper">
+                <img src={logo} alt="Logo" />
+        </div>
+        <h3>Password</h3>
+        <form onSubmit={handleSubmit}>
+          <input className="runtime_render-input"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder=""
+          />
+          {input.length > 0 && (
+          <button className="button runtime_render-button" type="submit">
+                <span>Enter</span>
+                </button>           )}
+
+        </form>
+      </div>
     );
-    setFilteredCardData(results);
   }
-}, [searchTerm, cardData]);
 
-// Safe text coercion for anything (null, number, object, etc.)
-const asText = (v) => {
-  if (v == null) return "";            // null/undefined
-  if (typeof v === "string") return v.trim();
-  // If it's a Date (unlikely after JSON), format it; else String() then trim
-  if (v instanceof Date) return v.toLocaleDateString();
-  return String(v).trim();
-};
-
-// Combine date + location safely (no dangling separators)
-const formatDateLocation = (date, location) => {
-  const d = asText(date);
-  const l = asText(location);
-  return d && l ? `${d} • ${l}` : d || l;
-};
-cardData.forEach((c, i) => {
-  if (c.date != null && typeof c.date !== "string")
-    console.warn("Non-string date at row", i, c.date);
-  if (c.location != null && typeof c.location !== "string")
-    console.warn("Non-string location at row", i, c.location);
-});
   return (
     <div className="App">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-<main>
-  {loading ? (
-    <div className="no-results">
-      <p>Loading images</p>
-    </div>
-  ) : filteredCardData.length > 0 ? (
-    <div className="card-grid">
-      {filteredCardData.map((card, idx) => (
-        <Card
-          key={idx}
-          imageSrc={card.imageSrc}
-          imageTiny={card.imageTiny}
-          headline={card.headline}
-          dateLocation={formatDateLocation(card.date, card.location)}
-          date={card.date}
-          location={card.location}
-          description={card.description}
-          filename={card.filename}
-          keywords={card.keywords}
-          onImageClick={() => setSelectedIndex(idx)}
-        />
-      ))}
-    </div>
-  ) : (
-    <div className="no-results">
-      <p>No results found for your search term</p>
-    </div>
-  )}
-</main>
-       {selectedIndex !== null && (
+      <main>
+        {loading ? (
+          <div className="no-results">
+            <p>Loading images</p>
+          </div>
+        ) : filteredCardData.length > 0 ? (
+          <div className="card-grid">
+            {filteredCardData.map((card, idx) => (
+              <Card
+                key={idx}
+                imageSrc={card.imageSrc}
+                imageTiny={card.imageTiny}
+                headline={card.headline}
+                dateLocation={formatDateLocation(card.date, card.location)}
+                date={card.date}
+                location={card.location}
+                description={card.description}
+                filename={card.filename}
+                keywords={card.keywords}
+                onImageClick={() => setSelectedIndex(idx)}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="no-results">
+            <p>No results found for your search term</p>
+          </div>
+        )}
+      </main>
+      {selectedIndex !== null && (
         <ImageModal
-        imageSrc={filteredCardData[selectedIndex].imageSrc}
-        imageSmall={filteredCardData[selectedIndex].imageSmall}
-        imageMedium={filteredCardData[selectedIndex].imageMedium}
-        imageLarge={filteredCardData[selectedIndex].imageLarge} 
-        headline={filteredCardData[selectedIndex].headline}
-        dateLocation={formatDateLocation(
-                filteredCardData[selectedIndex].date,
-                filteredCardData[selectedIndex].location)}
-        date={filteredCardData[selectedIndex].date}
-        location={filteredCardData[selectedIndex].location}
-        description={filteredCardData[selectedIndex].description}
-        filename={filteredCardData[selectedIndex].filename}
-        keywords={filteredCardData[selectedIndex].keywords}
-        onClose={() => setSelectedIndex(null)}
-        onNext={() => setSelectedIndex((prev) => (prev + 1) % filteredCardData.length)}
-        onPrev={() => setSelectedIndex((prev) => (prev - 1 + filteredCardData.length) % filteredCardData.length)}/>)}</div>);}
+          imageSrc={filteredCardData[selectedIndex].imageSrc}
+          imageSmall={filteredCardData[selectedIndex].imageSmall}
+          imageMedium={filteredCardData[selectedIndex].imageMedium}
+          imageLarge={filteredCardData[selectedIndex].imageLarge}
+          headline={filteredCardData[selectedIndex].headline}
+          dateLocation={formatDateLocation(
+            filteredCardData[selectedIndex].date,
+            filteredCardData[selectedIndex].location
+          )}
+          date={filteredCardData[selectedIndex].date}
+          location={filteredCardData[selectedIndex].location}
+          description={filteredCardData[selectedIndex].description}
+          filename={filteredCardData[selectedIndex].filename}
+          keywords={filteredCardData[selectedIndex].keywords}
+          onClose={() => setSelectedIndex(null)}
+          onNext={() =>
+            setSelectedIndex(
+              (prev) => (prev + 1) % filteredCardData.length
+            )
+          }
+          onPrev={() =>
+            setSelectedIndex(
+              (prev) => (prev - 1 + filteredCardData.length) %
+                filteredCardData.length
+            )
+          }
+        />
+      )}
+    </div>
+  );
+}
+
 export default App;

@@ -1,42 +1,155 @@
 html, body, #root {
-  background: var(--body-bg);
-  height: 100%;
-  margin: 0;
-  padding: 0;
+        background: var(--body-bg);
+        height: 100%;
+        margin: 0;
+        padding: 0;
 }
 .App {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
 }
-main {
-  background: var(--main-bg);
-  flex: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 8px;
-  box-sizing: border-box;
+.logo-wrapper {
+        opacity: 1;
+        background-color: var(--logo-wrapper-bg);
+        width: 100%;
+        margin-bottom: 40px;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.logo-wrapper {
+        opacity: 1;
+}
 }
 @media (max-width: 600px) {
-main {
-        display: block;
-
-        /*
-        copy this out of comments for media break visual; delete before deploy.
-        Keep 'display: block' there to stave off warning msg.
-        background: goldenrod; 
-        */
+.logo-wrapper {
+        opacity: 1;
 }
+}
+.logo-wrapper img {
+        opacity: 1;
+        background-color: var(--logo-wrapper-img-bg);
+        width: 100%;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.logo-wrapper img {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.logo-wrapper img {
+        opacity: 1;
+}
+}
+.runtime_render {
+        background: var(--runtime_render-bg);
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 100px 0 0 0;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.runtime_render {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.runtime_render {
+        opacity: 1;
+}
+}
+.runtime_render h3 {
+        opacity: 1;
+        font-size: 1.4rem;
+        font-weight: var(--weight-regular);
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+.runtime_render h3 {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.runtime_render h3 {
+        opacity: 1;
+}
+}
+.runtime_render-input {
+        background: var(--runtime_render-input-bg);
+        color: var(--menu-modal-search-input-text);
+        border: none;
+        height: 40px;
+        width: 100%;
+        vertical-align: middle;
+        border-radius: 4px;
+        margin: 10px 0 0 0;
+        padding: 0;
+        text-indent: 10px;
+        box-sizing: border-box;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+.runtime_render-input {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+.runtime_render-input {
+        opacity: 1;
+}
+}
+.runtime_render-button {
+        display: block;
+        height: 40px;
+        transition: opacity 400ms ease;
+        margin-top: 10px !important;
+        padding: 0 30px !important;
+        box-shadow: none;
+        border: none;
+        outline: none;
+}
+.runtime_render-button:focus {
+        box-shadow: none;
+        border: none;
+        outline: none;
+}
+.runtime_render-button.hidden {
+        display: none;
+        pointer-events: none;
+}
+.runtime_render-button.visible {
+        display: inline-block;
+        pointer-events: auto;
+}
+.menu-modal-input-reset:has(.runtime_render-button.hidden) {
+  grid-template-columns: 1fr; 
+}
+main {
+        background: var(--main-bg);
+        flex: 1;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 8px;
+        box-sizing: border-box;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 main {
-        display: block;
-
-        /*
-        copy this out of comments for media break visual; delete before deploy
-        Keep 'display: block' there so no warning msg.  
-        background: slateblue; 
-        */
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+main {
+        opacity: 1;
+}
+}
+body.menu-open main {
+        padding-top: 0;
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+body.menu-open main {
+        opacity: 1;
+}
+}
+@media (max-width: 600px) {
+body.menu-open main {
+        opacity: 1;
 }
 }
 .no-results {

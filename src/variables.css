@@ -24,6 +24,13 @@ button:active, .button:active {
 
 /* #region COLORS */      
 :root, :root[data-theme='actual'] {
+        --runtime_render-bg: none;
+        --runtime_render-input-bg: var(--menu-modal-search-input-bg);
+        --logo-wrapper-bg: none;
+        --logo-wrapper-img-bg: none;
+
+
+
         --button-bg: rgba(var(--jason-5-alpha),.15);
         --button-bg-hover: rgba(var(--jason-3-alpha),.4);
         --button-bg-active: rgba(var(--jason-3-alpha),.6);
@@ -72,17 +79,15 @@ button:active, .button:active {
                 rgba(var(--jason-2-alpha),.15)), 
                 rgb(52, 52, 52);
 
+
         --menu-outer-bg: var(--body-bg);
         --menu-inner-bg: none;
         --menu-modal-search-wrapper-bg: none;        
         --menu-modal-input-reset-bg: none;
-        --menu-modal-search-input-bg: rgba(255,255,255,.08);
+        --menu-modal-search-input-bg: var(--button-bg);
         --menu-modal-search-input-text: white;
 
 
-
-
-        /* ACTUAL */
         --image-modal-overlay-div-bg: rgba(128,128,128,1);
         --image-modal-content-div-bg: var(--body-bg);
         --image-modal-content-div-tablet-bg: var(--body-bg);
@@ -107,12 +112,13 @@ button:active, .button:active {
 
 
 
-
-
-
-
-
   :root[data-theme='test'] {
+        --runtime_render-bg: green;
+        --runtime_render-input-bg: white;
+        --logo-wrapper-bg: pink;
+        --logo-wrapper-img-bg: pink;
+
+
         --button-bg: rgba(255,200,9,1);
         --button-bg-hover: rgba(111,255,99,1);
         --button-bg-active: rgba(0,255,255,1);
@@ -125,17 +131,13 @@ button:active, .button:active {
                 rgba(var(--jason-1-alpha),.1),
                 rgba(var(--jason-1-alpha),.1)), 
                 rgb(40, 40, 40);
-        --header-footer-bg: 
-                linear-gradient(
-                rgba(var(--jason-1-alpha),.1),
-                rgba(var(--jason-1-alpha),.1)), 
-                rgb(25, 25, 25);
+        --header-footer-bg: red;
         --header-footer-inner-bg: pink;
         --header-left-bg: black;
         --header-right-bg: grey;
         --header-footer-text: white;
         --email-button-wrapper-bg: coral;
-        --main-bg: blue;
+        --main-bg: rgb(94, 114, 181);
         --no-results-bg: lightblue;
         --no-results-text: rgb(210, 210, 210);
         --card-bg: 
@@ -151,17 +153,14 @@ button:active, .button:active {
         --logo-button-bg: magenta;
         --logo-button-bg-hover: skyblue;
 
-        --menu-outer-bg: grey;
-        --menu-inner-bg: yellow;
+
+        --menu-outer-bg: rgba(117, 51, 180, 0.787);
+        --menu-inner-bg: rgb(102, 101, 192);
         --menu-modal-search-wrapper-bg: lime;        
         --menu-modal-input-reset-bg: purple;
         --menu-modal-search-input-text: white;
 
 
-
-
-
-        /* TEST */
         --image-modal-overlay-div-bg: green;
         --image-modal-content-div-bg: rgb(64, 52, 125);
         --image-modal-content-div-tablet-bg: rgb(180, 116, 187);
@@ -173,7 +172,7 @@ button:active, .button:active {
         --image-modal-back-and-forward-div-bg: rgba(0, 162, 255, 0.25);
         --image-modal-text-div-bg: hotpink;
         --image-modal-image-container-div-bg: rgb(150, 58, 12);
-        
+
         --image-modal-and-card-text-txt: lightblue;
         --image-modal-headline-bg: red;
         --image-modal-date-bg: lightgreen;
@@ -182,14 +181,6 @@ button:active, .button:active {
         --image-modal-filename-bg: red;
         --image-modal-keywords-bg: lightgreen;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -225,7 +216,6 @@ button:active, .button:active {
 /* #endregion FONT_VARS_IN_ROOT */       
 
 /* #region TEXT_STYLES */
-
 body {
         font-family: var(--font-body);
         font-weight: var(--weight-regular);

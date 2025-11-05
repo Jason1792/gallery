@@ -6,6 +6,12 @@ const Header = ({ searchTerm, setSearchTerm }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const inputRef = useRef(null);
 
+  useEffect(() => {
+    document.body.classList.toggle("menu-open", isMenuOpen);
+    // optional cleanup if Header ever unmounts
+    return () => document.body.classList.remove("menu-open");
+  }, [isMenuOpen]);
+  
   // Close on Esc
   useEffect(() => {
     if (!isMenuOpen) return;

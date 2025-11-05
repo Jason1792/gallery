@@ -9,7 +9,7 @@ html.no-scroll body {
   padding-right: var(--sbw);
 }
 html.no-scroll .header,
-html.no-scroll .footer { padding-right: var(--sbw); 
+html.no-scroll .menu-outer { padding-right: var(--sbw); 
 }
 body {
   margin: 0;
