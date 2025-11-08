@@ -1,140 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="uuid-fcf1353d-920d-412f-b4a2-6292b1d98020" data-name="ABs" xmlns="http://www.w3.org/2000/svg" width="160" height="90" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 90">
+<svg id="uuid-e5319b87-4331-4c02-a363-7ad8e1147a43" data-name="ABs" xmlns="http://www.w3.org/2000/svg" width="160" height="90" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 90">
   <defs>
     <style>
-      .uuid-07e3bbe4-2c1f-44b8-9439-77ed8ff3ba81 {
-        fill: #232323;
-      }
-
-      .uuid-2bd9154a-9b61-4e7c-8e03-02dd3aa0b5ed {
-        fill: #4e83a9;
-      }
-
-      .uuid-7368bca5-2cd5-4fd3-b764-5f54c2b9ed39 {
+      .uuid-9ef9b432-85c7-4ca0-9d4d-aed1efaa2447 {
         fill: #c2b44d;
       }
 
-      .uuid-cfe50825-c7c0-41d9-9085-5c0eeb8164b3 {
+      .uuid-b7eea1f8-5213-45a1-9d61-1b11e3c95ea4 {
         fill: #baad4a;
       }
 
-      .uuid-6fdee401-2350-4e38-8f82-95672fa50e2f {
+      .uuid-84edf5fc-7548-42d0-9b6e-c7ce60273a7f {
         fill: #ad5625;
       }
 
-      .uuid-80438452-d94d-4871-b1cd-c324d57f7d55 {
+      .uuid-808dabfe-c79b-49a1-8361-bb2b520c6c60 {
         fill: #b35926;
       }
 
-      .uuid-fd48c93c-6779-4e17-8d42-1789e6d8dbd9 {
+      .uuid-9f0091ac-6e59-4d6e-8cf3-cefe05c073b8 {
         fill: #cc6226;
       }
 
-      .uuid-909d3951-0216-465c-9b7f-45ba8417ee10 {
-        fill: none;
-        stroke: #ff66c7;
-        stroke-width: .12px;
-      }
-
-      .uuid-9f195b6f-be98-4ce8-b472-00efb79f1d9d {
-        fill: #ff66c7;
-      }
-
-      .uuid-aa1b046a-e216-406a-be85-0d978c24e728 {
-        fill: #6e695a;
-        opacity: .1;
-      }
-
-      .uuid-c640393a-0dd5-4926-9626-c96eb8b1275b {
-        fill: #f2efeb;
-        font-size: 8.5px;
-      }
-
-      .uuid-c640393a-0dd5-4926-9626-c96eb8b1275b, .uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7 {
-        font-family: Exo-Italic, Exo;
-        font-style: italic;
-      }
-
-      .uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7 {
-        fill: #fff;
-        font-size: 2.5px;
-      }
-
-      .uuid-16546eb5-001c-4175-84c0-dd6e8c691baa {
+      .uuid-1a94c20d-a05c-420f-8cea-917c9a2f8d8d {
         fill: #c9bb50;
       }
     </style>
-    <symbol id="uuid-b517f905-d779-44fe-97af-00b231d731fd" data-name="Bounding Box" viewBox="0 0 161.31 94.16">
-      <g>
-        <g id="uuid-da39e471-533c-44b3-933c-cf836f4434ba" data-name="BG">
-          <rect class="uuid-07e3bbe4-2c1f-44b8-9439-77ed8ff3ba81" x="1.31" width="160" height="90"/>
-          <rect class="uuid-aa1b046a-e216-406a-be85-0d978c24e728" x="1.31" width="160" height="90"/>
-        </g>
-        <g id="uuid-93bfd8f1-5a2a-461d-9481-52fd891477fd" data-name="Grid Lines">
-          <g>
-            <path class="uuid-9f195b6f-be98-4ce8-b472-00efb79f1d9d" d="M161.18.12v89.75H1.43V.12h159.75M161.31,0H1.31v90h160V0h0Z"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="81" x2="161.31" y2="81"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="72" x2="161.31" y2="72"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="63" x2="161.31" y2="63"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="54" x2="161.31" y2="54"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="45" x2="161.31" y2="45"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="36" x2="161.31" y2="36"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="27" x2="161.31" y2="27"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="18" x2="161.31" y2="18"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="1.31" y1="9" x2="161.31" y2="9"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="145.31" x2="145.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="129.31" x2="129.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="113.31" x2="113.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="97.31" x2="97.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="81.31" x2="81.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="65.31" x2="65.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="49.31" x2="49.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="33.31" x2="33.31" y2="90"/>
-            <line class="uuid-909d3951-0216-465c-9b7f-45ba8417ee10" x1="17.31" x2="17.31" y2="90"/>
-          </g>
-        </g>
-        <g id="uuid-5ad6a99f-c528-40ae-a171-f15d10f16273" data-name="Numbers as %">
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(93.21 47.48)"><tspan x="0" y="0">20</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(109.43 47.48)"><tspan x="0" y="0">40</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(125.38 47.48)"><tspan x="0" y="0">60</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(141.36 47.48)"><tspan x="0" y="0">80</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(156.2 47.48)"><tspan x="0" y="0">100</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(1.8 47.48)"><tspan x="0" y="0">100</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(17.81 47.48)"><tspan x="0" y="0">80</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(33.83 47.48)"><tspan x="0" y="0">60</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(49.84 47.48)"><tspan x="0" y="0">40</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(65.85 47.48)"><tspan x="0" y="0">20</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.39 38.59)"><tspan x="0" y="0">20</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.44 29.58)"><tspan x="0" y="0">40</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.37 20.56)"><tspan x="0" y="0">60</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.3 11.55)"><tspan x="0" y="0">80</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(76.33 2.65)"><tspan x="0" y="0">100</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(76.33 89.07)"><tspan x="0" y="0">100</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.3 80.05)"><tspan x="0" y="0">80</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.37 71.04)"><tspan x="0" y="0">60</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.44 62.02)"><tspan x="0" y="0">40</tspan></text>
-          <text class="uuid-27a1a0bf-6939-4a45-a5a2-115c2f61e6b7" transform="translate(77.39 53.13)"><tspan x="0" y="0">20</tspan></text>
-        </g>
-      </g>
-    </symbol>
+    <symbol id="uuid-84802217-709b-41d6-a29c-e0a040360e65" data-name="Bounding Box" viewBox="0 0 161.31 94.16"/>
   </defs>
-  <g id="uuid-8261df0a-546c-4599-a84e-b054b2b97ab2" data-name="AB06">
-    <use width="161.31" height="94.16" transform="translate(-1.31)" xlink:href="#uuid-b517f905-d779-44fe-97af-00b231d731fd"/>
+  <g id="uuid-2ade616e-f204-4322-b282-ce721ff76736" data-name="AB06">
+    <use width="161.31" height="94.16" transform="translate(-1.31)" xlink:href="#uuid-84802217-709b-41d6-a29c-e0a040360e65"/>
     <g>
-      <path class="uuid-16546eb5-001c-4175-84c0-dd6e8c691baa" d="M1.32,27.5l15.77.86-1.16,35.5-11.61.85L1.32,27.5M.47,26.67l3.14,38.88,13.08-.95,1.2-36.97L.47,26.67H.47Z"/>
-      <path class="uuid-cfe50825-c7c0-41d9-9085-5c0eeb8164b3" d="M29.74,25.18l-1.86,39.74-10.7-.78,1.18-36.14,11.38-2.82M30.25,24.56l-12.36,3.06-1.2,36.97,11.65.84,1.91-40.87h0Z"/>
-      <path class="uuid-7368bca5-2cd5-4fd3-b764-5f54c2b9ed39" d="M49.14,25.44l2.78,39.29-22.6-.22,1.83-39.02,17.99-.05M50,24.51l-19.75.06-1.91,40.87,24.57.23-2.91-41.16h0Z"/>
-      <path class="uuid-16546eb5-001c-4175-84c0-dd6e8c691baa" d="M50.45,25l13.12,2.33,4.74,36.58-15.02,1.32-2.84-40.22M50,24.51l2.91,41.16,15.86-1.39-4.84-37.3-13.93-2.47h0Z"/>
-      <path class="uuid-6fdee401-2350-4e38-8f82-95672fa50e2f" d="M97.67,25.81l.99,36.58-17.48.65,2.02-32.99,14.47-4.24M98.3,24.95l-15.72,4.61-2.09,34.16,18.84-.7-1.03-38.07h0Z"/>
-      <path class="uuid-fd48c93c-6779-4e17-8d42-1789e6d8dbd9" d="M99.55,26.35l17.76,2.48-.16,34.08-16.65-1.02-.96-35.54M98.3,24.95l1.03,38.07,19.03,1.17.17-36.42-20.23-2.82h0Z"/>
-      <path class="uuid-80438452-d94d-4871-b1cd-c324d57f7d55" d="M133.68,25.91l5.52,35.96-19.96,1.38.16-34.74,14.27-2.6M134.41,24.89l-15.88,2.89-.17,36.42,21.86-1.51-5.81-37.79h0Z"/>
-      <path class="uuid-fd48c93c-6779-4e17-8d42-1789e6d8dbd9" d="M135.03,25.51l10.4,1.64,13.23,36.41-18-1.37-5.64-36.68M134.41,24.89l5.81,37.79,19.21,1.46-13.61-37.46-11.41-1.8h0Z"/>
-    </g>
-    <g id="uuid-e9b40613-4522-4943-89e3-05c3e342b347" data-name="Single AB Number copy 5">
-      <g>
-        <circle class="uuid-2bd9154a-9b61-4e7c-8e03-02dd3aa0b5ed" cx="80" cy="45" r="6.35"/>
-        <text class="uuid-c640393a-0dd5-4926-9626-c96eb8b1275b" transform="translate(76.75 47.99)"><tspan x="0" y="0">6</tspan></text>
-      </g>
+      <path class="uuid-1a94c20d-a05c-420f-8cea-917c9a2f8d8d" d="M1.32,27.5l15.77.86-1.16,35.5-11.61.85L1.32,27.5M.47,26.67l3.14,38.88,13.08-.95,1.2-36.97L.47,26.67H.47Z"/>
+      <path class="uuid-b7eea1f8-5213-45a1-9d61-1b11e3c95ea4" d="M29.74,25.18l-1.86,39.74-10.7-.78,1.18-36.14,11.38-2.82M30.25,24.56l-12.36,3.06-1.2,36.97,11.65.84,1.91-40.87h0Z"/>
+      <path class="uuid-9ef9b432-85c7-4ca0-9d4d-aed1efaa2447" d="M49.14,25.44l2.78,39.29-22.6-.22,1.83-39.02,17.99-.05M50,24.51l-19.75.06-1.91,40.87,24.57.23-2.91-41.16h0Z"/>
+      <path class="uuid-1a94c20d-a05c-420f-8cea-917c9a2f8d8d" d="M50.45,25l13.12,2.33,4.74,36.58-15.02,1.32-2.84-40.22M50,24.51l2.91,41.16,15.86-1.39-4.84-37.3-13.93-2.47h0Z"/>
+      <path class="uuid-84edf5fc-7548-42d0-9b6e-c7ce60273a7f" d="M97.67,25.81l.99,36.58-17.48.65,2.02-32.99,14.47-4.24M98.3,24.95l-15.72,4.61-2.09,34.16,18.84-.7-1.03-38.07h0Z"/>
+      <path class="uuid-9f0091ac-6e59-4d6e-8cf3-cefe05c073b8" d="M99.55,26.35l17.76,2.48-.16,34.08-16.65-1.02-.96-35.54M98.3,24.95l1.03,38.07,19.03,1.17.17-36.42-20.23-2.82h0Z"/>
+      <path class="uuid-808dabfe-c79b-49a1-8361-bb2b520c6c60" d="M133.68,25.91l5.52,35.96-19.96,1.38.16-34.74,14.27-2.6M134.41,24.89l-15.88,2.89-.17,36.42,21.86-1.51-5.81-37.79h0Z"/>
+      <path class="uuid-9f0091ac-6e59-4d6e-8cf3-cefe05c073b8" d="M135.03,25.51l10.4,1.64,13.23,36.41-18-1.37-5.64-36.68M134.41,24.89l5.81,37.79,19.21,1.46-13.61-37.46-11.41-1.8h0Z"/>
     </g>
   </g>
 </svg>

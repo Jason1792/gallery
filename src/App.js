@@ -172,7 +172,7 @@ function App() {
                 aria-label="Next" 
                 title="Tap to change banner" />
          </div>        
-        <h3>Saturday 2:00pm</h3>
+        <h3>Saturday 3:25pm</h3>
         <form onSubmit={handleSubmit}>
           <input className="funtime-input"
             value={input}
