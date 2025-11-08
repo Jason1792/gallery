@@ -275,6 +275,8 @@ h4 {
 :root {
         --banner_position_master: calc(50% + 0px) calc(50% + 0px); 
         --banner_height_master: calc(var(--splash-max-width) * .5625 * .5);  
+        --banner_height_master-tablet: calc(var(--splash-max-width-tablet) * .5625 * .5);  
+        --banner_height_master-cell: calc(var(--splash-max-width-cell) * .5625 * .5);  
         --splash-max-width: 50vw;
         --splash-max-width-tablet: 90vw;
         --splash-max-width-cell: 90vw;

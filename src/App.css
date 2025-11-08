@@ -14,20 +14,18 @@ html, body, #root {
         max-width: var(--splash-max-width);
         margin: 0 auto;
         padding: 0;
+        box-sizing: border-box;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .splash {
         opacity: 1;
-        box-sizing: border-box;
         max-width: var(--splash-max-width-tablet);
-        margin: 0 auto;
 }
 }
 @media (max-width: 600px) {
 .splash {
         opacity: 1;
         max-width: var(--splash-max-width-cell);
-        margin: 0 auto;
 }
 }
 .splash h3 {
@@ -51,29 +49,42 @@ html, body, #root {
         background-color: var(--logo-carousel-wrapper-bg);
         width: 100%;
         padding: 100px 0;
-        height: calc(var(--splash-max-width)*var(--splash-max-width));
-        margin-bottom: 20px;
+        height: var(--banner_height_master);
+        margin: 0;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .logo-carousel-wrapper {
         opacity: 1;
+        height: var(--banner_height_master-tablet);
 }
 }
 @media (max-width: 600px) {
 .logo-carousel-wrapper {
         opacity: 1;
+        height: var(--banner_height_master-cell);
 }
 }
 .logo-carousel-image {
         background: var(--logo-carousel-image-bg); 
         background-image: var(--banner_url);
-        height: var(--banner_height);
+        height: var(--banner_height_master);
         background-position: var(--banner_position);
         background-size: 100%;
         flex: none;
         display: block;
 }
-.logo-carousel-image:hover {
+@media (min-width: 601px) and (max-width: 1024px) {
+.logo-carousel-image {
+        opacity: 1;
+        height: var(--banner_height_master-tablet);
+}
+}
+@media (max-width: 600px) {
+.logo-carousel-image {
+        opacity: 1;
+        height: var(--banner_height_master-cell);
+}
+}.logo-carousel-image:hover {
         background: var(--logo-carousel-image-bg); 
         background-image: var(--banner_url);
         height: var(--banner_height);
