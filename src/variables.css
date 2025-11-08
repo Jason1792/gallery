@@ -276,8 +276,8 @@ h4 {
         --banner_position_master: calc(50% + 0px) calc(50% + 0px); 
         --banner_height_master: calc(var(--splash-max-width) * .5625 * .5);  
         --splash-max-width: 50vw;
-        --splash-max-width-tablet: 50vw;
-        --splash-max-width-cell: 50vw;
+        --splash-max-width-tablet: 90vw;
+        --splash-max-width-cell: 90vw;
 }
 :root[data-theme-banner='logo-01'] {
         --banner_url: url(assets/logo-01.svg);     
