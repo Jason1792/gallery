@@ -1,51 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="uuid-50f7dcb1-9691-4261-b59f-cbaa10e805f4" data-name="ABs" xmlns="http://www.w3.org/2000/svg" width="160" height="90" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 90">
+<svg id="uuid-b080c400-b634-4442-9071-06a1a65ab17b" data-name="ABs" xmlns="http://www.w3.org/2000/svg" width="160" height="90" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 90">
   <defs>
     <style>
-      .uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2 {
+      .uuid-e7d952f4-4f90-4530-bc81-11880dfa3495 {
+        fill: #232323;
+      }
+
+      .uuid-514c8740-1fdc-4a9b-8eb9-fc42b94b7c4e {
+        fill: #4e83a9;
+      }
+
+      .uuid-4f962f03-51f4-4b17-9da5-a69a6a851605, .uuid-521f9429-5045-44f3-a830-547d9c51a3b3 {
         fill: #6e695a;
       }
 
-      .uuid-fd766ebc-596c-4007-9395-102115d0dc03 {
+      .uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5 {
         fill: #cc6226;
       }
 
-      .uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2 {
+      .uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6 {
+        fill: none;
+        stroke: #ff66c7;
+        stroke-width: .12px;
+      }
+
+      .uuid-ca5fa026-307c-4a2b-a10b-d225f99682ae {
+        fill: #ff66c7;
+      }
+
+      .uuid-521f9429-5045-44f3-a830-547d9c51a3b3 {
+        opacity: .1;
+      }
+
+      .uuid-8b646e09-4d44-4bd3-8053-1cc863bb2b9d {
+        fill: #f2efeb;
+        font-size: 8.5px;
+      }
+
+      .uuid-8b646e09-4d44-4bd3-8053-1cc863bb2b9d, .uuid-041f6832-f7dc-426b-8084-5019a5641973 {
+        font-family: Exo-Italic, Exo;
+        font-style: italic;
+      }
+
+      .uuid-041f6832-f7dc-426b-8084-5019a5641973 {
+        fill: #fff;
+        font-size: 2.5px;
+      }
+
+      .uuid-ab51cb68-0459-4aea-85fe-03c58b61d346 {
         fill: #c9bb50;
       }
     </style>
-    <symbol id="uuid-2570c8ca-32c0-4bac-a282-cd6481040e34" data-name="Bounding Box" viewBox="0 0 161.31 93.86"/>
+    <symbol id="uuid-becde1e4-982f-408f-81ce-db0e8c72844d" data-name="Bounding Box" viewBox="0 0 161.31 94.16">
+      <g>
+        <g id="uuid-f9ff3ade-4005-4319-a867-f183ee2eef5f" data-name="BG">
+          <rect class="uuid-e7d952f4-4f90-4530-bc81-11880dfa3495" x="1.31" width="160" height="90"/>
+          <rect class="uuid-521f9429-5045-44f3-a830-547d9c51a3b3" x="1.31" width="160" height="90"/>
+        </g>
+        <g id="uuid-9d5a7048-72d3-4148-9239-502c8043b3f5" data-name="Grid Lines">
+          <g>
+            <path class="uuid-ca5fa026-307c-4a2b-a10b-d225f99682ae" d="M161.18.12v89.75H1.43V.12h159.75M161.31,0H1.31v90h160V0h0Z"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="81" x2="161.31" y2="81"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="72" x2="161.31" y2="72"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="63" x2="161.31" y2="63"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="54" x2="161.31" y2="54"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="45" x2="161.31" y2="45"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="36" x2="161.31" y2="36"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="27" x2="161.31" y2="27"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="18" x2="161.31" y2="18"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="1.31" y1="9" x2="161.31" y2="9"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="145.31" x2="145.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="129.31" x2="129.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="113.31" x2="113.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="97.31" x2="97.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="81.31" x2="81.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="65.31" x2="65.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="49.31" x2="49.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="33.31" x2="33.31" y2="90"/>
+            <line class="uuid-b525bf4e-691d-49aa-aeb1-23fb63d9e3a6" x1="17.31" x2="17.31" y2="90"/>
+          </g>
+        </g>
+        <g id="uuid-3a7525af-4eab-4019-aa5b-8d86ee16bd81" data-name="Numbers as %">
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(93.21 47.48)"><tspan x="0" y="0">20</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(109.43 47.48)"><tspan x="0" y="0">40</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(125.38 47.48)"><tspan x="0" y="0">60</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(141.36 47.48)"><tspan x="0" y="0">80</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(156.2 47.48)"><tspan x="0" y="0">100</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(1.8 47.48)"><tspan x="0" y="0">100</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(17.81 47.48)"><tspan x="0" y="0">80</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(33.83 47.48)"><tspan x="0" y="0">60</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(49.84 47.48)"><tspan x="0" y="0">40</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(65.85 47.48)"><tspan x="0" y="0">20</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.39 38.59)"><tspan x="0" y="0">20</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.44 29.58)"><tspan x="0" y="0">40</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.37 20.56)"><tspan x="0" y="0">60</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.3 11.55)"><tspan x="0" y="0">80</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(76.33 2.65)"><tspan x="0" y="0">100</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(76.33 89.07)"><tspan x="0" y="0">100</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.3 80.05)"><tspan x="0" y="0">80</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.37 71.04)"><tspan x="0" y="0">60</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.44 62.02)"><tspan x="0" y="0">40</tspan></text>
+          <text class="uuid-041f6832-f7dc-426b-8084-5019a5641973" transform="translate(77.39 53.13)"><tspan x="0" y="0">20</tspan></text>
+        </g>
+      </g>
+    </symbol>
   </defs>
-  <g id="uuid-c0a16edd-0058-4923-b902-48a99abf47b4" data-name="AB01">
-    <use width="161.31" height="93.86" transform="translate(-1.31)" xlink:href="#uuid-2570c8ca-32c0-4bac-a282-cd6481040e34"/>
-    <g id="uuid-4f888c7b-401c-4496-b43a-9ed5a868a2df" data-name="Logo copy">
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="131.89" y="32.36" width="27.31" height="2.11" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="105.94" y="32.36" width="24.58" height="4.21" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="82.73" y="32.36" width="21.85" height="6.32" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="62.25" y="32.36" width="19.12" height="8.43" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="44.5" y="32.36" width="16.39" height="10.53" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="29.48" y="32.36" width="13.66" height="12.64" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="17.19" y="32.36" width="10.92" height="14.75" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="7.63" y="32.36" width="8.19" height="16.85" rx=".35" ry=".35"/>
-      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x=".8" y="32.36" width="5.46" height="18.96" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x=".8" y="54.48" width="5.46" height="3.16" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x=".8" y="52.37" width="5.46" height="1.05" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="131.89" y="46.05" width="27.31" height="11.59" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="131.89" y="35.52" width="27.31" height="9.48" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="105.94" y="47.11" width="24.58" height="10.53" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="105.94" y="37.63" width="24.58" height="8.43" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="82.73" y="48.16" width="21.85" height="9.48" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="82.73" y="39.73" width="21.85" height="7.37" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="62.25" y="49.21" width="19.12" height="8.43" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="62.25" y="41.84" width="19.12" height="6.32" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="44.5" y="50.27" width="16.39" height="7.37" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="44.5" y="43.95" width="16.39" height="5.27" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="29.48" y="51.32" width="13.66" height="6.32" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="29.48" y="46.05" width="13.66" height="4.21" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="17.19" y="52.37" width="10.92" height="5.27" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="17.19" y="48.16" width="10.92" height="3.16" rx=".35" ry=".35"/>
-      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="7.63" y="53.43" width="8.19" height="4.21" rx=".35" ry=".35"/>
-      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="7.63" y="50.27" width="8.19" height="2.11" rx=".35" ry=".35"/>
+  <g id="uuid-bc79b4b7-4033-4fea-9533-b62284e627a9" data-name="AB01">
+    <use width="161.31" height="94.16" transform="translate(-1.31)" xlink:href="#uuid-becde1e4-982f-408f-81ce-db0e8c72844d"/>
+    <g id="uuid-6e8ad3d1-8e94-4710-9257-8494c79f1d81" data-name="Logo copy">
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="131.89" y="32.36" width="27.31" height="2.11" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="105.94" y="32.36" width="24.58" height="4.21" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="82.73" y="32.36" width="21.85" height="6.32" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="62.25" y="32.36" width="19.12" height="8.43" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="44.5" y="32.36" width="16.39" height="10.53" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="29.48" y="32.36" width="13.66" height="12.64" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="17.19" y="32.36" width="10.92" height="14.75" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x="7.63" y="32.36" width="8.19" height="16.85" rx=".35" ry=".35"/>
+      <rect class="uuid-ab51cb68-0459-4aea-85fe-03c58b61d346" x=".8" y="32.36" width="5.46" height="18.96" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x=".8" y="54.48" width="5.46" height="3.16" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x=".8" y="52.37" width="5.46" height="1.05" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="131.89" y="46.05" width="27.31" height="11.59" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="131.89" y="35.52" width="27.31" height="9.48" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="105.94" y="47.11" width="24.58" height="10.53" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="105.94" y="37.63" width="24.58" height="8.43" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="82.73" y="48.16" width="21.85" height="9.48" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="82.73" y="39.73" width="21.85" height="7.37" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="62.25" y="49.21" width="19.12" height="8.43" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="62.25" y="41.84" width="19.12" height="6.32" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="44.5" y="50.27" width="16.39" height="7.37" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="44.5" y="43.95" width="16.39" height="5.27" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="29.48" y="51.32" width="13.66" height="6.32" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="29.48" y="46.05" width="13.66" height="4.21" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="17.19" y="52.37" width="10.92" height="5.27" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="17.19" y="48.16" width="10.92" height="3.16" rx=".35" ry=".35"/>
+      <rect class="uuid-f9c57d9c-33c5-4d3c-ae40-0c924c8b91f5" x="7.63" y="53.43" width="8.19" height="4.21" rx=".35" ry=".35"/>
+      <rect class="uuid-4f962f03-51f4-4b17-9da5-a69a6a851605" x="7.63" y="50.27" width="8.19" height="2.11" rx=".35" ry=".35"/>
+    </g>
+    <g id="uuid-eb0aff95-a9c7-42f6-9fdb-d9dc680d9450" data-name="Single AB Number copy 8">
+      <g>
+        <circle class="uuid-514c8740-1fdc-4a9b-8eb9-fc42b94b7c4e" cx="80" cy="45" r="6.35"/>
+        <text class="uuid-8b646e09-4d44-4bd3-8053-1cc863bb2b9d" transform="translate(77.86 47.99)"><tspan x="0" y="0">1</tspan></text>
+      </g>
     </g>
   </g>
 </svg>

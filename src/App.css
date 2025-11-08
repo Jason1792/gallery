@@ -11,22 +11,23 @@ html, body, #root {
 }
 .splash {
         background: var(--splash-bg);
-        max-width: 1000px;
+        max-width: var(--splash-max-width);
         margin: 0 auto;
-        padding: 50px 0 0 0;
+        padding: 0;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .splash {
         opacity: 1;
-        max-width: 100%;
-        padding: 50px 10px 0 10px;
         box-sizing: border-box;
+        max-width: var(--splash-max-width-tablet);
+        margin: 0 auto;
 }
 }
 @media (max-width: 600px) {
 .splash {
         opacity: 1;
-        max-width: 80vw;
+        max-width: var(--splash-max-width-cell);
+        margin: 0 auto;
 }
 }
 .splash h3 {
@@ -49,7 +50,8 @@ html, body, #root {
         display: block;
         background-color: var(--logo-carousel-wrapper-bg);
         width: 100%;
-        height: var(--banner_height);
+        padding: 100px 0;
+        height: calc(var(--splash-max-width)*var(--splash-max-width));
         margin-bottom: 20px;
 }
 @media (min-width: 601px) and (max-width: 1024px) {

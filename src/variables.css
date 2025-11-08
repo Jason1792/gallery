@@ -274,9 +274,11 @@ h4 {
 /* #region BANNER_IMAGES */  
 :root {
         --banner_position_master: calc(50% + 0px) calc(50% + 0px); 
-        --banner_height_master: calc(565px * .5);  
+        --banner_height_master: calc(var(--splash-max-width) * .5625 * .5);  
+        --splash-max-width: 50vw;
+        --splash-max-width-tablet: 50vw;
+        --splash-max-width-cell: 50vw;
 }
-
 :root[data-theme-banner='logo-01'] {
         --banner_url: url(assets/logo-01.svg);     
         --banner_height: var(--banner_height_master);              
