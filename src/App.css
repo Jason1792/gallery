@@ -84,27 +84,39 @@ html, body, #root {
         opacity: 1;
         height: var(--banner_height_master-cell);
 }
-}.logo-carousel-image:hover {
+}
+.logo-carousel-image:hover {
         background: var(--logo-carousel-image-bg); 
         background-image: var(--banner_url);
-        height: var(--banner_height);
+        height: var(--banner_height_master);
         background-position: var(--banner_position);
         background-size: 100%;
         flex: none;
         display: block;
 }
-  .logo-carousel-button {
-    appearance: none;
-    -webkit-appearance: none;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    /* Height & background are already defined on .logo carousel */
-    cursor: pointer;/*
-    background-color: transparent;  preserve the background from .hero-image-carousel */
-  }
-
+@media (min-width: 601px) and (max-width: 1024px) {
+.logo-carousel-image:hover {
+        opacity: 1;
+        height: var(--banner_height_master-tablet);
+}
+}
+@media (max-width: 600px) {
+.logo-carousel-image:hover {
+        opacity: 1;
+        height: var(--banner_height_master-cell);
+}
+}
+.logo-carousel-button {
+        appearance: none;
+        -webkit-appearance: none;
+        border: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        /* Height & background are already defined on .logo carousel */
+        cursor: pointer;/*
+        background-color: transparent;  preserve the background from .hero-image-carousel */
+}
 .funtime-input {
         background: var(--funtime-input-bg);
         color: var(--menu-modal-search-input-text);
