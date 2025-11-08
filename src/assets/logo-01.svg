@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-50f7dcb1-9691-4261-b59f-cbaa10e805f4" data-name="ABs" xmlns="http://www.w3.org/2000/svg" width="160" height="90" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 90">
+  <defs>
+    <style>
+      .uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2 {
+        fill: #6e695a;
+      }
+
+      .uuid-fd766ebc-596c-4007-9395-102115d0dc03 {
+        fill: #cc6226;
+      }
+
+      .uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2 {
+        fill: #c9bb50;
+      }
+    </style>
+    <symbol id="uuid-2570c8ca-32c0-4bac-a282-cd6481040e34" data-name="Bounding Box" viewBox="0 0 161.31 93.86"/>
+  </defs>
+  <g id="uuid-c0a16edd-0058-4923-b902-48a99abf47b4" data-name="AB01">
+    <use width="161.31" height="93.86" transform="translate(-1.31)" xlink:href="#uuid-2570c8ca-32c0-4bac-a282-cd6481040e34"/>
+    <g id="uuid-4f888c7b-401c-4496-b43a-9ed5a868a2df" data-name="Logo copy">
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="131.89" y="32.36" width="27.31" height="2.11" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="105.94" y="32.36" width="24.58" height="4.21" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="82.73" y="32.36" width="21.85" height="6.32" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="62.25" y="32.36" width="19.12" height="8.43" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="44.5" y="32.36" width="16.39" height="10.53" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="29.48" y="32.36" width="13.66" height="12.64" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="17.19" y="32.36" width="10.92" height="14.75" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x="7.63" y="32.36" width="8.19" height="16.85" rx=".35" ry=".35"/>
+      <rect class="uuid-db59d870-64c0-4f42-a3ba-51a111d5a9f2" x=".8" y="32.36" width="5.46" height="18.96" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x=".8" y="54.48" width="5.46" height="3.16" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x=".8" y="52.37" width="5.46" height="1.05" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="131.89" y="46.05" width="27.31" height="11.59" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="131.89" y="35.52" width="27.31" height="9.48" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="105.94" y="47.11" width="24.58" height="10.53" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="105.94" y="37.63" width="24.58" height="8.43" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="82.73" y="48.16" width="21.85" height="9.48" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="82.73" y="39.73" width="21.85" height="7.37" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="62.25" y="49.21" width="19.12" height="8.43" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="62.25" y="41.84" width="19.12" height="6.32" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="44.5" y="50.27" width="16.39" height="7.37" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="44.5" y="43.95" width="16.39" height="5.27" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="29.48" y="51.32" width="13.66" height="6.32" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="29.48" y="46.05" width="13.66" height="4.21" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="17.19" y="52.37" width="10.92" height="5.27" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="17.19" y="48.16" width="10.92" height="3.16" rx=".35" ry=".35"/>
+      <rect class="uuid-fd766ebc-596c-4007-9395-102115d0dc03" x="7.63" y="53.43" width="8.19" height="4.21" rx=".35" ry=".35"/>
+      <rect class="uuid-cf267a36-8c41-4caf-957e-05fa4d0f85e2" x="7.63" y="50.27" width="8.19" height="2.11" rx=".35" ry=".35"/>
+    </g>
+  </g>
+</svg>

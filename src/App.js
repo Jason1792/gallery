@@ -3,9 +3,20 @@ import Header from "./Header";
 import Card from "./Card";
 import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
-import logo from "./assets/logo.svg";
 
-const runtime_render = "Ok";
+ const BANNERS = [
+   "logo-01",
+   "logo-02",
+   "logo-03",
+   "logo-04",
+   "logo-05",
+   "logo-06",
+   "logo-07",
+   "logo-08",
+   "logo-09"
+ ];
+
+const funtime = "Ok";
 const AUTH_KEY = "gallery-authed"; // name in localStorage
 
 function App() {
@@ -13,6 +24,18 @@ function App() {
   const [authed, setAuthed] = useState(false);
   const [input, setInput] = useState("");
 
+     const [banner, setBanner] = useState(() => {
+     const saved =
+       typeof window !== "undefined" &&
+       window.localStorage &&
+       window.localStorage.getItem("theme-banner");
+
+     const attr =
+       typeof document !== "undefined" &&
+       document.documentElement.getAttribute("data-theme-banner");
+     return saved || attr || BANNERS[0];
+   });
+  
   // 👇 check localStorage once, when the app mounts
   useEffect(() => {
     const saved = localStorage.getItem(AUTH_KEY);
@@ -20,6 +43,21 @@ function App() {
       setAuthed(true);
     }
   }, []);
+
+   useEffect(() => {
+     if (typeof document !== "undefined") {
+       document.documentElement.setAttribute("data-theme-banner", banner);
+     }
+     if (typeof window !== "undefined" && window.localStorage) {
+       window.localStorage.setItem("theme-banner", banner);
+     }
+   }, [banner]);
+
+   const advanceBanner = () => {
+     const idx = BANNERS.indexOf(banner);
+     const next = BANNERS[(idx + 1) % BANNERS.length];
+     setBanner(next);
+   };
 
   // 2. app hooks
   const [cardData, setCardData] = useState([]);
@@ -115,7 +153,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (input === runtime_render) {
+    if (input === funtime) {
       setAuthed(true);
       localStorage.setItem(AUTH_KEY, "true");
     } else {
@@ -126,21 +164,25 @@ function App() {
   // 3. now that all hooks are declared, you can branch in the render
   if (!authed) {
     return (
-      <div className="runtime_render">
-        <div className="logo-wrapper">
-                <img src={logo} alt="Logo" />
-        </div>
+      <div className="splash">
+         <div className="logo-carousel-wrapper">
+                <button className="logo-carousel-image logo-carousel-button"
+                type="button"
+                onClick={advanceBanner}
+                aria-label="Next" 
+                title="Tap to change banner" />
+         </div>        
         <h3>Password: Ok</h3>
         <form onSubmit={handleSubmit}>
-          <input className="runtime_render-input"
+          <input className="funtime-input"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder=""
           />
           {input.length > 0 && (
-          <button className="button runtime_render-button" type="submit">
+          <button className="button funtime-button" type="submit">
                 <span>Enter</span>
-                </button> )}
+        </button> )}
         </form>
       </div>
     );

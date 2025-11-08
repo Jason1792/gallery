@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="uuid-16e6f1ff-028c-4e88-8061-54c4fc9a630a" data-name="ABs" xmlns="http://www.w3.org/2000/svg" width="160" height="90" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 160 90">
+  <defs>
+    <style>
+      .uuid-09cf70d4-e64e-420a-a814-3af3513483b0 {
+        stroke: #c2b44d;
+        stroke-width: .6px;
+      }
+
+      .uuid-09cf70d4-e64e-420a-a814-3af3513483b0, .uuid-d8c4bd97-8c14-4caa-865a-566588049343, .uuid-4436561d-d1b7-4486-8468-5015ebe85d55, .uuid-b80a4e6d-bda7-41e5-a523-d8b3c25e1626, .uuid-c3295bce-b10f-4fd5-8352-4b3348601d2c, .uuid-f16a9e9c-56dd-44f0-8a84-f31cd0ba13fe, .uuid-60742658-50fd-40b6-87fd-7a1018406065, .uuid-98bc8858-8ea5-442d-a984-7404b5042a7e {
+        fill: none;
+      }
+
+      .uuid-d8c4bd97-8c14-4caa-865a-566588049343 {
+        stroke-width: .78px;
+      }
+
+      .uuid-d8c4bd97-8c14-4caa-865a-566588049343, .uuid-4436561d-d1b7-4486-8468-5015ebe85d55 {
+        stroke: #cc6226;
+      }
+
+      .uuid-4436561d-d1b7-4486-8468-5015ebe85d55 {
+        stroke-width: .34px;
+      }
+
+      .uuid-b80a4e6d-bda7-41e5-a523-d8b3c25e1626 {
+        stroke: #b35926;
+        stroke-width: .57px;
+      }
+
+      .uuid-8af2d19b-a28e-4aa8-b593-ee66620459c6 {
+        fill: #c2b44d;
+      }
+
+      .uuid-7c42b647-e520-4474-888c-d4865587881f {
+        fill: #baad4a;
+      }
+
+      .uuid-746da664-c434-42ad-809a-4dc64f20f729 {
+        fill: #ad5625;
+      }
+
+      .uuid-c3295bce-b10f-4fd5-8352-4b3348601d2c {
+        stroke: #ad5625;
+        stroke-width: .42px;
+      }
+
+      .uuid-ddede9b1-3c03-49e9-b270-71fb1f1c62d2 {
+        fill: #b35926;
+      }
+
+      .uuid-f16a9e9c-56dd-44f0-8a84-f31cd0ba13fe {
+        stroke-width: .26px;
+      }
+
+      .uuid-f16a9e9c-56dd-44f0-8a84-f31cd0ba13fe, .uuid-60742658-50fd-40b6-87fd-7a1018406065 {
+        stroke: #c9bb50;
+      }
+
+      .uuid-60742658-50fd-40b6-87fd-7a1018406065 {
+        stroke-width: .5px;
+      }
+
+      .uuid-3f0c3a6a-3029-4ccb-939e-d98b2f5e550e {
+        fill: #cc6226;
+      }
+
+      .uuid-98bc8858-8ea5-442d-a984-7404b5042a7e {
+        stroke: #baad4a;
+        stroke-width: .31px;
+      }
+
+      .uuid-0c9a510d-4906-490f-8187-f76d2b9e59e2 {
+        fill: #c9bb50;
+      }
+    </style>
+    <symbol id="uuid-c828afa2-8e4d-47a1-830c-779dd4ff36b4" data-name="Bounding Box" viewBox="0 0 161.31 93.86"/>
+  </defs>
+  <g id="uuid-7d7925e4-1079-4e29-beeb-0a422a0d5a5b" data-name="AB08">
+    <use width="161.31" height="93.86" transform="translate(-1.31)" xlink:href="#uuid-c828afa2-8e4d-47a1-830c-779dd4ff36b4"/>
+    <g>
+      <line class="uuid-60742658-50fd-40b6-87fd-7a1018406065" x1="1.98" y1="27.15" x2="16.3" y2="63.75"/>
+      <line class="uuid-09cf70d4-e64e-420a-a814-3af3513483b0" x1="32.05" y1="24.67" x2="50.2" y2="65.49"/>
+      <line class="uuid-f16a9e9c-56dd-44f0-8a84-f31cd0ba13fe" x1="62.27" y1="26.37" x2="52.13" y2="66"/>
+      <line class="uuid-98bc8858-8ea5-442d-a984-7404b5042a7e" x1="30.05" y1="24.47" x2="18.08" y2="64.2"/>
+      <line class="uuid-4436561d-d1b7-4486-8468-5015ebe85d55" x1="158.38" y1="63.41" x2="134.93" y2="24.93"/>
+      <line class="uuid-d8c4bd97-8c14-4caa-865a-566588049343" x1="116.1" y1="63.13" x2="99.51" y2="25.91"/>
+      <line class="uuid-c3295bce-b10f-4fd5-8352-4b3348601d2c" x1="80.56" y1="63.23" x2="96.7" y2="25.37"/>
+      <line class="uuid-b80a4e6d-bda7-41e5-a523-d8b3c25e1626" x1="119.04" y1="63.22" x2="132.85" y2="25.55"/>
+      <path class="uuid-0c9a510d-4906-490f-8187-f76d2b9e59e2" d="M1.68,26.97l15.23.85-.51,35.65-11.71.83L1.68,26.97M.58,25.9l3.19,39.48,13.63-.97.53-37.54-17.35-.97h0Z"/>
+      <path class="uuid-7c42b647-e520-4474-888c-d4865587881f" d="M30.17,24.56l-1.88,40.86-10.27-1.54.52-36.52,11.62-2.8M30.82,23.76l-12.89,3.11-.53,37.54,11.48,1.72,1.94-42.37h0Z"/>
+      <path class="uuid-8af2d19b-a28e-4aa8-b593-ee66620459c6" d="M47.52,24.91l2.79,40.25-20.17-.21,1.84-39.99,15.55-.05M48.64,23.71l-17.82.06-1.94,42.37,22.72.24-2.95-42.67h0Z"/>
+      <path class="uuid-0c9a510d-4906-490f-8187-f76d2b9e59e2" d="M49.21,24.34l13.1,2.32,4.79,36.98-15.03,2.12-2.87-41.42M48.64,23.71l2.95,42.67,16.11-2.28-4.91-37.88-14.15-2.51h0Z"/>
+      <path class="uuid-746da664-c434-42ad-809a-4dc64f20f729" d="M96.87,25.27l.5,36.76-16.87.96,2.03-33.51,14.34-4.2M97.69,24.16l-15.96,4.68-2.12,35.04,18.62-1.05-.53-38.66h0Z"/>
+      <path class="uuid-3f0c3a6a-3029-4ccb-939e-d98b2f5e550e" d="M99.27,25.96l17.05,2.42-.16,34.29-16.4-1.29-.48-35.42M97.69,24.16l.53,38.66,19.5,1.53.17-37.33-20.2-2.87h0Z"/>
+      <path class="uuid-ddede9b1-3c03-49e9-b270-71fb1f1c62d2" d="M133.06,25.42l5.05,35.54-19.25,2.13.16-35.11,14.04-2.55M134.02,24.09l-16.13,2.93-.17,37.33,21.68-2.4-5.38-37.87h0Z"/>
+      <path class="uuid-3f0c3a6a-3029-4ccb-939e-d98b2f5e550e" d="M134.81,24.9l10.3,1.62,13.32,36.67-18.44-1.84-5.18-36.45M134.02,24.09l5.38,37.87,20.03,2-13.82-38.04-11.58-1.82h0Z"/>
+    </g>
+  </g>
+</svg>

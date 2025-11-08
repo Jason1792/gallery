@@ -24,12 +24,11 @@ button:active, .button:active {
 
 /* #region COLORS */      
 :root, :root[data-theme='actual'] {
-        --runtime_render-bg: none;
-        --runtime_render-input-bg: var(--menu-modal-search-input-bg);
-        --logo-wrapper-bg: none;
-        --logo-wrapper-img-bg: none;
-
-
+        --splash-bg: none;
+        --logo-carousel-wrapper-bg: none;
+        --logo-carousel-image-bg: none;
+        --funtime-bg: none;
+        --funtime-input-bg: var(--menu-modal-search-input-bg);
 
         --button-bg: rgba(var(--jason-5-alpha),.15);
         --button-bg-hover: rgba(var(--jason-3-alpha),.4);
@@ -113,14 +112,15 @@ button:active, .button:active {
 
 
   :root[data-theme='test'] {
-        --runtime_render-bg: green;
-        --runtime_render-input-bg: white;
-        --logo-wrapper-bg: pink;
-        --logo-wrapper-img-bg: pink;
+        --splash-bg: rgb(226, 232, 202);
+        --logo-carousel-wrapper-bg: rgb(90, 190, 236);
+        --logo-carousel-image-bg: rgb(99, 136, 94);
+        --funtime-bg: green;
+        --funtime-input-bg: white;
 
 
         --button-bg: rgba(255,200,9,1);
-        --button-bg-hover: rgba(111,255,99,1);
+        --button-bg-hover: rgb(96, 183, 88);
         --button-bg-active: rgba(0,255,255,1);
         --button-text: rgba(255,0,111,1);
         --button-text-hover: rgba(44,188,88,1);
@@ -269,3 +269,57 @@ h4 {
         margin-bottom: 0;
 }
 /* #endregion TEXT_VAR_STYLES */       
+
+
+/* #region BANNER_IMAGES */  
+:root {
+        --banner_position_master: calc(50% + 0px) calc(50% + 0px); 
+        --banner_height_master: calc(565px * .5);  
+}
+
+:root[data-theme-banner='logo-01'] {
+        --banner_url: url(assets/logo-01.svg);     
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-02'] {
+        --banner_url: url(assets/logo-02.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-03'] {
+        --banner_url: url(assets/logo-03.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-04'] {
+        --banner_url: url(assets/logo-04.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-05'] {
+        --banner_url: url(assets/logo-05.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-06'] {
+        --banner_url: url(assets/logo-06.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-07'] {
+        --banner_url: url(assets/logo-07.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-08'] {
+        --banner_url: url(assets/logo-08.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-09'] {
+        --banner_url: url(assets/logo-09.svg);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+/* #endregion BANNER_IMAGES */       
