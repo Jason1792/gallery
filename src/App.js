@@ -13,7 +13,8 @@ import ImageModal from "./ImageModal";
    "logo-06",
    "logo-07",
    "logo-08",
-   "logo-09"
+   "logo-09",
+   "logo-10"
  ];
 
 const funtime = "Ok";
@@ -172,7 +173,7 @@ function App() {
                 aria-label="Next" 
                 title="Tap to change banner" />
          </div>        
-        <h3>Saturday 3:25pm</h3>
+        <h3>Sunday 5:47pm</h3>
         <form onSubmit={handleSubmit}>
           <input className="funtime-input"
             value={input}

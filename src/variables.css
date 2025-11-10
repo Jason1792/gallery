@@ -277,53 +277,58 @@ h4 {
         --banner_height_master: calc(var(--splash-max-width) * var(--crop-master));  
         --banner_height_master-tablet: calc(var(--splash-max-width-tablet) * var(--crop-master));  
         --banner_height_master-cell: calc(var(--splash-max-width-cell) * var(--crop-master));  
-        --crop-master: calc(.5625 * .5);
+        --crop-master: calc(.5625 * 1);
         --splash-max-width: 50vw;
         --splash-max-width-tablet: 90vw;
         --splash-max-width-cell: 90vw;
 }
 :root[data-theme-banner='logo-01'] {
-        --banner_url: url(assets/logo-01.svg);     
+        --banner_url: url(assets/logo-01.png);     
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-02'] {
-        --banner_url: url(assets/logo-02.svg);        
+        --banner_url: url(assets/logo-02.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-03'] {
-        --banner_url: url(assets/logo-03.svg);        
+        --banner_url: url(assets/logo-03.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-04'] {
-        --banner_url: url(assets/logo-04.svg);        
+        --banner_url: url(assets/logo-04.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-05'] {
-        --banner_url: url(assets/logo-05.svg);        
+        --banner_url: url(assets/logo-05.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-06'] {
-        --banner_url: url(assets/logo-06.svg);        
+        --banner_url: url(assets/logo-06.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-07'] {
-        --banner_url: url(assets/logo-07.svg);        
+        --banner_url: url(assets/logo-07.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-08'] {
-        --banner_url: url(assets/logo-08.svg);        
+        --banner_url: url(assets/logo-08.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
 :root[data-theme-banner='logo-09'] {
-        --banner_url: url(assets/logo-09.svg);        
+        --banner_url: url(assets/logo-09.png);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-10'] {
+        --banner_url: url(assets/logo-10.png);        
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
