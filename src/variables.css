@@ -27,8 +27,9 @@ button:active, .button:active {
         --splash-bg: none;
         --logo-carousel-wrapper-bg: none;
         --logo-carousel-image-bg: none;
-        --funtime-bg: none;
+        --funtime-all-bg: none;
         --funtime-input-bg: var(--menu-modal-search-input-bg);
+        --input-and-button-bg: none;
 
         --button-bg: rgba(var(--jason-5-alpha),.15);
         --button-bg-hover: rgba(var(--jason-3-alpha),.4);
@@ -107,16 +108,13 @@ button:active, .button:active {
         --image-modal-keywords-bg: none;
 }
 
-
-
-
-
-  :root[data-theme='test'] {
-        --splash-bg: rgb(226, 232, 202);
+:root[data-theme='test'] {
+        --splash-bg: rgb(124, 72, 81);
         --logo-carousel-wrapper-bg: rgb(90, 190, 236);
         --logo-carousel-image-bg: rgb(99, 136, 94);
-        --funtime-bg: green;
-        --funtime-input-bg: white;
+        --funtime-all-bg: rgb(138, 117, 89);
+        --funtime-input-bg: rgb(189, 227, 177);
+        --input-and-button-bg: hotpink;
 
 
         --button-bg: rgba(255,200,9,1);
@@ -270,7 +268,6 @@ h4 {
 }
 /* #endregion TEXT_VAR_STYLES */       
 
-
 /* #region BANNER_IMAGES */  
 :root {
         --banner_position_master: calc(50% + 0px) calc(50% + 0px); 
@@ -278,7 +275,7 @@ h4 {
         --banner_height_master-tablet: calc(var(--splash-max-width-tablet) * var(--crop-master));  
         --banner_height_master-cell: calc(var(--splash-max-width-cell) * var(--crop-master));  
         --crop-master: calc(.5625 * 1);
-        --splash-max-width: 50vw;
+        --splash-max-width: 800px;
         --splash-max-width-tablet: 90vw;
         --splash-max-width-cell: 90vw;
 }
@@ -329,6 +326,21 @@ h4 {
 }
 :root[data-theme-banner='logo-10'] {
         --banner_url: url(assets/logo-10.png);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-11'] {
+        --banner_url: url(assets/logo-11.png); 
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-12'] {
+        --banner_url: url(assets/logo-12.png);        
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-13'] {
+        --banner_url: url(assets/logo-13.png); 
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }

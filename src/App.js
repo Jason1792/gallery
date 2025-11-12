@@ -14,7 +14,10 @@ import ImageModal from "./ImageModal";
    "logo-07",
    "logo-08",
    "logo-09",
-   "logo-10"
+   "logo-10",
+   "logo-11",
+   "logo-12",
+   "logo-13"
  ];
 
 const funtime = "Ok";
@@ -172,9 +175,11 @@ function App() {
                 onClick={advanceBanner}
                 aria-label="Next" 
                 title="Tap to change banner" />
-         </div>        
-        <h3>Sunday 5:47pm</h3>
-        <form onSubmit={handleSubmit}>
+         </div>
+         <div className="funtime-all"> 
+        <h3>Password</h3>
+        <form className="input-and-button"
+        onSubmit={handleSubmit}>
           <input className="funtime-input"
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -185,6 +190,7 @@ function App() {
                 <span>Enter</span>
         </button> )}
         </form>
+        </div>        
       </div>
     );
   }
