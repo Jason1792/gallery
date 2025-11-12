@@ -121,7 +121,7 @@ html, body, #root {
 .funtime-all {
         background: var(--funtime-all-bg);
         border: none;
-        width: 40%;
+        width: 60%;
         margin: auto;
         padding: 0;
         box-sizing: border-box;
@@ -131,11 +131,13 @@ html, body, #root {
 @media (min-width: 601px) and (max-width: 1024px) {
 .funtime-all {
         opacity: 1;
+        width: 70%;
 }
 }
 @media (max-width: 600px) {
 .funtime-all {
         opacity: 1;
+        width: 100%;
 }
 }
 .input-and-button {
