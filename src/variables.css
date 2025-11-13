@@ -344,4 +344,14 @@ h4 {
         --banner_height: var(--banner_height_master);              
         --banner_position: var(--banner_position_master);
 }
+:root[data-theme-banner='logo-14'] {
+        --banner_url: url(assets/logo-14.png); 
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
+:root[data-theme-banner='logo-15'] {
+        --banner_url: url(assets/logo-15.png); 
+        --banner_height: var(--banner_height_master);              
+        --banner_position: var(--banner_position_master);
+}
 /* #endregion BANNER_IMAGES */       

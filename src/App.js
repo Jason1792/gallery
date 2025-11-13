@@ -17,8 +17,10 @@ import ImageModal from "./ImageModal";
    "logo-10",
    "logo-11",
    "logo-12",
-   "logo-13"
- ];
+   "logo-13",
+   "logo-14",
+   "logo-15"
+];
 
 const funtime = "Ok";
 const AUTH_KEY = "gallery-authed"; // name in localStorage

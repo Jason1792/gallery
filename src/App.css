@@ -30,8 +30,9 @@ html, body, #root {
 }
 .splash h3 {
         opacity: 1;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: var(--weight-regular);
+        line-height: .5;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .splash h3 {
