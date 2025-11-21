@@ -9,7 +9,7 @@ return (
 <h3 className="deets">Portland, Oregon</h3>
 <h3 className="deets">415 407 2295</h3>
 <h3 className="deets">jdullack@gmail.com</h3>
-<h3 className="deets">Last Mod: Nov 21, 12:46pm</h3>
+<h3 className="deets">Last Mod: Nov 21, 12:50pm</h3>
 <ul className="level-1-list">
         <li>1: Work Experience</li>
         <ul className="level-2-list">
