@@ -1,7 +1,7 @@
 import "./Card.css";
 const Card = ({ 
         imageSrc, imageTiny, headline, dateLocation, date, location, description, filename, keywords, onImageClick }) => {
-const tiny = imageTiny || imageSrc; // fall back if tiny missing
+const tiny = imageTiny || imageSrc; 
 return (
         <div className="card">
                 <div className="card-image-container">

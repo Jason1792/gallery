@@ -1,8 +1,9 @@
 import "./App.css";
 import Header from "./Header";
+import ResumeText from "./ResumeText";
 import Card from "./Card";
-import { useEffect, useState } from "react";
 import ImageModal from "./ImageModal";
+import { useEffect, useState } from "react";
 
  const BANNERS = [
    "logo-01",
@@ -200,6 +201,7 @@ function App() {
   return (
     <div className="App">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+      <ResumeText />
       <main>
         {loading ? (
           <div className="no-results">

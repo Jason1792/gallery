@@ -56,6 +56,10 @@ button:active, .button:active {
         --main-bg: none;
         --no-results-bg: none;
         --no-results-text: rgb(210, 210, 210);
+
+        --resume-text-outer-bg: none;
+        --resume-text-inner-bg: none;
+
         --card-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
@@ -123,7 +127,7 @@ button:active, .button:active {
         --button-text: rgba(255,0,111,1);
         --button-text-hover: rgba(44,188,88,1);
         --button-text-active: rgba(255,255,255,1);        
-        --text-color: hotpink;
+        --text-color: rgb(92, 43, 67);
         --body-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
@@ -138,6 +142,10 @@ button:active, .button:active {
         --main-bg: rgb(94, 114, 181);
         --no-results-bg: lightblue;
         --no-results-text: rgb(210, 210, 210);
+
+        --resume-text-outer-bg: hotpink;
+        --resume-text-inner-bg: rgb(163, 47, 105);
+
         --card-bg: 
                 linear-gradient(
                 rgba(var(--jason-1-alpha),.1),
@@ -249,12 +257,6 @@ h4 {
         font-size: 1.8rem;
         line-height: 1;
         margin: 0;
-}
-.body-small {
-        font-family: var(--font-body);
-        font-weight: var(--weight-regular);
-        font-size: 0.875rem;
-        margin:  /* top: */ 0rem /* right: */ 0rem /* bottom: */ 0rem /* left: */ 0rem;
 }
 .button-text {
         background: var(--button-bg);

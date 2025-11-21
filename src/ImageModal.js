@@ -128,32 +128,24 @@ const ImageModal = ({
   return (
 
 
-
-
-
-
-
-
-
-
-<div className="image-modal-overlay-div" /* CV */ > 
+<div className="image-modal-overlay-div"  > 
         <div className={`image-modal-content-div 
-        ${isImmersive ? "immersive" : ""}`} data-immersive={isImmersive} /* CV */ >
+        ${isImmersive ? "immersive" : ""}`} data-immersive={isImmersive}  >
                 {/* Top bar (fades out via CSS when immersive) */}
-                <div className="image-modal-nav-and-text-div" aria-hidden={isImmersive} /* CV */ >
-                        <div className="image-modal-nav-div" /* CV */ >
-                                <div className="image-modal-close-div" /* CV */ >
-                                        <button className="image-modal-nav-button" /* CV */
+                <div className="image-modal-nav-and-text-div" aria-hidden={isImmersive}  >
+                        <div className="image-modal-nav-div"  >
+                                <div className="image-modal-close-div"  >
+                                        <button className="image-modal-nav-button" 
                                         onClick={onClose} aria-label="Close">
                                                 <i className="button-icon bi bi-x-lg"></i>
                                         </button>
                                 </div>
-                                <div className="image-modal-back-and-forward-div" /* CV */ >
-                                        <button className="image-modal-nav-button" /* CV */  
+                                <div className="image-modal-back-and-forward-div"  >
+                                        <button className="image-modal-nav-button"   
                                         onClick={onPrev} aria-label="Previous">
                                                 <i className="button-icon left-icon bi bi-chevron-left accordion-button-icon" aria-hidden="true" />
                                         </button>
-                                        <button className="image-modal-nav-button" /* CV */ 
+                                        <button className="image-modal-nav-button"  
                                         onClick={onNext} aria-label="Next">
                                                 <i className="button-icon right-icon bi bi-chevron-right accordion-button-icon" aria-hidden="true" />
                                         </button>
@@ -174,7 +166,7 @@ const ImageModal = ({
                                 <p className="image-modal-keywords">{keywords}</p>
                         </div>
                 </div>
-                <div className="image-modal-image-container-div" /* CV */ 
+                <div className="image-modal-image-container-div"  
                 onClick={onImageClick} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
                         <picture key={bp}>
                                 <source media="(max-width: 600px)" srcSet={small} />

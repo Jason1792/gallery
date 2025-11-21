@@ -1,13 +1,7 @@
-/* z-index */ .image-modal-overlay-div { 
+.image-modal-overlay-div { 
         background: var(--image-modal-overlay-div-bg);
         position: fixed; 
-        /* I20251027A Commented out:
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        */
-        inset: 0; /* I20251027A Added: */
+        inset: 0; 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,22 +17,15 @@
         opacity: 1;
 }
 }
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
 .image-modal-content-div { 
         background: var(--image-modal-content-div-bg);
         padding: 0;
         width: 100vw;
-        /* I20251027A Commented out:
-        height: 100vh;
-        height: 100dvh;
-        */
-        top: 0; /* I20251027A Added per me 20251028*/
-        left: 0; /* I20251027A Added per me */
-        inset: 0; /* I20251027A Added per me */
-        height: 100svh; /* I20251027A Added per Chat */
-        min-height: 100svh; /* I20251027A Added */
+        top: 0; 
+        left: 0; 
+        inset: 0; 
+        height: 100svh; 
+        min-height: 100svh; 
         min-height: 100%;
         display: flex;
         flex-direction: column;
@@ -48,7 +35,7 @@
         overflow: hidden;
         row-gap: 0;
         position: relative; /* creates stacking context for children */
-        transition: background 200ms ease, background-color 200ms ease; /* cover both props */
+        transition: background 200ms ease, background-color 200ms ease; 
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-content-div { 
@@ -64,15 +51,12 @@
         position: relative;
 }
 }
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
 .image-modal-content-div.immersive {
         opacity: 1;
         padding: 0; 
         background-color: black;
-        height: 100svh; /* I20251027A Added. When the smoke clears, try deleting these, since it's already stated in non-immers version */
-        min-height: 100svh; /* I20251027A Added. When the smoke clears, try deleting these, since it's already stated in non-immers version */
+        height: 100svh; 
+        min-height: 100svh; 
         min-height: 100%;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -85,10 +69,7 @@
         opacity: 1;
 }
 }
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
-/* yyy xxx */ .image-modal-nav-and-text-div { 
+.image-modal-nav-and-text-div { 
         background: var(--image-modal-nav-and-text-div-bg);
         color: var(--image-modal-and-card-text-txt);
         width: 100%;
@@ -98,14 +79,14 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding: 6px 6.5px;
-        padding-top: calc(6px + env(safe-area-inset-top, 0)); /* I20251027A Add safe-area padding for notches/URL bar overlap (nice-to-have). Prevents top bar from ever tucking under the iOS chrome on devices with a notch. */
+        padding-top: calc(6px + env(safe-area-inset-top, 0)); 
         gap: 10px; 
         box-sizing: border-box;
         border-radius: 0;
         min-height: fit-content;
         opacity: 1;
         transition: opacity 200ms ease;
-        position: relative; /* Ensure header bar sits above fixed on-image controls */
+        position: relative; 
         z-index: 10;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -118,9 +99,6 @@
         opacity: 1;
 }
 }
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
 .image-modal-nav-and-text-div { pointer-events: none; }
 .image-modal-nav-and-text-div button,
 .image-modal-nav-and-text-div [role="button"],
@@ -130,9 +108,6 @@
 .image-modal-nav-and-text-div textarea { 
         pointer-events: auto;
 }
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
 .image-modal-content-div.immersive .image-modal-nav-and-text-div,
 .image-modal-content-div.immersive .image-modal-nav-and-text-div * {
         opacity: 0 !important;
@@ -153,10 +128,7 @@
         pointer-events: none !important;
 }
 }
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
-/* yyy xxx */ .image-modal-nav-div { 
+.image-modal-nav-div { 
         background-color: var(--image-modal-nav-div-bg);
         height: auto;
         display: flex;
@@ -169,7 +141,6 @@
         border-radius: none;
         flex: 0 0 auto;
         pointer-events: none !important;
-
 }
 @media (min-width: 601px) and (max-width: 1024px) {
 .image-modal-nav-div { 
@@ -185,17 +156,13 @@
         order: 2;
         padding: 0;
 }
-}
-/**/
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
-/* z-index */ .image-modal-close-div { 
+} 
+.image-modal-close-div { 
         background-color: var(--image-modal-close-div-bg);
         height: 100%;
         box-sizing: border-box;
         border-radius: 6px;
-        position: relative; /* ZI only works on positioned elements */
+        position: relative; /* so ZI works */
         z-index: 1;
 }
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -208,11 +175,7 @@
         opacity: 1;
 }
 }
-
-/* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
-
 .image-modal-nav-button { 
-        /* don't add bg color here; button element already has it. */
         border: none;
         padding: 0;
         margin: 0;
@@ -268,7 +231,7 @@
 
 /* X X X X X X X X X X X X X X X X X X X X X X X X X X X */
 
-/* yyy */ .image-modal-back-and-forward-div { 
+.image-modal-back-and-forward-div { 
         opacity: 1;
         background-color: var(--image-modal-back-and-forward-div-bg);
         height: 100%;
