@@ -46,14 +46,14 @@
         margin-bottom: 16px;
         text-transform: uppercase; 
 }
-.location, .phone, .email {
+.deets {
         opacity: .4;
         font-size: 1.25rem;
         margin-bottom: 6px;
         font-weight: 400;  
 }
-.email {
-        margin-bottom: 22px;
+.resume-text-inner h3:last-of-type {
+        margin-bottom: 35px;
 }
 .level-1-list li, 
 .level-2-list li, 
