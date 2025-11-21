@@ -20,7 +20,7 @@ return (
                         <ul className="level-4-list">
                                 <li>4: Graphics director for Covid-19 return-to-office program</li>
                                 <li>4: Owner of forms library for Financial Operations department</li>
-                                <li>4: PPT presentation decks and marketing materials MENTION ESG BOARD-LEVEL BULLSHIT</li>
+                                <li>4: PPT presentation decks and marketing materials MENTION ESG BOARD-LEVEL ITEMS</li>
                         </ul>
                         <li>3: Music Industry Climate Collective (MICC) (2023): Logo & PPT presentation decks</li>
                         <li>3: Hopsauce (Bay Area funk band): Designed 'Le Tasty' ALBUM COVER / LOGO / CD PACKAGING DESIGN / BUSINESS CARD (2013-2014); website creation & maintenance (2015-2019)</li>
