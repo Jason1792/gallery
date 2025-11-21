@@ -1,6 +1,6 @@
 import "./App.css";
 import Header from "./Header";
-import ResumeText from "./ResumeText";
+// import ResumeText from "./ResumeText"; 
 import Card from "./Card";
 import ImageModal from "./ImageModal";
 import { useEffect, useState } from "react";
@@ -201,7 +201,6 @@ function App() {
   return (
     <div className="App">
       <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      <ResumeText />
       <main>
         {loading ? (
           <div className="no-results">
