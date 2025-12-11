@@ -67,7 +67,7 @@ return (
                         </div>
                         <div className="email-button-wrapper">
                                 <a className="button email-button"
-                                href="mailto:jdullack@gmail.com" target="_blank" rel="noopener noreferrer">
+                                href="mailto:reallygoodgraphicdesign@gmail.com" target="_blank" rel="noopener noreferrer">
                                         <i className="bi bi-envelope"></i>
                                 </a>
                         </div>
