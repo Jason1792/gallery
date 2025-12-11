@@ -180,7 +180,7 @@ function App() {
                 title="Tap to change banner" />
          </div>
          <div className="funtime-all"> 
-        <h3>Password</h3>
+        <h3>P-p-p-password</h3>
         <form className="input-and-button"
         onSubmit={handleSubmit}>
           <input className="funtime-input"
