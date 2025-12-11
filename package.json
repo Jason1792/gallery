@@ -1,7 +1,7 @@
 {
   "name": "react-project-01",
   "version": "0.1.0",
-  "homepage": "https://jason1792.github.io/gallery/",
+  "homepage": "https://reallygoodgraphicdesign.github.io/gallery/",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
