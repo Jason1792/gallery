@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./Header.css";
-import logo from "./assets/logo.svg";
+import logo from "./assets/logo.png";
 
 const Header = ({ searchTerm, setSearchTerm }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -49,9 +49,9 @@ return (
                 </div>
         </div>
         {isMenuOpen && (
-        <div className="menu-outer" /* none | grey */
+        <div className="menu-outer" 
         role="region" aria-label="Search and contact">
-                <div className="menu-inner" /* none | yella */>        
+                <div className="menu-inner" >        
                         <div className="menu-modal-input-reset">
                                 <div className="menu-modal-search-wrapper">
                                         <span>

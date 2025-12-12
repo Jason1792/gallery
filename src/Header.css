@@ -20,7 +20,7 @@
         font-size: 1.25rem;
 }
 .header-left {
-        opacity: 100;
+        opacity: 1;
         background: var(--header-left-bg);
         flex: 1 1 100%;
         display: flex;
@@ -38,12 +38,14 @@
         border: none;
         padding: 0;
         margin: 0;
+        border-radius: 0 !important;
 }
 .logo-button:hover {
         background: none !important;
         filter: saturate(100%);
 }
 .logo-button img {
+        opacity: .75;
         display: block;
         height: 36px;
         width: auto;

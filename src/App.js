@@ -6,9 +6,9 @@ import ImageModal from "./ImageModal";
 import { useEffect, useState } from "react";
 
  const BANNERS = [
+   "logo-03",
    "logo-01",
    "logo-02",
-   "logo-03",
    "logo-04",
    "logo-05",
    "logo-06",
@@ -20,7 +20,8 @@ import { useEffect, useState } from "react";
    "logo-12",
    "logo-13",
    "logo-14",
-   "logo-15"
+   "logo-15",
+   "logo-18"
 ];
 
 const funtime = "Ok";
